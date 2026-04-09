@@ -20,7 +20,7 @@ export default function TKKegiatan() {
       <div className="text-center mb-20">
         <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Seru di TK</h2>
         <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
-        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang berbagai aktivitas yang merangsang kreativitas dan perkembangan otak anak di masa *golden age*.</p>
+        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang berbagai aktivitas yang merangsang kreativitas dan perkembangan otak anak di masa <strong p>Golden Age</strong>.</p>
       </div>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

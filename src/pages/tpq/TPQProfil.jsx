@@ -1,6 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Star, BookOpen, Mic, Heart, Award, ArrowRight, MessageCircle } from 'lucide-react';
+import { 
+  Star, BookOpen, Mic, Heart, Award, ArrowRight, 
+  MessageCircle, MapPin, Phone, Hash, Clock, Quote, Mail 
+} from 'lucide-react';
 
 // SVG Icon Instagram Manual untuk mengatasi error lucide-react
 const InstagramIcon = ({ size = 24, className = "" }) => (
@@ -16,8 +19,21 @@ export default function TPQProfil() {
 
   // Fungsi untuk membuka WhatsApp khusus Admin TPQ
   const handleWhatsApp = () => {
-    window.open('https://wa.me/6281299998888?text=Assalamu%27alaikum%20Admin%20TPQ%20Al-Huda,%20saya%20ingin%20bertanya%20seputar%20pendaftaran%20TPQ.', '_blank');
+    window.open('https://wa.me/6287869974676?text=Assalamu%27alaikum%20Admin%20TPQ%20Al-Huda,%20saya%20ingin%20bertanya%20seputar%20pendaftaran%20TPQ.', '_blank');
   };
+
+  // Komponen Helper untuk Kotak Info Profil (Tema Hijau)
+  const InfoCard = ({ icon, label, value, className = "" }) => (
+    <div className={`flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${className}`}>
+      <div className="bg-green-100 p-3 rounded-xl text-huda-green flex-shrink-0">
+        {icon}
+      </div>
+      <div>
+        <p className="text-sm text-gray-500 font-bold mb-1">{label}</p>
+        <p className="text-gray-800 font-semibold leading-snug">{value}</p>
+      </div>
+    </div>
+  );
 
   return (
     <div className="relative min-h-screen bg-gray-50 animate-[fadeIn_0.5s_ease-out]">
@@ -31,12 +47,12 @@ export default function TPQProfil() {
           <div className="w-32 h-2 bg-huda-green mx-auto rounded-full"></div>
         </div>
 
-        {/* Section 1: Tentang Kami & Visi Misi */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-          <div className="relative group">
+        {/* Section 1: Sejarah & Pendekatan TPQ */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+          <div className="relative group sticky top-32">
             <div className="absolute inset-0 bg-huda-green rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
             
-            {/* Foto Ilustrasi Belajar Mengaji yang Baru dengan Fallback Anti-Blank */}
+            {/* Foto Ilustrasi Belajar Mengaji */}
             <img 
               src="https://img.freepik.com/premium-photo/group-muslim-children-reading-holy-books-quran-together-mosque_603656-4176.jpg" 
               alt="Anak-anak belajar mengaji TPQ Al-Huda" 
@@ -47,31 +63,51 @@ export default function TPQProfil() {
               className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" 
             />
           </div>
+          
           <div>
-            <h3 className="text-4xl font-extrabold text-huda-dark mb-6">Mencetak Generasi Qur'ani yang Berakhlakul Karimah</h3>
-            <p className="text-gray-600 mb-10 text-xl leading-relaxed">
-              Taman Pendidikan Al-Qur'an (TPQ) Al-Huda hadir sebagai wadah pembinaan keagamaan Islam bagi anak-anak di luar jam sekolah formal. Kami berkomitmen untuk memberantas buta huruf Al-Qur'an dan menanamkan pemahaman agama yang lurus sejak dini, dengan metode pengajaran yang menyenangkan dan asatidz yang berkompeten di bidangnya.
+            {/* Kotak Visi / Motto */}
+            <div className="bg-huda-green/10 border-l-8 border-huda-green p-6 rounded-r-3xl mb-8">
+              <Quote className="text-huda-green w-10 h-10 mb-3 opacity-50" />
+              <h4 className="text-3xl font-extrabold text-huda-dark italic leading-tight">"Mandiri, Kreatif, Berakhlak Islami"</h4>
+              <p className="text-gray-600 font-bold mt-2">- Visi TPQ Al-Huda</p>
+            </div>
+
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
+              Taman Pendidikan al-Qur'an (TPQ) adalah sebuah tempat yang indah dan nyaman. Oleh karena itu proses belajar dan mengajar TPQ harus mampu mencerminkan, menciptakan iklim yang indah, nyaman dan menyenangkan. Menurut As’ad Humam, Taman Pendidikan al-Qur'an (TPQ) adalah <strong className="text-huda-dark">“Lembaga Pendidikan dan Pengajaran Al-Qur'an untuk anak usia SD (7-12 tahun)”</strong>.
             </p>
             
-            <h3 className="text-3xl font-extrabold text-huda-dark mb-6">Visi & Misi</h3>
-            <ul className="space-y-6 text-gray-700 text-xl font-medium">
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed text-justify">
+              Keberadaan <strong className="text-huda-green">TPQ Al Huda</strong> merupakan langkah strategis sebagai upaya bebas buta al-Qur'an bagi ummat Islam. Hal ini perlu adanya proses KBM (Kegiatan Belajar Mengajar) atau sistem pengelolaan yang professional. Sesuai dengan namanya, maka tujuan finalnya adalah mencetak lulusan yang bertaqwa kepada Allah Swt., fasih membaca al-Qur'an, tekun beribadah dan berakhlaqul karimah.
+            </p>
+
+            {/* Kolom Info Identitas TPQ */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-10">
+              <InfoCard icon={<Hash size={24} />} label="No. Statistik (Kemenag)" value="411231759065" className="sm:col-span-2" />
+              <InfoCard icon={<Clock size={24} />} label="Hari & Jam Belajar" value="Senin s/d Jum'at (15.00 - 17.00 WIB)" className="sm:col-span-2" />
+            </div>
+
+            {/* Misi TPQ */}
+            <h3 className="text-3xl font-extrabold text-huda-green mb-6">Misi Kami</h3>
+            <ul className="space-y-4 text-gray-700 text-lg font-medium">
               <li className="flex items-start gap-4">
-                <div className="bg-green-100 p-2 rounded-full mt-1">
-                  <Star className="text-huda-green w-6 h-6 flex-shrink-0 fill-current" />
-                </div>
-                Menjadikan Al-Qur'an sebagai pedoman hidup generasi penerus bangsa.
+                <div className="bg-green-100 p-1.5 rounded-full mt-1"><Star className="text-huda-green w-5 h-5 flex-shrink-0 fill-current" /></div>
+                Menjadikan santri bisa membaca Al Quran dengan fashih.
               </li>
               <li className="flex items-start gap-4">
-                <div className="bg-green-100 p-2 rounded-full mt-1">
-                  <Star className="text-huda-green w-6 h-6 flex-shrink-0 fill-current" />
-                </div>
-                Membekali santri dengan kemampuan membaca Al-Qur'an secara tartil sesuai kaidah ilmu Tajwid.
+                <div className="bg-green-100 p-1.5 rounded-full mt-1"><Star className="text-huda-green w-5 h-5 flex-shrink-0 fill-current" /></div>
+                Menanamkan dasar-dasar aqidah islamiyah kepada santri secara baik dan benar.
               </li>
               <li className="flex items-start gap-4">
-                <div className="bg-green-100 p-2 rounded-full mt-1">
-                  <Star className="text-huda-green w-6 h-6 flex-shrink-0 fill-current" />
-                </div>
-                Menyelenggarakan pembinaan akidah, ibadah, dan akhlak melalui pembiasaan sehari-hari.
+                <div className="bg-green-100 p-1.5 rounded-full mt-1"><Star className="text-huda-green w-5 h-5 flex-shrink-0 fill-current" /></div>
+                Menanamkan dasar-dasar akhlak islamiyah kepada santri secara baik dan benar.
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="bg-green-100 p-1.5 rounded-full mt-1"><Star className="text-huda-green w-5 h-5 flex-shrink-0 fill-current" /></div>
+                Menanamkan dasar-dasar adab islamiyah kepada santri secara baik dan benar.
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="bg-green-100 p-1.5 rounded-full mt-1"><Star className="text-huda-green w-5 h-5 flex-shrink-0 fill-current" /></div>
+                Menanamkan dasar-dasar ibadah kepada santri secara baik dan benar.
               </li>
             </ul>
           </div>
@@ -119,8 +155,8 @@ export default function TPQProfil() {
           </div>
         </div>
 
-        {/* Section 3: Call to Action (CTA) & Sosial Media Spesifik TPQ */}
-        <div className="bg-huda-dark rounded-[3rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
+        {/* Section 3: Call to Action (CTA) & Informasi Kontak Gabungan */}
+        <div className="bg-huda-dark rounded-[3rem] p-10 md:p-14 text-center text-white shadow-2xl relative overflow-hidden">
           {/* Efek Ornamen Latar Belakang */}
           <div className="absolute top-0 left-0 w-64 h-64 bg-huda-green rounded-full opacity-30 transform -translate-x-16 -translate-y-16"></div>
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-huda-yellow rounded-full opacity-20 transform translate-x-16 translate-y-16"></div>
@@ -138,14 +174,46 @@ export default function TPQProfil() {
               Klik Untuk Mendaftar <ArrowRight className="w-8 h-8" />
             </button>
 
-            {/* Profil Sosial Media TPQ */}
-            <div className="pt-10 border-t border-gray-600/50 flex flex-col items-center">
-              <p className="text-lg font-semibold text-gray-300 mb-6">Ikuti Dokumentasi Kegiatan TPQ di Sosial Media Kami</p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <a href="https://instagram.com/tpq_alhuda" target="_blank" rel="noreferrer" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-2xl transition-colors text-white">
-                  <InstagramIcon className="w-6 h-6" />
-                  <span className="font-bold text-lg">@tpq_alhuda</span>
-                </a>
+            {/* Area Informasi Kontak & Lokasi Baru (Khusus TPQ) */}
+            <div className="pt-12 border-t border-gray-600/50 flex flex-col items-center">
+              <p className="text-xl font-bold text-huda-green mb-8">Informasi Kontak & Lokasi Resmi TPQ</p>
+              
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
+                {/* Kiri: Alamat Lengkap */}
+                <div className="bg-white/10 p-6 rounded-3xl flex items-start gap-4 hover:bg-white/20 transition-colors">
+                  <MapPin className="w-8 h-8 text-huda-green flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-bold text-white mb-2 text-lg">Alamat Lengkap</p>
+                    <p className="text-gray-300 leading-relaxed">Jl. Bambu Apus Raya No. 85, Pondok Bambu, Kec. Duren Sawit, Jakarta Timur</p>
+                  </div>
+                </div>
+                
+                {/* Kanan: Telepon, Email, Sosmed */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <a href="https://wa.me/6287869974676" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
+                    <Phone className="w-6 h-6 text-huda-green" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">WhatsApp Admin</p>
+                      <p className="text-gray-300 font-semibold">0878 6997 4676</p>
+                    </div>
+                  </a>
+                  
+                  <a href="mailto:tpqalhuda.pondokbambu@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
+                    <Mail className="w-6 h-6 text-huda-green" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">Email Resmi</p>
+                      <p className="text-gray-300 text-sm break-all font-semibold">tpqalhuda.pondokbambu<br/>@gmail.com</p>
+                    </div>
+                  </a>
+                  
+                  <a href="https://instagram.com/tpqalhuda.pondokbambu" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex items-center gap-4">
+                    <InstagramIcon className="w-7 h-7 text-huda-green" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">Instagram</p>
+                      <p className="text-gray-300 font-semibold">@tpqalhuda.pondokbambu</p>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
