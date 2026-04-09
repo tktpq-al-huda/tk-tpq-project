@@ -54,7 +54,7 @@ export default function TPQProfil() {
             
             {/* Foto Ilustrasi Belajar Mengaji */}
             <img 
-              src="https://img.freepik.com/premium-photo/group-muslim-children-reading-holy-books-quran-together-mosque_603656-4176.jpg" 
+              src="/logo/tpq-al-huda.jpeg" 
               alt="Anak-anak belajar mengaji TPQ Al-Huda" 
               onError={(e) => {
                 e.target.onerror = null; 

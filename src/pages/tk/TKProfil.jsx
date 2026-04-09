@@ -51,7 +51,7 @@ export default function TKProfil() {
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
           <div className="relative group sticky top-32">
             <div className="absolute inset-0 bg-huda-yellow rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="Kegiatan TK Islam Al-Huda" className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" />
+            <img src="/logo/tk-islam-al-huda.jpeg" alt="Kegiatan TK Islam Al-Huda" className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" />
           </div>
           
           <div>

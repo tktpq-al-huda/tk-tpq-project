@@ -3,9 +3,9 @@ import { Calendar, Megaphone, Building, X, ArrowRight, Clock, MapPin, Image as I
 
 // --- DATA DUMMY FASILITAS ---
 const FASILITAS = [
-  { id: 1, title: 'Gedung Sekolah Nyaman', desc: 'Bangunan permanen, sirkulasi udara baik, dan lingkungan yang aman untuk anak-anak.', image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80' },
-  { id: 2, title: 'Taman Bermain (Playground)', desc: 'Area bermain outdoor dan indoor yang dilengkapi alat permainan edukatif dan aman.', image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80' },
-  { id: 3, title: 'Ruang Kelas & Sentra', desc: 'Kelas ber-AC dengan perlengkapan multimedia dan alat peraga edukatif lengkap.', image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80' },
+  { id: 1, title: 'Gedung Sekolah Nyaman', desc: 'Bangunan permanen, sirkulasi udara baik, dan lingkungan yang aman untuk anak-anak.', image: '/foto-sarana-prasarana/gedung-sekolah-nyaman.jpg' },
+  { id: 2, title: 'Taman Bermain (Playground)', desc: 'Area bermain outdoor dan indoor yang dilengkapi alat permainan edukatif dan aman.', image: '/foto-sarana-prasarana/taman-bermain.jpg' },
+  { id: 3, title: 'Ruang Kelas & Sentra', desc: 'Kelas dengan perlengkapan multimedia dan alat peraga edukatif lengkap.', image: '/foto-sarana-prasarana/ruang-kelas-sentra.jpg' },
 ];
 
 // --- DATA DUMMY BERITA & ACARA ---
@@ -13,7 +13,7 @@ const BERITA = [
   {
     id: 1,
     kategori: 'Berita',
-    tanggal: '15 Agustus 2026',
+    tanggal: '17 Agustus 2025',
     judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
     snippet: 'TK Islam Al-Huda mengadakan berbagai lomba seru untuk memeriahkan HUT RI...',
     fullText: 'Alhamdulillah, acara peringatan Hari Kemerdekaan Republik Indonesia di TK Islam Al-Huda berjalan dengan sangat meriah. Anak-anak sangat antusias mengikuti berbagai lomba seperti lomba mewarnai, lomba membawa kelereng, dan lomba menyanyi lagu nasional. Acara ini bertujuan untuk menanamkan rasa cinta tanah air sejak dini kepada anak-anak kita.',
