@@ -21,12 +21,16 @@ export default function Navbar() {
           </div>
 
           {/* Menu Desktop */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/tk" className={`font-bold text-lg hover:text-huda-green transition-all ${path === '/tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>TK Islam</Link>
-            <Link to="/kegiatan-tk" className={`font-bold text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>Kegiatan TK</Link>
-            <Link to="/tpq" className={`font-bold text-lg hover:text-huda-green transition-all ${path === '/tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>TPQ Al-Huda</Link>
-            <Link to="/kegiatan-tpq" className={`font-bold text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>Kegiatan TPQ</Link>
-            <Link to="/kontak" className="font-extrabold text-lg bg-huda-green text-white px-8 py-2.5 rounded-full hover:bg-huda-dark hover:shadow-xl transform hover:-translate-y-1 transition-all">Kontak</Link>
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <Link to="/tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>TK Islam</Link>
+            <Link to="/kegiatan-tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>Kegiatan TK</Link>
+            <Link to="/tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>TPQ Al-Huda</Link>
+            <Link to="/kegiatan-tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>Kegiatan TPQ</Link>
+            
+            {/* TAMBAHAN BARU: Menu Informasi */}
+            <Link to="/informasi" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/informasi' ? 'text-huda-green border-b-4 border-huda-dark pb-1' : 'text-gray-600'}`}>Informasi</Link>
+            
+            <Link to="/kontak" className="font-extrabold text-base xl:text-lg bg-huda-green text-white px-6 xl:px-8 py-2.5 rounded-full hover:bg-huda-dark hover:shadow-xl transform hover:-translate-y-1 transition-all">Kontak</Link>
           </div>
 
           {/* Tombol Hamburger Mobile */}
@@ -40,12 +44,16 @@ export default function Navbar() {
 
       {/* Menu Mobile */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl absolute w-full">
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl absolute w-full max-h-[80vh] overflow-y-auto">
           <div className="px-4 pt-2 pb-6 space-y-3 flex flex-col">
             <Link to="/tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">TK Islam Al-Huda</Link>
             <Link to="/kegiatan-tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">Kegiatan TK</Link>
             <Link to="/tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">TPQ Al-Huda</Link>
             <Link to="/kegiatan-tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">Kegiatan TPQ</Link>
+            
+            {/* TAMBAHAN BARU: Menu Informasi Mobile */}
+            <Link to="/informasi" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-gray-50 text-lg">Informasi & Berita</Link>
+            
             <Link to="/kontak" onClick={closeMenu} className="text-center px-4 py-4 mt-4 rounded-full font-extrabold text-white bg-huda-green hover:bg-huda-dark text-lg shadow-lg">Kontak Kami</Link>
           </div>
         </div>

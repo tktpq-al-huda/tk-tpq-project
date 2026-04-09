@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Kontak from './pages/Kontak';
+import Informasi from './pages/Informasi'; 
 
 // Halaman TK
 import TKProfil from './pages/tk/TKProfil';
@@ -71,6 +72,9 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/kontak" element={<Kontak />} />
               
+              {/* Rute Halaman Informasi */}
+              <Route path="/informasi" element={<Informasi />} />
+              
               {/* Rute TK */}
               <Route path="/tk" element={<TKProfil />} />
               <Route path="/kegiatan-tk" element={<TKKegiatan />} />
@@ -105,6 +109,11 @@ export default function App() {
           @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
           @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
           @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
+          /* Custom scrollbar untuk pop-up */
+          .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+          .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+          .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
         `}} />
       </div>
     </BrowserRouter>
