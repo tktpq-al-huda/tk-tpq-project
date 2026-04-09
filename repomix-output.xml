@@ -46,9 +46,12 @@ index.html
 package.json
 postcss.config.js
 public/alhuda-icon.png
-public/foto-kegiatan-tk/foto-olahraga-gembira.jpg
-public/foto-kegiatan-tk/Praktik Ibadah.jpg
-public/foto-kegiatan-tk/Seni & Kreativitas.jpg
+public/foto-profil-kegiatan-tk/cover-tk-al-huda.png
+public/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg
+public/foto-profil-kegiatan-tk/kegiatan-berenang.jpg
+public/foto-profil-kegiatan-tk/praktik-ibadah.jpg
+public/foto-profil-kegiatan-tk/seni-kreativitas-1.jpg
+public/foto-profil-kegiatan-tk/seni-kreativitas.jpg
 public/logo/tk-islam-al-huda.jpeg
 public/logo/tpq-al-huda.jpeg
 README.md
@@ -76,6 +79,349 @@ vite.config.js
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+node_modules
+dist
+.env
+.vercel
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+])
+</file>
+
+<file path="package.json">
+{
+  "name": "tk-tpq-al-huda",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^1.7.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "vite": "^5.4.21"
+  }
+}
+</file>
+
+<file path="postcss.config.js">
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+</file>
+
+<file path="src/assets/react.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
+</file>
+
+<file path="src/assets/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="src/components/TestimonialMarquee.jsx">
+import React, { useState, useEffect } from 'react';
+import { Star, CheckCircle } from 'lucide-react';
+
+const DATA_TESTIMONI = [
+  { id: 1, nama: 'Bunda Fathan', rating: 5, teks: 'Alhamdulillah sejak di TK Al-Huda, Fathan jadi lebih mandiri dan hafal banyak doa sehari-hari.' },
+  { id: 2, nama: 'Ayah Aisyah', rating: 5, teks: 'Guru-gurunya sangat sabar dan penyayang. TPQ-nya juga bagus, bacaan Aisyah makin tartil sesuai tajwid.' },
+  { id: 3, nama: 'Bunda Rafa', rating: 4, teks: 'Fasilitas sangat lengkap, bersih, dan aman. Anak saya selalu bersemangat kalau waktunya berangkat sekolah.' },
+  { id: 4, nama: 'Ayah Bima', rating: 5, teks: 'Program unggulannya sangat terasa dampaknya pada adab dan akhlak anak di rumah. Sangat direkomendasikan!' },
+  { id: 5, nama: 'Bunda Kirana', rating: 5, teks: 'Lingkungannya asri dan kondusif untuk anak-anak bermain dan belajar agama.' },
+];
+
+export const TestimonialMarquee = () => {
+  const [testimonials, setTestimonials] = useState(DATA_TESTIMONI);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // MENGGUNAKAN URL GOOGLE SCRIPT ULASAN MILIKMU
+  const SCRIPT_URL_ULASAN = 'https://script.google.com/macros/s/AKfycbwpkb5U9UgP1ei9x8wqfXB3hBnmaDVuzQ4BY2sfUNXSPEickC5YtjAJhjp_UPx5VI5guQ/exec';
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch(SCRIPT_URL_ULASAN);
+        const data = await response.json();
+        
+        if (data.result === 'success' && data.data && data.data.length > 0) {
+          // Menggabungkan data dari Google Sheet (terbaru) dengan data statis dari web
+          setTestimonials([...data.data, ...DATA_TESTIMONI]);
+        }
+      } catch (error) {
+        console.error("Gagal menarik ulasan dari Google Sheet:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
+  // Menggandakan array agar efek berjalannya (marquee) tidak terputus
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+
+  return (
+    <div className="w-full bg-huda-dark py-12 overflow-hidden relative border-t-4 border-huda-yellow">
+      <div className="text-center mb-8">
+        <h3 className="text-2xl font-bold text-white mb-2">Apa Kata Orang Tua Murid?</h3>
+        <div className="w-16 h-1 bg-huda-yellow mx-auto rounded-full mb-4"></div>
+        {isLoading && <p className="text-gray-400 text-sm animate-pulse">Memperbarui ulasan terbaru...</p>}
+      </div>
+
+      <div className="animate-scroll flex gap-6 px-4 hover:[animation-play-state:paused]">
+        {duplicatedTestimonials.map((testimoni, idx) => (
+          <div key={idx} className="bg-white rounded-2xl p-6 shadow-xl w-80 flex-shrink-0 flex flex-col justify-between transform transition-transform hover:scale-105">
+            <div>
+              <div className="flex text-huda-yellow mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={20} className={i < (testimoni.rating || 5) ? "fill-current" : "text-gray-300"} />
+                ))}
+              </div>
+              <p className="text-gray-600 italic mb-4">"{testimoni.teks}"</p>
+            </div>
+            <div>
+              <p className="font-bold text-huda-green border-t pt-3 flex items-center gap-2">
+                <CheckCircle size={16} className="flex-shrink-0" /> 
+                <span className="truncate">{testimoni.nama}</span>
+              </p>
+              {testimoni.layanan && (
+                <p className="text-xs text-gray-400 ml-6">{testimoni.layanan}</p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+</file>
+
+<file path="src/data/index.js">
+export const DATA_KEGIATAN_TK = [
+  { 
+    id: 1, 
+    title: 'Seni & Kreativitas', 
+    desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, dan membuat prakarya.', 
+    icon: 'palette',
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80'
+  },
+  { 
+    id: 2, 
+    title: 'Praktik Ibadah', 
+    desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, dan hafalan doa-doa harian.', 
+    icon: 'heart',
+    image: 'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80'
+  },
+  { 
+    id: 3, 
+    title: 'Olahraga Gembira', 
+    desc: 'Senam ceria, permainan ketangkasan di luar ruangan untuk melatih keseimbangan dan kesehatan fisik.', 
+    icon: 'activity',
+    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80'
+  },
+];
+
+export const DATA_KEGIATAN_TPQ = [
+  { 
+    id: 1, 
+    title: 'Klasikal & Privat', 
+    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
+    icon: 'book',
+    image: 'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=800&q=80'
+  },
+  { 
+    id: 2, 
+    title: 'Muroja\'ah Bersama', 
+    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
+    icon: 'mic',
+    image: 'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=800&q=80'
+  },
+  { 
+    id: 3, 
+    title: 'Kisah Islami & Akhlak', 
+    desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
+    icon: 'users',
+    image: 'https://images.unsplash.com/photo-1511632765486-a01c80cb8fa6?auto=format&fit=crop&w=800&q=80'
+  },
+];
+
+export const DATA_TESTIMONI = [
+  { id: 1, nama: 'Bunda Fathan', rating: 5, teks: 'Alhamdulillah sejak di TK Al-Huda, Fathan jadi lebih mandiri dan hafal banyak doa sehari-hari.' },
+  { id: 2, nama: 'Ayah Aisyah', rating: 5, teks: 'Guru-gurunya sangat sabar dan penyayang. TPQ-nya juga bagus, bacaan Aisyah makin tartil sesuai tajwid.' },
+  { id: 3, nama: 'Bunda Rafa', rating: 4, teks: 'Fasilitas sangat lengkap, bersih, dan aman. Anak saya selalu bersemangat kalau waktunya berangkat sekolah.' },
+  { id: 4, nama: 'Ayah Bima', rating: 5, teks: 'Program unggulannya sangat terasa dampaknya pada adab dan akhlak anak di rumah. Sangat direkomendasikan!' },
+  { id: 5, nama: 'Bunda Kirana', rating: 5, teks: 'Lingkungannya asri dan kondusif untuk anak-anak bermain dan belajar agama.' },
+];
+</file>
+
+<file path="src/index.css">
+/* src/index.css — YANG BENAR */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { font-family: 'Nunito', sans-serif; }
+</file>
+
+<file path="src/main.jsx">
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+</file>
+
+<file path="src/pages/Home.jsx">
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ArrowRight, X } from 'lucide-react';
+import { TestimonialMarquee } from '../components/TestimonialMarquee'; // Import komponen testimoni yang udah dibuat sebelumnya
+
+export default function Home() {
+  const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Munculkan pop-up guru setelah 1.5 detik
+    const timer = setTimeout(() => setShowPopup(true), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="animate-[fadeIn_0.5s_ease-out]">
+      <div className="flex flex-col md:flex-row min-h-[calc(100vh-80px)] mt-20">
+        
+        {/* Sisi TK */}
+        <div className="w-full md:w-1/2 min-h-[50vh] flex flex-col justify-center items-center p-8 relative overflow-hidden group bg-[#fefce8] border-b-4 md:border-b-0 md:border-r-4 border-white">
+          <div className="absolute inset-0 bg-[radial-gradient(#fef08a_2px,transparent_2px)] [background-size:30px_30px] opacity-40"></div>
+          <div className="absolute inset-0 bg-yellow-400 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+          
+          <div className="z-10 flex flex-col items-center text-center transform transition-transform duration-700 group-hover:scale-105">
+            <div className="w-48 h-48 md:w-72 md:h-72 bg-white rounded-full p-4 shadow-2xl mb-8 flex items-center justify-center border-4 border-huda-yellow overflow-hidden relative">
+              {/* Gambar akan diambil dari folder public/logo/ */}
+              <img src="/logo/tk-islam-al-huda.jpeg" alt="Logo TK" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/facc15/000000?text=TK+Al-Huda"}} />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TK Islam Al-Huda</h1>
+            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Membangun Karakter Anak Cerdas, Ceria, dan Berakhlak Mulia Sejak Dini."</p>
+            <button onClick={() => navigate('/tk')} className="bg-huda-yellow text-huda-dark font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0">
+              Profil TK <ArrowRight className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+
+        {/* Sisi TPQ */}
+        <div className="w-full md:w-1/2 min-h-[50vh] flex flex-col justify-center items-center p-8 relative overflow-hidden group bg-[#f0fdf4]">
+          <div className="absolute inset-0 bg-[radial-gradient(#bbf7d0_2px,transparent_2px)] [background-size:30px_30px] opacity-40"></div>
+          <div className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+          
+          <div className="z-10 flex flex-col items-center text-center transform transition-transform duration-700 group-hover:scale-105">
+            <div className="w-48 h-48 md:w-72 md:h-72 bg-white rounded-full p-4 shadow-2xl mb-8 flex items-center justify-center border-4 border-huda-green overflow-hidden relative">
+              {/* Gambar akan diambil dari folder public/logo/ */}
+              <img src="/logo/tpq-al-huda.jpeg" alt="Logo TPQ" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/16a34a/ffffff?text=TPQ+Al-Huda"}} />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TPQ Al-Huda</h1>
+            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Mencetak Generasi Pecinta Al-Qur'an yang Berakhlakul Karimah."</p>
+            <button onClick={() => navigate('/tpq')} className="bg-huda-green text-white font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-huda-dark hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-green-800 active:border-b-0 active:translate-y-0">
+              Profil TPQ <ArrowRight className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+
+      </div>
+      
+      {/* Memanggil Komponen Testimoni */}
+      <TestimonialMarquee />
+
+      {/* Pop-up Sapaan Guru */}
+      {showPopup && (
+        <div className="fixed bottom-6 right-6 z-50 animate-[bounceIn_0.8s_cubic-bezier(0.175,0.885,0.32,1.275)_forwards]">
+          <div className="flex items-end gap-3 animate-[float_3s_ease-in-out_infinite] relative">
+            <button onClick={() => setShowPopup(false)} className="absolute -top-3 -right-3 bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-600 shadow-lg z-10 border-2 border-white transition-colors">
+              <X size={18} strokeWidth={3} />
+            </button>
+            <div className="bg-white text-gray-800 p-5 rounded-3xl rounded-br-none shadow-2xl border-4 border-huda-green max-w-[280px]">
+              <p className="text-base font-bold leading-relaxed">
+                <span className="text-huda-green text-lg">Assalamu'alaikum!</span> 👋<br/>
+                Selamat datang di website TK-TPQ Islam Al-Huda. Yuk intip kegiatan seru kami!
+              </p>
+            </div>
+            <div className="w-24 h-24 bg-yellow-100 rounded-full border-4 border-white shadow-2xl overflow-hidden flex-shrink-0">
+              {/* Avatar Guru (SVG) */}
+              <svg viewBox="0 0 100 100" className="w-full h-full pt-2">
+                <circle cx="50" cy="40" r="18" fill="#fcd34d" />
+                <path d="M 25 90 Q 50 45 75 90 Z" fill="#16a34a" />
+                <circle cx="43" cy="38" r="2.5" fill="#374151" />
+                <circle cx="57" cy="38" r="2.5" fill="#374151" />
+                <path d="M 44 46 Q 50 52 56 46" stroke="#374151" strokeWidth="2.5" fill="transparent" strokeLinecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+</file>
 
 <file path="src/pages/Informasi.jsx">
 import React, { useState } from 'react';
@@ -272,587 +618,6 @@ export default function Informasi() {
         </div>
       )}
 
-    </div>
-  );
-}
-</file>
-
-<file path=".gitignore">
-node_modules
-dist
-.env
-.vercel
-</file>
-
-<file path="eslint.config.js">
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import { defineConfig, globalIgnores } from 'eslint/config'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{js,jsx}'],
-    extends: [
-      js.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
-    },
-    rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-    },
-  },
-])
-</file>
-
-<file path="package.json">
-{
-  "name": "tk-tpq-al-huda",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "lucide-react": "^1.7.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.2"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.4",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^4.7.0",
-    "autoprefixer": "^10.4.27",
-    "eslint": "^9.39.4",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.4.0",
-    "postcss": "^8.5.8",
-    "tailwindcss": "^3.4.19",
-    "vite": "^5.4.21"
-  }
-}
-</file>
-
-<file path="postcss.config.js">
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
-</file>
-
-<file path="src/App.jsx">
-import React, { useEffect, Component } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-
-// Import Komponen & Halaman Utama
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Kontak from './pages/Kontak';
-import Informasi from './pages/Informasi'; 
-
-// Halaman TK
-import TKProfil from './pages/tk/TKProfil';
-import TKKegiatan from './kegiatan/kegiatan-tk/TKKegiatan';
-import DaftarTK from './pages/tk/DaftarTK';
-
-// Halaman TPQ
-import TPQProfil from './pages/tpq/TPQProfil';
-import TPQKegiatan from './kegiatan/kegiatan-tpq/TPQKegiatan';
-import DaftarTPQ from './pages/tpq/DaftarTPQ';
-
-// ==========================================
-// PENDETEKSI ERROR (MENCEGAH LAYAR PUTIH)
-// ==========================================
-class ErrorBoundary extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false, errorInfo: null, error: null };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true, error: error };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error("Error detail:", error, errorInfo);
-    this.setState({ errorInfo: errorInfo });
-  }
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="p-10 m-10 bg-red-50 border-2 border-red-500 rounded-2xl text-red-800 font-sans">
-          <h2 className="text-3xl font-bold mb-4">Oops! Ada Error di React 🐛</h2>
-          <p className="font-bold mb-2">Pesan Error:</p>
-          <code className="block bg-white p-4 rounded-lg shadow mb-4 text-red-600 font-mono">
-            {this.state.error && this.state.error.toString()}
-          </code>
-          <p className="mt-6 text-gray-600 font-bold">👉 Silakan cek tab Console atau perbaiki file yang bermasalah.</p>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-
-// Fitur otomatis scroll ke atas saat ganti halaman
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
-
-export default function App() {
-  return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col">
-        <Navbar />
-        
-        <main className="flex-grow">
-          <ErrorBoundary>
-            <Routes>
-              {/* Rute Utama */}
-              <Route path="/" element={<Home />} />
-              <Route path="/kontak" element={<Kontak />} />
-              
-              {/* Rute Halaman Informasi */}
-              <Route path="/informasi" element={<Informasi />} />
-              
-              {/* Rute TK */}
-              <Route path="/tk" element={<TKProfil />} />
-              <Route path="/kegiatan-tk" element={<TKKegiatan />} />
-              <Route path="/daftar-tk" element={<DaftarTK />} />
-              
-              {/* Rute TPQ */}
-              <Route path="/tpq" element={<TPQProfil />} />
-              <Route path="/kegiatan-tpq" element={<TPQKegiatan />} />
-              <Route path="/daftar-tpq" element={<DaftarTPQ />} />
-              
-              {/* Fallback 404 (Halaman tidak ditemukan) */}
-              <Route path="*" element={
-                <div className="pt-40 pb-20 px-6 text-center min-h-[60vh] flex flex-col items-center justify-center">
-                  <h2 className="text-3xl font-bold text-gray-400 mb-4">Halaman sedang dalam tahap pembuatan... 🚀</h2>
-                  <p className="text-gray-500">Silakan kembali ke Home.</p>
-                </div>
-              } />
-            </Routes>
-          </ErrorBoundary>
-        </main>
-
-        <footer className="bg-gray-900 text-gray-400 text-center py-10 mt-auto z-10">
-          <p className="text-2xl font-extrabold text-white mb-3">TK-TPQ Islam Al-Huda</p>
-          <p className="mb-4 text-sm max-w-md mx-auto">Mencetak Generasi Pecinta Al-Qur'an yang Cerdas dan Berakhlak Mulia.</p>
-          <p className="text-gray-500">&copy; {new Date().getFullYear()} Hak Cipta Dilindungi.</p>
-        </footer>
-
-        {/* Style Global untuk Animasi */}
-        <style dangerouslySetInnerHTML={{__html: `
-          @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-          .animate-scroll { display: flex; width: max-content; animation: scroll 35s linear infinite; }
-          @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-          @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
-          @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
-          /* Custom scrollbar untuk pop-up */
-          .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-          .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-          .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-          .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-        `}} />
-      </div>
-    </BrowserRouter>
-  );
-}
-</file>
-
-<file path="src/assets/react.svg">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
-</file>
-
-<file path="src/assets/vite.svg">
-<svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
-</file>
-
-<file path="src/components/Navbar.jsx">
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Home, Menu, X } from 'lucide-react';
-
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const path = location.pathname;
-
-  const closeMenu = () => setIsOpen(false);
-
-  return (
-    <nav className="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          <div className="flex items-center">
-             <Link to="/" className="flex items-center gap-3 text-huda-green hover:text-huda-dark transition-colors" onClick={closeMenu}>
-              <Home className="w-8 h-8" />
-              <span className="font-extrabold text-2xl tracking-wide">Al-Huda</span>
-            </Link>
-          </div>
-
-          {/* Menu Desktop */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <Link to="/tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>TK Islam</Link>
-            <Link to="/kegiatan-tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>Kegiatan TK</Link>
-            <Link to="/tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>TPQ Al-Huda</Link>
-            <Link to="/kegiatan-tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>Kegiatan TPQ</Link>
-            
-            {/* TAMBAHAN BARU: Menu Informasi */}
-            <Link to="/informasi" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/informasi' ? 'text-huda-green border-b-4 border-huda-dark pb-1' : 'text-gray-600'}`}>Informasi</Link>
-            
-            <Link to="/kontak" className="font-extrabold text-base xl:text-lg bg-huda-green text-white px-6 xl:px-8 py-2.5 rounded-full hover:bg-huda-dark hover:shadow-xl transform hover:-translate-y-1 transition-all">Kontak</Link>
-          </div>
-
-          {/* Tombol Hamburger Mobile */}
-          <div className="flex items-center lg:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-huda-green">
-              {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Menu Mobile */}
-      {isOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl absolute w-full max-h-[80vh] overflow-y-auto">
-          <div className="px-4 pt-2 pb-6 space-y-3 flex flex-col">
-            <Link to="/tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">TK Islam Al-Huda</Link>
-            <Link to="/kegiatan-tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">Kegiatan TK</Link>
-            <Link to="/tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">TPQ Al-Huda</Link>
-            <Link to="/kegiatan-tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">Kegiatan TPQ</Link>
-            
-            {/* TAMBAHAN BARU: Menu Informasi Mobile */}
-            <Link to="/informasi" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-gray-50 text-lg">Informasi & Berita</Link>
-            
-            <Link to="/kontak" onClick={closeMenu} className="text-center px-4 py-4 mt-4 rounded-full font-extrabold text-white bg-huda-green hover:bg-huda-dark text-lg shadow-lg">Kontak Kami</Link>
-          </div>
-        </div>
-      )}
-    </nav>
-  );
-}
-</file>
-
-<file path="src/components/TestimonialMarquee.jsx">
-import React, { useState, useEffect } from 'react';
-import { Star, CheckCircle } from 'lucide-react';
-
-const DATA_TESTIMONI = [
-  { id: 1, nama: 'Bunda Fathan', rating: 5, teks: 'Alhamdulillah sejak di TK Al-Huda, Fathan jadi lebih mandiri dan hafal banyak doa sehari-hari.' },
-  { id: 2, nama: 'Ayah Aisyah', rating: 5, teks: 'Guru-gurunya sangat sabar dan penyayang. TPQ-nya juga bagus, bacaan Aisyah makin tartil sesuai tajwid.' },
-  { id: 3, nama: 'Bunda Rafa', rating: 4, teks: 'Fasilitas sangat lengkap, bersih, dan aman. Anak saya selalu bersemangat kalau waktunya berangkat sekolah.' },
-  { id: 4, nama: 'Ayah Bima', rating: 5, teks: 'Program unggulannya sangat terasa dampaknya pada adab dan akhlak anak di rumah. Sangat direkomendasikan!' },
-  { id: 5, nama: 'Bunda Kirana', rating: 5, teks: 'Lingkungannya asri dan kondusif untuk anak-anak bermain dan belajar agama.' },
-];
-
-export const TestimonialMarquee = () => {
-  const [testimonials, setTestimonials] = useState(DATA_TESTIMONI);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // MENGGUNAKAN URL GOOGLE SCRIPT ULASAN MILIKMU
-  const SCRIPT_URL_ULASAN = 'https://script.google.com/macros/s/AKfycbwpkb5U9UgP1ei9x8wqfXB3hBnmaDVuzQ4BY2sfUNXSPEickC5YtjAJhjp_UPx5VI5guQ/exec';
-
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch(SCRIPT_URL_ULASAN);
-        const data = await response.json();
-        
-        if (data.result === 'success' && data.data && data.data.length > 0) {
-          // Menggabungkan data dari Google Sheet (terbaru) dengan data statis dari web
-          setTestimonials([...data.data, ...DATA_TESTIMONI]);
-        }
-      } catch (error) {
-        console.error("Gagal menarik ulasan dari Google Sheet:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchReviews();
-  }, []);
-
-  // Menggandakan array agar efek berjalannya (marquee) tidak terputus
-  const duplicatedTestimonials = [...testimonials, ...testimonials];
-
-  return (
-    <div className="w-full bg-huda-dark py-12 overflow-hidden relative border-t-4 border-huda-yellow">
-      <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold text-white mb-2">Apa Kata Orang Tua Murid?</h3>
-        <div className="w-16 h-1 bg-huda-yellow mx-auto rounded-full mb-4"></div>
-        {isLoading && <p className="text-gray-400 text-sm animate-pulse">Memperbarui ulasan terbaru...</p>}
-      </div>
-
-      <div className="animate-scroll flex gap-6 px-4 hover:[animation-play-state:paused]">
-        {duplicatedTestimonials.map((testimoni, idx) => (
-          <div key={idx} className="bg-white rounded-2xl p-6 shadow-xl w-80 flex-shrink-0 flex flex-col justify-between transform transition-transform hover:scale-105">
-            <div>
-              <div className="flex text-huda-yellow mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={20} className={i < (testimoni.rating || 5) ? "fill-current" : "text-gray-300"} />
-                ))}
-              </div>
-              <p className="text-gray-600 italic mb-4">"{testimoni.teks}"</p>
-            </div>
-            <div>
-              <p className="font-bold text-huda-green border-t pt-3 flex items-center gap-2">
-                <CheckCircle size={16} className="flex-shrink-0" /> 
-                <span className="truncate">{testimoni.nama}</span>
-              </p>
-              {testimoni.layanan && (
-                <p className="text-xs text-gray-400 ml-6">{testimoni.layanan}</p>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-</file>
-
-<file path="src/data/index.js">
-export const DATA_KEGIATAN_TK = [
-  { 
-    id: 1, 
-    title: 'Seni & Kreativitas', 
-    desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, dan membuat prakarya.', 
-    icon: 'palette',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80'
-  },
-  { 
-    id: 2, 
-    title: 'Praktik Ibadah', 
-    desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, dan hafalan doa-doa harian.', 
-    icon: 'heart',
-    image: 'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80'
-  },
-  { 
-    id: 3, 
-    title: 'Olahraga Gembira', 
-    desc: 'Senam ceria, permainan ketangkasan di luar ruangan untuk melatih keseimbangan dan kesehatan fisik.', 
-    icon: 'activity',
-    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80'
-  },
-];
-
-export const DATA_KEGIATAN_TPQ = [
-  { 
-    id: 1, 
-    title: 'Klasikal & Privat', 
-    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
-    icon: 'book',
-    image: 'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=800&q=80'
-  },
-  { 
-    id: 2, 
-    title: 'Muroja\'ah Bersama', 
-    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
-    icon: 'mic',
-    image: 'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=800&q=80'
-  },
-  { 
-    id: 3, 
-    title: 'Kisah Islami & Akhlak', 
-    desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
-    icon: 'users',
-    image: 'https://images.unsplash.com/photo-1511632765486-a01c80cb8fa6?auto=format&fit=crop&w=800&q=80'
-  },
-];
-
-export const DATA_TESTIMONI = [
-  { id: 1, nama: 'Bunda Fathan', rating: 5, teks: 'Alhamdulillah sejak di TK Al-Huda, Fathan jadi lebih mandiri dan hafal banyak doa sehari-hari.' },
-  { id: 2, nama: 'Ayah Aisyah', rating: 5, teks: 'Guru-gurunya sangat sabar dan penyayang. TPQ-nya juga bagus, bacaan Aisyah makin tartil sesuai tajwid.' },
-  { id: 3, nama: 'Bunda Rafa', rating: 4, teks: 'Fasilitas sangat lengkap, bersih, dan aman. Anak saya selalu bersemangat kalau waktunya berangkat sekolah.' },
-  { id: 4, nama: 'Ayah Bima', rating: 5, teks: 'Program unggulannya sangat terasa dampaknya pada adab dan akhlak anak di rumah. Sangat direkomendasikan!' },
-  { id: 5, nama: 'Bunda Kirana', rating: 5, teks: 'Lingkungannya asri dan kondusif untuk anak-anak bermain dan belajar agama.' },
-];
-</file>
-
-<file path="src/index.css">
-/* src/index.css — YANG BENAR */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body { font-family: 'Nunito', sans-serif; }
-</file>
-
-<file path="src/kegiatan/kegiatan-tpq/TPQKegiatan.jsx">
-import React from 'react';
-import { BookOpen, Mic, Users, Star, Activity, Heart } from 'lucide-react';
-
-// Data Kegiatan TPQ diletakkan langsung di sini agar tidak terjadi error import
-const DATA_KEGIATAN_TPQ = [
-  { id: 1, title: 'Klasikal & Privat', desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', icon: 'book' },
-  { id: 2, title: 'Muroja\'ah Bersama', desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', icon: 'mic' },
-  { id: 3, title: 'Kisah Islami & Akhlak', desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', icon: 'users' },
-];
-
-// Helper untuk Icons
-const getIcon = (iconName, size = 48) => {
-  switch (iconName) {
-    case 'book': return <BookOpen size={size} />;
-    case 'mic': return <Mic size={size} />;
-    case 'users': return <Users size={size} />;
-    case 'activity': return <Activity size={size} />;
-    case 'heart': return <Heart size={size} />;
-    default: return <Star size={size} />;
-  }
-};
-
-export default function TPQKegiatan() {
-  return (
-    <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen animate-[fadeIn_0.5s_ease-out]">
-      <div className="text-center mb-20">
-        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Harian TPQ</h2>
-        <div className="w-32 h-2 bg-huda-green mx-auto rounded-full"></div>
-        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang metode pembelajaran yang interaktif dan berjenjang, memastikan setiap santri mendapatkan perhatian penuh dalam proses belajarnya memahami Al-Qur'an.</p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {DATA_KEGIATAN_TPQ.map((item) => (
-          <div key={item.id} className="bg-white rounded-3xl shadow-xl p-10 transform hover:-translate-y-3 transition-all duration-300 border-t-8 border-huda-green hover:shadow-2xl">
-            <div className="w-24 h-24 bg-green-50 text-huda-green rounded-2xl flex items-center justify-center mb-8 mx-auto transform -rotate-3 hover:-rotate-12 transition-transform">
-              {getIcon(item.icon, 48)}
-            </div>
-            <h3 className="text-2xl font-extrabold text-center text-huda-dark mb-4">{item.title}</h3>
-            <p className="text-center text-gray-600 text-lg leading-relaxed">{item.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-</file>
-
-<file path="src/main.jsx">
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
-</file>
-
-<file path="src/pages/Home.jsx">
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ArrowRight, X } from 'lucide-react';
-import { TestimonialMarquee } from '../components/TestimonialMarquee'; // Import komponen testimoni yang udah dibuat sebelumnya
-
-export default function Home() {
-  const navigate = useNavigate();
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    // Munculkan pop-up guru setelah 1.5 detik
-    const timer = setTimeout(() => setShowPopup(true), 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div className="animate-[fadeIn_0.5s_ease-out]">
-      <div className="flex flex-col md:flex-row min-h-[calc(100vh-80px)] mt-20">
-        
-        {/* Sisi TK */}
-        <div className="w-full md:w-1/2 min-h-[50vh] flex flex-col justify-center items-center p-8 relative overflow-hidden group bg-[#fefce8] border-b-4 md:border-b-0 md:border-r-4 border-white">
-          <div className="absolute inset-0 bg-[radial-gradient(#fef08a_2px,transparent_2px)] [background-size:30px_30px] opacity-40"></div>
-          <div className="absolute inset-0 bg-yellow-400 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
-          
-          <div className="z-10 flex flex-col items-center text-center transform transition-transform duration-700 group-hover:scale-105">
-            <div className="w-48 h-48 md:w-72 md:h-72 bg-white rounded-full p-4 shadow-2xl mb-8 flex items-center justify-center border-4 border-huda-yellow overflow-hidden relative">
-              {/* Gambar akan diambil dari folder public/logo/ */}
-              <img src="/logo/tk-islam-al-huda.jpeg" alt="Logo TK" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/facc15/000000?text=TK+Al-Huda"}} />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TK Islam Al-Huda</h1>
-            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Membangun Karakter Anak Cerdas, Ceria, dan Berakhlak Mulia Sejak Dini."</p>
-            <button onClick={() => navigate('/tk')} className="bg-huda-yellow text-huda-dark font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0">
-              Profil TK <ArrowRight className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-
-        {/* Sisi TPQ */}
-        <div className="w-full md:w-1/2 min-h-[50vh] flex flex-col justify-center items-center p-8 relative overflow-hidden group bg-[#f0fdf4]">
-          <div className="absolute inset-0 bg-[radial-gradient(#bbf7d0_2px,transparent_2px)] [background-size:30px_30px] opacity-40"></div>
-          <div className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
-          
-          <div className="z-10 flex flex-col items-center text-center transform transition-transform duration-700 group-hover:scale-105">
-            <div className="w-48 h-48 md:w-72 md:h-72 bg-white rounded-full p-4 shadow-2xl mb-8 flex items-center justify-center border-4 border-huda-green overflow-hidden relative">
-              {/* Gambar akan diambil dari folder public/logo/ */}
-              <img src="/logo/tpq-al-huda.jpeg" alt="Logo TPQ" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/16a34a/ffffff?text=TPQ+Al-Huda"}} />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TPQ Al-Huda</h1>
-            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Mencetak Generasi Pecinta Al-Qur'an yang Berakhlakul Karimah."</p>
-            <button onClick={() => navigate('/tpq')} className="bg-huda-green text-white font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-huda-dark hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-green-800 active:border-b-0 active:translate-y-0">
-              Profil TPQ <ArrowRight className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-
-      </div>
-      
-      {/* Memanggil Komponen Testimoni */}
-      <TestimonialMarquee />
-
-      {/* Pop-up Sapaan Guru */}
-      {showPopup && (
-        <div className="fixed bottom-6 right-6 z-50 animate-[bounceIn_0.8s_cubic-bezier(0.175,0.885,0.32,1.275)_forwards]">
-          <div className="flex items-end gap-3 animate-[float_3s_ease-in-out_infinite] relative">
-            <button onClick={() => setShowPopup(false)} className="absolute -top-3 -right-3 bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-600 shadow-lg z-10 border-2 border-white transition-colors">
-              <X size={18} strokeWidth={3} />
-            </button>
-            <div className="bg-white text-gray-800 p-5 rounded-3xl rounded-br-none shadow-2xl border-4 border-huda-green max-w-[280px]">
-              <p className="text-base font-bold leading-relaxed">
-                <span className="text-huda-green text-lg">Assalamu'alaikum!</span> 👋<br/>
-                Selamat datang di website TK-TPQ Islam Al-Huda. Yuk intip kegiatan seru kami!
-              </p>
-            </div>
-            <div className="w-24 h-24 bg-yellow-100 rounded-full border-4 border-white shadow-2xl overflow-hidden flex-shrink-0">
-              {/* Avatar Guru (SVG) */}
-              <svg viewBox="0 0 100 100" className="w-full h-full pt-2">
-                <circle cx="50" cy="40" r="18" fill="#fcd34d" />
-                <path d="M 25 90 Q 50 45 75 90 Z" fill="#16a34a" />
-                <circle cx="43" cy="38" r="2.5" fill="#374151" />
-                <circle cx="57" cy="38" r="2.5" fill="#374151" />
-                <path d="M 44 46 Q 50 52 56 46" stroke="#374151" strokeWidth="2.5" fill="transparent" strokeLinecap="round"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -1388,43 +1153,338 @@ If you are developing a production application, we recommend using TypeScript wi
 "# tk-tpq-project"
 </file>
 
-<file path="src/kegiatan/kegiatan-tk/TKKegiatan.jsx">
-import React from 'react';
-import { Palette, Heart, Activity, BookOpen, Users, Star } from 'lucide-react';
-import { DATA_KEGIATAN_TK } from '../../data/index.js';
+<file path="src/App.jsx">
+import React, { useEffect, Component } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+
+// Import Komponen & Halaman Utama
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Kontak from './pages/Kontak';
+import Informasi from './pages/Informasi'; 
+
+// Halaman TK
+import TKProfil from './pages/tk/TKProfil';
+import TKKegiatan from './kegiatan/kegiatan-tk/TKKegiatan';
+import DaftarTK from './pages/tk/DaftarTK';
+
+// Halaman TPQ
+import TPQProfil from './pages/tpq/TPQProfil';
+import TPQKegiatan from './kegiatan/kegiatan-tpq/TPQKegiatan';
+import DaftarTPQ from './pages/tpq/DaftarTPQ';
+
+// ==========================================
+// PENDETEKSI ERROR (MENCEGAH LAYAR PUTIH)
+// ==========================================
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, errorInfo: null, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error: error };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error("Error detail:", error, errorInfo);
+    this.setState({ errorInfo: errorInfo });
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-10 m-10 bg-red-50 border-2 border-red-500 rounded-2xl text-red-800 font-sans">
+          <h2 className="text-3xl font-bold mb-4">Oops! Ada Error di React 🐛</h2>
+          <p className="font-bold mb-2">Pesan Error:</p>
+          <code className="block bg-white p-4 rounded-lg shadow mb-4 text-red-600 font-mono">
+            {this.state.error && this.state.error.toString()}
+          </code>
+          <p className="mt-6 text-gray-600 font-bold">👉 Silakan cek tab Console atau perbaiki file yang bermasalah.</p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// Fitur otomatis scroll ke atas saat ganti halaman
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col">
+        <Navbar />
+        
+        <main className="flex-grow">
+          <ErrorBoundary>
+            <Routes>
+              {/* Rute Utama */}
+              <Route path="/" element={<Home />} />
+              <Route path="/kontak" element={<Kontak />} />
+              
+              {/* Rute Halaman Informasi */}
+              <Route path="/informasi" element={<Informasi />} />
+              
+              {/* Rute TK */}
+              <Route path="/tk" element={<TKProfil />} />
+              <Route path="/kegiatan-tk" element={<TKKegiatan />} />
+              <Route path="/daftar-tk" element={<DaftarTK />} />
+              
+              {/* Rute TPQ */}
+              <Route path="/tpq" element={<TPQProfil />} />
+              <Route path="/kegiatan-tpq" element={<TPQKegiatan />} />
+              <Route path="/daftar-tpq" element={<DaftarTPQ />} />
+              
+              {/* Fallback 404 (Halaman tidak ditemukan) */}
+              <Route path="*" element={
+                <div className="pt-40 pb-20 px-6 text-center min-h-[60vh] flex flex-col items-center justify-center">
+                  <h2 className="text-3xl font-bold text-gray-400 mb-4">Halaman sedang dalam tahap pembuatan... 🚀</h2>
+                  <p className="text-gray-500">Silakan kembali ke Home.</p>
+                </div>
+              } />
+            </Routes>
+          </ErrorBoundary>
+        </main>
+
+        <footer className="bg-gray-900 text-gray-400 text-center py-10 mt-auto z-10">
+          <p className="text-2xl font-extrabold text-white mb-3">TK-TPQ Islam Al-Huda</p>
+          <p className="mb-4 text-sm max-w-md mx-auto">Mencetak Generasi Pecinta Al-Qur'an yang Cerdas dan Berakhlak Mulia.</p>
+          <p className="text-gray-500">&copy; {new Date().getFullYear()} Hak Cipta Dilindungi.</p>
+        </footer>
+
+        {/* Style Global untuk Animasi */}
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+          .animate-scroll { display: flex; width: max-content; animation: scroll 35s linear infinite; }
+          @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+          @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+          @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
+          /* Custom scrollbar untuk pop-up */
+          .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+          .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+          .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        `}} />
+      </div>
+    </BrowserRouter>
+  );
+}
+</file>
+
+<file path="src/components/Navbar.jsx">
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Home, Menu, X } from 'lucide-react';
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const path = location.pathname;
+
+  const closeMenu = () => setIsOpen(false);
+
+  return (
+    <nav className="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-20">
+          <div className="flex items-center">
+             <Link to="/" className="flex items-center gap-3 text-huda-green hover:text-huda-dark transition-colors" onClick={closeMenu}>
+              <Home className="w-8 h-8" />
+              <span className="font-extrabold text-2xl tracking-wide">Al-Huda</span>
+            </Link>
+          </div>
+
+          {/* Menu Desktop */}
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <Link to="/tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>TK Islam</Link>
+            <Link to="/kegiatan-tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>Kegiatan TK</Link>
+            <Link to="/tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>TPQ Al-Huda</Link>
+            <Link to="/kegiatan-tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>Kegiatan TPQ</Link>
+            
+            {/* TAMBAHAN BARU: Menu Informasi */}
+            <Link to="/informasi" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/informasi' ? 'text-huda-green border-b-4 border-huda-dark pb-1' : 'text-gray-600'}`}>Informasi</Link>
+            
+            <Link to="/kontak" className="font-extrabold text-base xl:text-lg bg-huda-green text-white px-6 xl:px-8 py-2.5 rounded-full hover:bg-huda-dark hover:shadow-xl transform hover:-translate-y-1 transition-all">Kontak</Link>
+          </div>
+
+          {/* Tombol Hamburger Mobile */}
+          <div className="flex items-center lg:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-huda-green">
+              {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Menu Mobile */}
+      {isOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl absolute w-full max-h-[80vh] overflow-y-auto">
+          <div className="px-4 pt-2 pb-6 space-y-3 flex flex-col">
+            <Link to="/tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">TK Islam Al-Huda</Link>
+            <Link to="/kegiatan-tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">Kegiatan TK</Link>
+            <Link to="/tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">TPQ Al-Huda</Link>
+            <Link to="/kegiatan-tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">Kegiatan TPQ</Link>
+            
+            {/* TAMBAHAN BARU: Menu Informasi Mobile */}
+            <Link to="/informasi" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-gray-50 text-lg">Informasi & Berita</Link>
+            
+            <Link to="/kontak" onClick={closeMenu} className="text-center px-4 py-4 mt-4 rounded-full font-extrabold text-white bg-huda-green hover:bg-huda-dark text-lg shadow-lg">Kontak Kami</Link>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
+</file>
+
+<file path="src/kegiatan/kegiatan-tpq/TPQKegiatan.jsx">
+import React, { useState } from 'react';
+import { BookOpen, Mic, Users, Star, Activity, Heart, X, Image as ImageIcon } from 'lucide-react';
+
+const DATA_KEGIATAN_TPQ = [
+  { 
+    id: 1, 
+    title: 'Klasikal & Privat', 
+    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
+    icon: 'book',
+    gallery: [
+      'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=800&q=80',
+      'https://img.freepik.com/premium-photo/group-muslim-children-reading-holy-books-quran-together-mosque_603656-4176.jpg?w=800&q=80',
+      'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  { 
+    id: 2, 
+    title: 'Muroja\'ah Bersama', 
+    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
+    icon: 'mic',
+    gallery: [
+      'https://img.freepik.com/free-photo/muslim-family-reading-quran-together_53876-20967.jpg?w=800&q=80',
+      'https://images.unsplash.com/photo-1511632765486-a01c80cb8fa6?auto=format&fit=crop&w=800&q=80',
+      'https://img.freepik.com/free-photo/kids-learning-about-islam_23-2149025816.jpg?w=800&q=80'
+    ]
+  },
+  { 
+    id: 3, 
+    title: 'Kisah Islami & Akhlak', 
+    desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
+    icon: 'users',
+    gallery: [
+      'https://img.freepik.com/free-photo/teacher-teaching-kids-about-islam_23-2149025811.jpg?w=800&q=80',
+      'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80',
+      'https://img.freepik.com/free-photo/arab-boys-studying_53876-20959.jpg?w=800&q=80'
+    ]
+  },
+];
 
 // Helper untuk Icons
 const getIcon = (iconName, size = 48) => {
   switch (iconName) {
-    case 'palette': return <Palette size={size} />;
-    case 'heart': return <Heart size={size} />;
-    case 'activity': return <Activity size={size} />;
     case 'book': return <BookOpen size={size} />;
+    case 'mic': return <Mic size={size} />;
     case 'users': return <Users size={size} />;
+    case 'activity': return <Activity size={size} />;
+    case 'heart': return <Heart size={size} />;
     default: return <Star size={size} />;
   }
 };
 
-export default function TKKegiatan() {
+export default function TPQKegiatan() {
+  const [selectedActivity, setSelectedActivity] = useState(null);
+
+  if (selectedActivity) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+
   return (
     <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen animate-[fadeIn_0.5s_ease-out]">
       <div className="text-center mb-20">
-        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Seru di TK</h2>
-        <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
-        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang berbagai aktivitas yang merangsang kreativitas dan perkembangan otak anak di masa <strong p>Golden Age</strong>.</p>
+        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Harian TPQ</h2>
+        <div className="w-32 h-2 bg-huda-green mx-auto rounded-full"></div>
+        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang metode pembelajaran yang interaktif dan berjenjang. Klik kegiatan di bawah untuk melihat dokumentasi foto kami!</p>
       </div>
-      
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {DATA_KEGIATAN_TK.map((item) => (
-          <div key={item.id} className="bg-white rounded-3xl shadow-xl p-10 transform hover:-translate-y-3 transition-all duration-300 border-b-8 border-huda-yellow hover:shadow-2xl">
-            <div className="w-24 h-24 rounded-2xl bg-yellow-100 text-huda-yellow flex items-center justify-center mb-8 mx-auto transform rotate-3 hover:rotate-12 transition-transform">
+        {DATA_KEGIATAN_TPQ.map((item) => (
+          <div 
+            key={item.id} 
+            onClick={() => setSelectedActivity(item)}
+            className="bg-white rounded-3xl shadow-xl p-10 transform hover:-translate-y-3 transition-all duration-300 border-t-8 border-huda-green hover:shadow-2xl cursor-pointer group"
+          >
+            <div className="w-24 h-24 bg-green-50 text-huda-green rounded-2xl flex items-center justify-center mb-8 mx-auto transform -rotate-3 group-hover:-rotate-12 group-hover:scale-110 transition-all duration-300">
               {getIcon(item.icon, 48)}
             </div>
-            <h3 className="text-2xl font-extrabold text-center text-huda-dark mb-4">{item.title}</h3>
-            <p className="text-center text-gray-600 text-lg leading-relaxed">{item.desc}</p>
+            <h3 className="text-2xl font-extrabold text-center text-huda-dark mb-4 group-hover:text-huda-green transition-colors">{item.title}</h3>
+            <p className="text-center text-gray-600 text-lg leading-relaxed mb-4">{item.desc}</p>
+            <div className="text-center text-huda-green font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+              <ImageIcon size={16} /> Lihat Galeri
+            </div>
           </div>
         ))}
       </div>
+
+      {/* POP-UP / MODAL GALERI TPQ */}
+      {selectedActivity && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          <div 
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
+            onClick={() => setSelectedActivity(null)}
+          ></div>
+          
+          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl relative z-10 flex flex-col animate-[bounceIn_0.4s_ease-out] overflow-hidden">
+            
+            <button 
+              onClick={() => setSelectedActivity(null)}
+              className="absolute top-4 right-4 z-20 bg-gray-100 hover:bg-red-100 hover:text-red-600 text-gray-800 p-2 rounded-full transition-colors shadow-sm"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Header Pop-up TPQ */}
+            <div className="p-6 sm:p-8 border-b border-gray-100 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 bg-green-50/50">
+              <div className="w-20 h-20 shrink-0 rounded-2xl bg-huda-green text-white flex items-center justify-center shadow-lg transform rotate-3">
+                  {getIcon(selectedActivity.icon, 40)}
+              </div>
+              <div className="text-center sm:text-left">
+                <h3 className="text-3xl font-extrabold text-huda-dark mb-2">{selectedActivity.title}</h3>
+                <p className="text-gray-600 leading-relaxed max-w-2xl">{selectedActivity.desc}</p>
+              </div>
+            </div>
+
+            {/* Area Galeri Foto */}
+            <div className="overflow-y-auto p-6 sm:p-8 custom-scrollbar bg-white flex-grow">
+               <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                  <ImageIcon className="text-huda-green" size={24} /> Dokumentasi {selectedActivity.title}
+               </h4>
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {selectedActivity.gallery.map((img, idx) => (
+                    <div key={idx} className="group relative rounded-2xl overflow-hidden shadow-md border-4 border-gray-50 aspect-[4/3] bg-gray-100">
+                      <img 
+                        src={img} 
+                        alt={`${selectedActivity.title} ${idx + 1}`} 
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "https://placehold.co/800x600/16a34a/ffffff?text=Foto+Menyusul";
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                    </div>
+                  ))}
+               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
@@ -2061,6 +2121,155 @@ export default function TPQProfil() {
           <span className="relative inline-flex rounded-full h-5 w-5 bg-red-500 border-2 border-white"></span>
         </span>
       </button>
+
+    </div>
+  );
+}
+</file>
+
+<file path="src/kegiatan/kegiatan-tk/TKKegiatan.jsx">
+import React, { useState } from 'react';
+import { Palette, Heart, Activity, BookOpen, Users, Star, X, Image as ImageIcon } from 'lucide-react';
+
+// Memasukkan data langsung ke sini agar mudah mengatur galeri foto
+const DATA_KEGIATAN_TK = [
+  { 
+    id: 1, 
+    title: 'Seni & Kreativitas', 
+    desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, dan membuat prakarya.', 
+    icon: 'palette',
+    gallery: [
+      '/foto-kegiatan-tk/Seni %26 Kreativitas.jpg', // Foto aslimu (menggunakan %26 untuk simbol &)
+      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  { 
+    id: 2, 
+    title: 'Praktik Ibadah', 
+    desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, dan hafalan doa-doa harian.', 
+    icon: 'heart',
+    gallery: [
+      '/foto-kegiatan-tk/Praktik Ibadah.jpg', // Foto aslimu
+      'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80',
+      'https://img.freepik.com/free-photo/muslim-kids-reading-quran_53876-20956.jpg?w=800&q=80'
+    ]
+  },
+  { 
+    id: 3, 
+    title: 'Olahraga Gembira', 
+    desc: 'Senam ceria, permainan ketangkasan di luar ruangan untuk melatih keseimbangan dan kesehatan fisik.', 
+    icon: 'activity',
+    gallery: [
+      '/foto-kegiatan-tk/foto-olahraga-gembira.jpg', // Foto aslimu
+      'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+];
+
+// Helper untuk Icons
+const getIcon = (iconName, size = 48) => {
+  switch (iconName) {
+    case 'palette': return <Palette size={size} />;
+    case 'heart': return <Heart size={size} />;
+    case 'activity': return <Activity size={size} />;
+    case 'book': return <BookOpen size={size} />;
+    case 'users': return <Users size={size} />;
+    default: return <Star size={size} />;
+  }
+};
+
+export default function TKKegiatan() {
+  const [selectedActivity, setSelectedActivity] = useState(null);
+
+  // Mengunci scroll body saat popup terbuka
+  if (selectedActivity) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+
+  return (
+    <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen animate-[fadeIn_0.5s_ease-out]">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Seru di TK</h2>
+        <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
+        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang berbagai aktivitas yang merangsang kreativitas dan perkembangan otak anak di masa <strong>Golden Age</strong>. Klik kegiatan untuk melihat foto-fotonya!</p>
+      </div>
+      
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {DATA_KEGIATAN_TK.map((item) => (
+          <div 
+            key={item.id} 
+            onClick={() => setSelectedActivity(item)}
+            className="bg-white rounded-3xl shadow-xl p-10 transform hover:-translate-y-3 transition-all duration-300 border-b-8 border-huda-yellow hover:shadow-2xl cursor-pointer group"
+          >
+            <div className="w-24 h-24 rounded-2xl bg-yellow-100 text-huda-yellow flex items-center justify-center mb-8 mx-auto transform rotate-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300">
+              {getIcon(item.icon, 48)}
+            </div>
+            <h3 className="text-2xl font-extrabold text-center text-huda-dark mb-4 group-hover:text-huda-yellow transition-colors">{item.title}</h3>
+            <p className="text-center text-gray-600 text-lg leading-relaxed mb-4">{item.desc}</p>
+            <div className="text-center text-huda-yellow font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+              <ImageIcon size={16} /> Lihat Galeri
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* POP-UP / MODAL GALERI TK */}
+      {selectedActivity && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          <div 
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
+            onClick={() => setSelectedActivity(null)}
+          ></div>
+          
+          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl relative z-10 flex flex-col animate-[bounceIn_0.4s_ease-out] overflow-hidden">
+            
+            <button 
+              onClick={() => setSelectedActivity(null)}
+              className="absolute top-4 right-4 z-20 bg-gray-100 hover:bg-red-100 hover:text-red-600 text-gray-800 p-2 rounded-full transition-colors shadow-sm"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Header Pop-up TK */}
+            <div className="p-6 sm:p-8 border-b border-gray-100 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 bg-yellow-50/50">
+              <div className="w-20 h-20 shrink-0 rounded-2xl bg-huda-yellow text-huda-dark flex items-center justify-center shadow-lg transform -rotate-3">
+                  {getIcon(selectedActivity.icon, 40)}
+              </div>
+              <div className="text-center sm:text-left">
+                <h3 className="text-3xl font-extrabold text-huda-dark mb-2">{selectedActivity.title}</h3>
+                <p className="text-gray-600 leading-relaxed max-w-2xl">{selectedActivity.desc}</p>
+              </div>
+            </div>
+
+            {/* Area Galeri Foto */}
+            <div className="overflow-y-auto p-6 sm:p-8 custom-scrollbar bg-white flex-grow">
+               <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                  <ImageIcon className="text-huda-yellow" size={24} /> Dokumentasi {selectedActivity.title}
+               </h4>
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {selectedActivity.gallery.map((img, idx) => (
+                    <div key={idx} className="group relative rounded-2xl overflow-hidden shadow-md border-4 border-gray-50 aspect-[4/3] bg-gray-100">
+                      <img 
+                        src={img} 
+                        alt={`${selectedActivity.title} ${idx + 1}`} 
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "https://placehold.co/800x600/facc15/000000?text=Foto+Menyusul";
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                    </div>
+                  ))}
+               </div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
