@@ -45,8 +45,7 @@ eslint.config.js
 index.html
 package.json
 postcss.config.js
-public/favicon.svg
-public/icons.svg
+public/alhuda-icon.png
 public/logo/tk-islam-al-huda.jpeg
 public/logo/tpq-al-huda.jpeg
 README.md
@@ -113,22 +112,6 @@ export default defineConfig([
 ])
 </file>
 
-<file path="index.html">
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tk-tpq-al-huda</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
-</file>
-
 <file path="package.json">
 {
   "name": "tk-tpq-al-huda",
@@ -171,37 +154,6 @@ export default {
     autoprefixer: {},
   },
 }
-</file>
-
-<file path="public/favicon.svg">
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
-</file>
-
-<file path="public/icons.svg">
-<svg xmlns="http://www.w3.org/2000/svg">
-  <symbol id="bluesky-icon" viewBox="0 0 16 17">
-    <g clip-path="url(#bluesky-clip)"><path fill="#08060d" d="M7.75 7.735c-.693-1.348-2.58-3.86-4.334-5.097-1.68-1.187-2.32-.981-2.74-.79C.188 2.065.1 2.812.1 3.251s.241 3.602.398 4.13c.52 1.744 2.367 2.333 4.07 2.145-2.495.37-4.71 1.278-1.805 4.512 3.196 3.309 4.38-.71 4.987-2.746.608 2.036 1.307 5.91 4.93 2.746 2.72-2.746.747-4.143-1.747-4.512 1.702.189 3.55-.4 4.07-2.145.156-.528.397-3.691.397-4.13s-.088-1.186-.575-1.406c-.42-.19-1.06-.395-2.741.79-1.755 1.24-3.64 3.752-4.334 5.099"/></g>
-    <defs><clipPath id="bluesky-clip"><path fill="#fff" d="M.1.85h15.3v15.3H.1z"/></clipPath></defs>
-  </symbol>
-  <symbol id="discord-icon" viewBox="0 0 20 19">
-    <path fill="#08060d" d="M16.224 3.768a14.5 14.5 0 0 0-3.67-1.153c-.158.286-.343.67-.47.976a13.5 13.5 0 0 0-4.067 0c-.128-.306-.317-.69-.476-.976A14.4 14.4 0 0 0 3.868 3.77C1.546 7.28.916 10.703 1.231 14.077a14.7 14.7 0 0 0 4.5 2.306q.545-.748.965-1.587a9.5 9.5 0 0 1-1.518-.74q.191-.14.372-.293c2.927 1.369 6.107 1.369 8.999 0q.183.152.372.294-.723.437-1.52.74.418.838.963 1.588a14.6 14.6 0 0 0 4.504-2.308c.37-3.911-.63-7.302-2.644-10.309m-9.13 8.234c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.894 0 1.614.82 1.599 1.82.001 1-.705 1.82-1.6 1.82m5.91 0c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.893 0 1.614.82 1.599 1.82 0 1-.706 1.82-1.6 1.82"/>
-  </symbol>
-  <symbol id="documentation-icon" viewBox="0 0 21 20">
-    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="m15.5 13.333 1.533 1.322c.645.555.967.833.967 1.178s-.322.623-.967 1.179L15.5 18.333m-3.333-5-1.534 1.322c-.644.555-.966.833-.966 1.178s.322.623.966 1.179l1.534 1.321"/>
-    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M17.167 10.836v-4.32c0-1.41 0-2.117-.224-2.68-.359-.906-1.118-1.621-2.08-1.96-.599-.21-1.349-.21-2.848-.21-2.623 0-3.935 0-4.983.369-1.684.591-3.013 1.842-3.641 3.428C3 6.449 3 7.684 3 10.154v2.122c0 2.558 0 3.838.706 4.726q.306.383.713.671c.76.536 1.79.64 3.581.66"/>
-    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M3 10a2.78 2.78 0 0 1 2.778-2.778c.555 0 1.209.097 1.748-.047.48-.129.854-.503.982-.982.145-.54.048-1.194.048-1.749a2.78 2.78 0 0 1 2.777-2.777"/>
-  </symbol>
-  <symbol id="github-icon" viewBox="0 0 19 19">
-    <path fill="#08060d" fill-rule="evenodd" d="M9.356 1.85C5.05 1.85 1.57 5.356 1.57 9.694a7.84 7.84 0 0 0 5.324 7.44c.387.079.528-.168.528-.376 0-.182-.013-.805-.013-1.454-2.165.467-2.616-.935-2.616-.935-.349-.91-.864-1.143-.864-1.143-.71-.48.051-.48.051-.48.787.051 1.2.805 1.2.805.695 1.194 1.817.857 2.268.649.064-.507.27-.857.49-1.052-1.728-.182-3.545-.857-3.545-3.87 0-.857.31-1.558.8-2.104-.078-.195-.349-1 .077-2.078 0 0 .657-.208 2.14.805a7.5 7.5 0 0 1 1.946-.26c.657 0 1.328.092 1.946.26 1.483-1.013 2.14-.805 2.14-.805.426 1.078.155 1.883.078 2.078.502.546.799 1.247.799 2.104 0 3.013-1.818 3.675-3.558 3.87.284.247.528.714.528 1.454 0 1.052-.012 1.896-.012 2.156 0 .208.142.455.528.377a7.84 7.84 0 0 0 5.324-7.441c.013-4.338-3.48-7.844-7.773-7.844" clip-rule="evenodd"/>
-  </symbol>
-  <symbol id="social-icon" viewBox="0 0 20 20">
-    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M12.5 6.667a4.167 4.167 0 1 0-8.334 0 4.167 4.167 0 0 0 8.334 0"/>
-    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M2.5 16.667a5.833 5.833 0 0 1 8.75-5.053m3.837.474.513 1.035c.07.144.257.282.414.309l.93.155c.596.1.736.536.307.965l-.723.73a.64.64 0 0 0-.152.531l.207.903c.164.715-.213.991-.84.618l-.872-.52a.63.63 0 0 0-.577 0l-.872.52c-.624.373-1.003.094-.84-.618l.207-.903a.64.64 0 0 0-.152-.532l-.723-.729c-.426-.43-.289-.864.306-.964l.93-.156a.64.64 0 0 0 .412-.31l.513-1.034c.28-.562.735-.562 1.012 0"/>
-  </symbol>
-  <symbol id="x-icon" viewBox="0 0 19 19">
-    <path fill="#08060d" fill-rule="evenodd" d="M1.893 1.98c.052.072 1.245 1.769 2.653 3.77l2.892 4.114c.183.261.333.48.333.486s-.068.089-.152.183l-.522.593-.765.867-3.597 4.087c-.375.426-.734.834-.798.905a1 1 0 0 0-.118.148c0 .01.236.017.664.017h.663l.729-.83c.4-.457.796-.906.879-.999a692 692 0 0 0 1.794-2.038c.034-.037.301-.34.594-.675l.551-.624.345-.392a7 7 0 0 1 .34-.374c.006 0 .93 1.306 2.052 2.903l2.084 2.965.045.063h2.275c1.87 0 2.273-.003 2.266-.021-.008-.02-1.098-1.572-3.894-5.547-2.013-2.862-2.28-3.246-2.273-3.266.008-.019.282-.332 2.085-2.38l2-2.274 1.567-1.782c.022-.028-.016-.03-.65-.03h-.674l-.3.342a871 871 0 0 1-1.782 2.025c-.067.075-.405.458-.75.852a100 100 0 0 1-.803.91c-.148.172-.299.344-.99 1.127-.304.343-.32.358-.345.327-.015-.019-.904-1.282-1.976-2.808L6.365 1.85H1.8zm1.782.91 8.078 11.294c.772 1.08 1.413 1.973 1.425 1.984.016.017.241.02 1.05.017l1.03-.004-2.694-3.766L7.796 5.75 5.722 2.852l-1.039-.004-1.039-.004z" clip-rule="evenodd"/>
-  </symbol>
-</svg>
 </file>
 
 <file path="src/App.jsx">
@@ -795,7 +747,7 @@ export default function Kontak() {
                 <div>
                   <p className="text-sm text-gray-400 font-bold mb-1">Alamat Lengkap</p>
                   <p className="font-semibold leading-relaxed text-gray-100 text-base">
-                    Jl. Bambu Apus Raya No.85, RT.14/RW.10, Pd. Bambu, Kec. Duren Sawit, Jakarta Timur, 13890.
+                    Jl. Bambu Apus Raya No.85, RT.14/RW.10, Pd. Bambu, Kec. Duren Sawit, Jakarta Timur, 13430.
                   </p>
                 </div>
               </div>
@@ -804,7 +756,7 @@ export default function Kontak() {
                 <div className="bg-white/10 p-3 rounded-2xl shrink-0"><Phone className="text-huda-yellow" size={28} /></div>
                 <div>
                   <p className="text-sm text-gray-400 font-bold mb-1">Telepon / WhatsApp</p>
-                  <p className="font-semibold text-gray-100">+62 812-1111-2222</p>
+                  <p className="font-semibold text-gray-100">+62 821-2564-0715</p>
                 </div>
               </div>
               {/* Email - SUDAH KEMBALI */}
@@ -824,7 +776,7 @@ export default function Kontak() {
                 </div>
               </div>
             </div>
-            <a href="https://wa.me/6281211112222" target="_blank" rel="noreferrer" className="mt-10 w-full bg-huda-yellow text-huda-dark font-extrabold py-4 rounded-2xl flex items-center justify-center gap-2 hover:bg-yellow-500 transition-all">
+            <a href="https://wa.me/6282125640715" target="_blank" rel="noreferrer" className="mt-10 w-full bg-huda-yellow text-huda-dark font-extrabold py-4 rounded-2xl flex items-center justify-center gap-2 hover:bg-yellow-500 transition-all">
               <MessageCircle size={24} /> Chat Admin Sekarang
             </a>
           </div>
@@ -1129,118 +1081,212 @@ export default function DaftarTK() {
 <file path="src/pages/tk/TKProfil.jsx">
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Star, CheckCircle, BookOpen, Heart, Activity, ArrowRight, MessageCircle } from 'lucide-react';
+import { 
+  CheckCircle, BookOpen, Heart, Activity, ArrowRight, 
+  MessageCircle, MapPin, Phone, Hash, Award, Clock, Quote, Mail
+} from 'lucide-react';
 
-const InstagramIcon = () => (
-  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+// SVG Icon Instagram Manual untuk mengatasi error lucide-react
+const InstagramIcon = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
   </svg>
 );
 
 export default function TKProfil() {
   const navigate = useNavigate();
 
+  // Fungsi untuk membuka WhatsApp khusus Admin TK
   const handleWhatsApp = () => {
-    window.open('https://wa.me/6281234567890?text=Assalamu%27alaikum%20Admin%20TK%20Islam%20Al-Huda,%20saya%20ingin%20bertanya%20seputar%20pendaftaran%20dan%20program%20TK.', '_blank');
+    window.open('https://wa.me/6282125640715?text=Assalamu%27alaikum%20Admin%20TK%20Islam%20Al-Huda,%20saya%20ingin%20bertanya%20seputar%20pendaftaran%20dan%20program%20TK.', '_blank');
   };
+
+  // Komponen Helper untuk Kotak Info Profil (Versi lebih ringkas)
+  const InfoCard = ({ icon, label, value, className = "" }) => (
+    <div className={`flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${className}`}>
+      <div className="bg-green-100 p-3 rounded-xl text-huda-green flex-shrink-0">
+        {icon}
+      </div>
+      <div>
+        <p className="text-sm text-gray-500 font-bold mb-1">{label}</p>
+        <p className="text-gray-800 font-semibold leading-snug">{value}</p>
+      </div>
+    </div>
+  );
 
   return (
     <div className="relative min-h-screen bg-gray-50 animate-[fadeIn_0.5s_ease-out]">
+      
+      {/* Container Utama */}
       <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        
+        {/* Header Title */}
         <div className="text-center mb-20">
           <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Profil TK Islam Al-Huda</h2>
           <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-          <div className="relative group">
+        {/* Section 1: Sejarah, Pendekatan & Identitas Inti */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+          <div className="relative group sticky top-32">
             <div className="absolute inset-0 bg-huda-yellow rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
             <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="Kegiatan TK Islam Al-Huda" className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" />
           </div>
+          
           <div>
-            <h3 className="text-4xl font-extrabold text-huda-green mb-6">Masa Depan Gemilang Dimulai Dari Sini</h3>
-            <p className="text-gray-600 mb-10 text-xl leading-relaxed">
-              TK Islam Al-Huda adalah lembaga pendidikan anak usia dini yang berdedikasi untuk memberikan fondasi terbaik bagi masa depan buah hati Anda. Kami menggabungkan kurikulum modern dengan penanaman nilai-nilai akidah, akhlak, dan kemandirian sejak dini.
+            <div className="bg-huda-yellow/20 border-l-8 border-huda-yellow p-6 rounded-r-3xl mb-8">
+              <Quote className="text-huda-yellow w-10 h-10 mb-3 opacity-50" />
+              <h4 className="text-3xl font-extrabold text-huda-dark italic leading-tight">"Mandiri, Kreatif, Berakhlak Islami"</h4>
+              <p className="text-gray-600 font-bold mt-2">- Motto TK Islam Al-Huda</p>
+            </div>
+
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
+              <strong className="text-huda-green">TK Islam Al-Huda</strong> merupakan lembaga pendidikan anak usia dini yang berkomitmen untuk memberikan layanan pendidikan berkualitas dengan pendekatan IMTAQ dan Pembelajaran Mendalam. Kami berdiri pada tahun 2013 di kawasan komplek Jl. Bambu Apus Raya Pondok Bambu, Duren Sawit, Jakarta Timur.
             </p>
-            <h3 className="text-3xl font-extrabold text-huda-green mb-6">Visi & Misi</h3>
-            <ul className="space-y-6 text-gray-700 text-xl font-medium">
-              {[
-                "Membentuk generasi Islami yang cerdas, ceria, dan bertakwa kepada Allah SWT.",
-                "Mengembangkan potensi kognitif, motorik, bahasa, dan sosial emosional anak secara seimbang.",
-                "Menyelenggarakan pembelajaran aktif, kreatif, dan menyenangkan melalui metode \"Bermain Sambil Belajar\"."
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <div className="bg-yellow-100 p-2 rounded-full mt-1">
-                    <Star className="text-huda-yellow w-6 h-6 flex-shrink-0 fill-current" />
-                  </div>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
+              Sebagai Taman Kanak-kanak berstatus swasta di bawah naungan Dinas Pendidikan Provinsi DKI Jakarta, kami melayani anak-anak usia 3–6 tahun dalam program pendidikan kelompok Bermain A dan B. Sekolah ini lahir dari kebutuhan masyarakat akan pendidikan anak usia dini yang berkualitas dan agamis di tengah dinamika perkotaan yang semakin kompleks.
+            </p>
+
+            <div className="bg-green-50 border-2 border-green-100 p-6 rounded-3xl mt-8 mb-8">
+              <h3 className="text-xl font-extrabold text-huda-dark mb-3">✨ Transformasi 2025</h3>
+              <p className="text-gray-700 leading-relaxed text-justify">
+                Sekolah mengadopsi pendekatan <strong>IMTAQ</strong> dan <strong>Pembelajaran Mendalam</strong> sebagai fondasi utama dalam meningkatkan mutu pembelajaran. Perubahan ini bukan sekadar pergantian metode, melainkan transformasi paradigma yang menempatkan anak sebagai pembelajar aktif yang memiliki potensi luar biasa untuk berkembang dalam pengenalan IMTAQ, suasana yang berkesadaran, bermakna, dan menggembirakan.
+              </p>
+            </div>
+
+            {/* Kolom Info Identitas Langsung di bawah Sejarah */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <InfoCard icon={<Hash size={24} />} label="No. NPSN" value="20111944" />
+              <InfoCard icon={<Award size={24} />} label="Status Akreditasi" value="Terakreditasi – B" />
+              <InfoCard icon={<Clock size={24} />} label="Hari & Jam Belajar" value="Senin s/d Jum'at (08.00 - 11.00 WIB)" className="sm:col-span-2" />
+            </div>
           </div>
         </div>
 
+        {/* Section 2: Program Unggulan */}
         <div className="mb-24">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-extrabold text-huda-dark mb-4">Program Unggulan TK Kami</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Kami merancang program khusus untuk mengoptimalkan masa golden age anak Anda.</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Mendukung pendekatan <strong p>Pembelajaran Mendalam</strong> untuk mengoptimalkan masa <strong p>Golden Age</strong> anak Anda.</p>
           </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: <BookOpen className="text-huda-green w-8 h-8" />, bg: "bg-green-100", border: "border-huda-green", title: "Tahfidz Cilik", desc: "Menanamkan kecintaan pada Al-Qur'an sejak dini dengan hafalan surat pendek dan doa harian." },
-              { icon: <Activity className="text-huda-yellow w-8 h-8" />, bg: "bg-yellow-100", border: "border-huda-yellow", title: "Eksplorasi Kreatif", desc: "Memaksimalkan sensor motorik melalui aktivitas seni, kerajinan tangan, dan permainan fisik edukatif." },
-              { icon: <Heart className="text-huda-green w-8 h-8" />, bg: "bg-green-100", border: "border-huda-green", title: "Karakter Islami", desc: "Pembiasaan adab harian seperti kemandirian, etika makan, berbagi, hingga tata cara sholat." },
-              { icon: <CheckCircle className="text-huda-yellow w-8 h-8" />, bg: "bg-yellow-100", border: "border-huda-yellow", title: "Calistung Asyik", desc: "Pengenalan dasar membaca, menulis, dan berhitung tanpa paksaan melalui metode bermain interaktif." },
-            ].map((item, i) => (
-              <div key={i} className={`bg-white p-8 rounded-3xl shadow-xl border-t-8 ${item.border} hover:-translate-y-2 transition-transform duration-300`}>
-                <div className={`${item.bg} w-16 h-16 rounded-2xl flex items-center justify-center mb-6`}>{item.icon}</div>
-                <h4 className="text-2xl font-bold text-gray-800 mb-3">{item.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-green hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <BookOpen className="text-huda-green w-8 h-8" />
               </div>
-            ))}
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Tahfidz Cilik</h4>
+              <p className="text-gray-600 leading-relaxed">Menanamkan kecintaan pada Al-Qur'an sejak dini dengan hafalan surat pendek, doa harian, dan pengenalan hijaiyah.</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <Activity className="text-huda-yellow w-8 h-8" />
+              </div>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Eksplorasi Kreatif</h4>
+              <p className="text-gray-600 leading-relaxed">Memaksimalkan sensor motorik halus dan kasar melalui aktivitas seni, kerajinan tangan, dan permainan fisik edukatif.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-green hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <Heart className="text-huda-green w-8 h-8" />
+              </div>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Karakter Islami</h4>
+              <p className="text-gray-600 leading-relaxed">Pembiasaan adab harian seperti kemandirian, etika makan, berbagi, hingga tata cara sholat dan wudhu yang benar.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <CheckCircle className="text-huda-yellow w-8 h-8" />
+              </div>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Calistung Asyik</h4>
+              <p className="text-gray-600 leading-relaxed">Pengenalan dasar membaca, menulis, dan berhitung tanpa paksaan, melalui metode bermain interaktif yang menyenangkan.</p>
+            </div>
           </div>
         </div>
 
-        <div className="bg-huda-dark rounded-[3rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
+        {/* Section 3: Call to Action (CTA) & Informasi Kontak Gabungan */}
+        <div className="bg-huda-dark rounded-[3rem] p-10 md:p-14 text-center text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-huda-green rounded-full opacity-30 transform translate-x-16 -translate-y-16"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-huda-yellow rounded-full opacity-20 transform -translate-x-16 translate-y-16"></div>
+          
           <div className="relative z-10">
             <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Buah Hati Anda Bersama Kami!</h3>
             <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-              Berikan pendidikan usia dini terbaik yang memadukan nilai Islam dan ilmu pengetahuan. Kuota terbatas!
+              Berikan pendidikan usia dini terbaik yang memadukan nilai Islam dan ilmu pengetahuan. Kuota pendaftaran terbatas!
             </p>
-            <button onClick={() => navigate('/daftar-tk')}
-              className="bg-huda-yellow text-huda-dark font-extrabold text-2xl px-12 py-5 rounded-full shadow-xl hover:bg-yellow-500 transform hover:-translate-y-2 transition-all flex items-center gap-3 mx-auto border-b-4 border-yellow-600 mb-16">
+            
+            <button 
+              onClick={() => navigate('/daftar-tk')} 
+              className="bg-huda-yellow text-huda-dark font-extrabold text-2xl px-12 py-5 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 mx-auto border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0 mb-16"
+            >
               Klik Untuk Daftar <ArrowRight className="w-8 h-8" />
             </button>
-            <div className="pt-10 border-t border-gray-600/50 flex flex-col items-center">
-              <p className="text-lg font-semibold text-gray-300 mb-6">Ikuti Keseruan Kami di Sosial Media</p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <a href="https://instagram.com/tk_islam_alhuda" target="_blank" rel="noreferrer"
-                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-2xl transition-colors text-white">
-                  <InstagramIcon />
-                  <span className="font-bold text-lg">@tk_islam_alhuda</span>
-                </a>
-                <a href="https://tiktok.com/@tk_islam_alhuda" target="_blank" rel="noreferrer"
-                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-2xl transition-colors text-white">
-                  <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                  <span className="font-bold text-lg">@tk_islam_alhuda</span>
-                </a>
+
+            {/* Area Informasi Kontak & Lokasi Baru */}
+            <div className="pt-12 border-t border-gray-600/50 flex flex-col items-center">
+              <p className="text-xl font-bold text-huda-yellow mb-8">Informasi Kontak & Lokasi Resmi TK</p>
+              
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
+                {/* Kiri: Alamat Lengkap */}
+                <div className="bg-white/10 p-6 rounded-3xl flex items-start gap-4 hover:bg-white/20 transition-colors">
+                  <MapPin className="w-8 h-8 text-huda-yellow flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-bold text-white mb-2 text-lg">Alamat Lengkap</p>
+                    <p className="text-gray-300 leading-relaxed">Jl. Bambu Apus Raya No.85, Kel. Pondok Bambu, Kec. Duren Sawit, Jakarta Timur. 13430</p>
+                  </div>
+                </div>
+                
+                {/* Kanan: Telepon, Email, Sosmed */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <a href="tel:0218616313" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
+                    <Phone className="w-6 h-6 text-huda-yellow" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">Telepon Sekolah</p>
+                      <p className="text-gray-300 font-semibold">021 8616313</p>
+                    </div>
+                  </a>
+                  
+                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
+                    <Mail className="w-6 h-6 text-huda-yellow" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">Email Resmi</p>
+                      <p className="text-gray-300 text-sm break-all font-semibold">tkislamalhuda313<br/>@gmail.com</p>
+                    </div>
+                  </a>
+                  
+                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex items-center gap-4">
+                    <InstagramIcon className="w-7 h-7 text-huda-yellow" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">Instagram</p>
+                      <p className="text-gray-300 font-semibold">@tkialhuda.pondokbambu</p>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
-      <button onClick={handleWhatsApp}
-        className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white px-6 py-4 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.4)] flex items-center gap-3 hover:bg-[#20bd5a] hover:scale-105 transition-all duration-300">
+      {/* Floating Button WhatsApp khusus TK */}
+      <button 
+        onClick={handleWhatsApp}
+        className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white px-6 py-4 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.4)] flex items-center gap-3 hover:bg-[#20bd5a] hover:scale-105 transition-all duration-300 group"
+      >
         <MessageCircle className="w-8 h-8" />
-        <span className="font-bold text-lg tracking-wide hidden sm:block">Tanya langsung ke Whatsapp</span>
+        <span className="font-bold text-lg tracking-wide hidden sm:block">Tanya Admin TK</span>
+        
         <span className="absolute -top-1 -right-1 flex h-5 w-5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-5 w-5 bg-red-500 border-2 border-white"></span>
         </span>
       </button>
+
     </div>
   );
 }
@@ -1663,6 +1709,52 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- Favicon (Ikon Tab Browser) -->
+    <link rel="icon" type="image/png" href="/alhuda-icon.png" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Dasar -->
+    <title>TK-TPQ Islam Al-Huda | Mencetak Generasi Qur'ani</title>
+    <meta name="description" content="Lembaga pendidikan Islam usia dini (TK) dan tempat pendidikan Al-Qur'an (TPQ) yang berfokus pada karakter, adab, dan hafalan Al-Qur'an di Bambu Apus, Jakarta Timur." />
+    <meta name="keywords" content="TK Islam Al-Huda, TPQ Al-Huda, sekolah islam bambu apus, taman kanak-kanak islam, mengaji iqro, pendaftaran tk islam" />
+    <meta name="author" content="TK-TPQ Al-Huda" />
+
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <!-- Saat link dibagikan, data di bawah ini yang akan muncul sebagai preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tk-tpq-project.vercel.app/" />
+    <meta property="og:title" content="TK-TPQ Islam Al-Huda - Jakarta Timur" />
+    <meta property="og:description" content="Membangun Karakter Anak Cerdas, Ceria, dan Berakhlak Mulia. Buka Pendaftaran Santri Baru!" />
+    <meta property="og:image" content="/alhuda-icon.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tk-tpq-project.vercel.app/" />
+    <meta property="twitter:title" content="TK-TPQ Islam Al-Huda" />
+    <meta property="twitter:description" content="Membangun Karakter Anak Cerdas, Ceria, dan Berakhlak Mulia." />
+    <meta property="twitter:image" content="/alhuda-icon.png" />
+
+    <!-- Font Nunito (Opsional, sudah ada di CSS tapi bagus diletakkan di sini untuk performa) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
 </file>
 
 <file path="README.md">

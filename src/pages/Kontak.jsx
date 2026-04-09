@@ -65,7 +65,7 @@ export default function Kontak() {
                 <div>
                   <p className="text-sm text-gray-400 font-bold mb-1">Alamat Lengkap</p>
                   <p className="font-semibold leading-relaxed text-gray-100 text-base">
-                    Jl. Bambu Apus Raya No.85, RT.14/RW.10, Pd. Bambu, Kec. Duren Sawit, Jakarta Timur, 13890.
+                    Jl. Bambu Apus Raya No.85, RT.14/RW.10, Pd. Bambu, Kec. Duren Sawit, Jakarta Timur, 13430.
                   </p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function Kontak() {
                 <div className="bg-white/10 p-3 rounded-2xl shrink-0"><Phone className="text-huda-yellow" size={28} /></div>
                 <div>
                   <p className="text-sm text-gray-400 font-bold mb-1">Telepon / WhatsApp</p>
-                  <p className="font-semibold text-gray-100">+62 812-1111-2222</p>
+                  <p className="font-semibold text-gray-100">+62 821-2564-0715</p>
                 </div>
               </div>
               {/* Email - SUDAH KEMBALI */}
@@ -94,7 +94,7 @@ export default function Kontak() {
                 </div>
               </div>
             </div>
-            <a href="https://wa.me/6281211112222" target="_blank" rel="noreferrer" className="mt-10 w-full bg-huda-yellow text-huda-dark font-extrabold py-4 rounded-2xl flex items-center justify-center gap-2 hover:bg-yellow-500 transition-all">
+            <a href="https://wa.me/6282125640715" target="_blank" rel="noreferrer" className="mt-10 w-full bg-huda-yellow text-huda-dark font-extrabold py-4 rounded-2xl flex items-center justify-center gap-2 hover:bg-yellow-500 transition-all">
               <MessageCircle size={24} /> Chat Admin Sekarang
             </a>
           </div>
