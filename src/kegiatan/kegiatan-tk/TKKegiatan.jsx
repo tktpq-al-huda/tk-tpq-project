@@ -9,9 +9,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, dan membuat prakarya.', 
     icon: 'palette',
     gallery: [
-      '/foto-kegiatan-tk/Seni %26 Kreativitas.jpg', // Foto aslimu (menggunakan %26 untuk simbol &)
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80'
+      '/foto-profil-kegiatan-tk/seni-kreativitas.jpg',
+      '/foto-profil-kegiatan-tk/seni-kreativitas-1.jpg',
+      '/foto-profil-kegiatan-tk/seni-kreativitas-2.jpg'
     ]
   },
   { 
@@ -20,9 +20,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, dan hafalan doa-doa harian.', 
     icon: 'heart',
     gallery: [
-      '/foto-kegiatan-tk/Praktik Ibadah.jpg', // Foto aslimu
-      'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80',
-      'https://img.freepik.com/free-photo/muslim-kids-reading-quran_53876-20956.jpg?w=800&q=80'
+      '/foto-profil-kegiatan-tk/praktik-ibadah.jpg', // Foto aslimu
+      '/foto-profil-kegiatan-tk/praktik-ibadah-1.jpg',
+      '/foto-profil-kegiatan-tk/praktik-ibadah-2.jpg'
     ]
   },
   { 
@@ -31,9 +31,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Senam ceria, permainan ketangkasan di luar ruangan untuk melatih keseimbangan dan kesehatan fisik.', 
     icon: 'activity',
     gallery: [
-      '/foto-kegiatan-tk/foto-olahraga-gembira.jpg', // Foto aslimu
-      'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=800&q=80'
+      '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg', // Foto aslimu
+      '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg',
+      '/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.jpg'
     ]
   },
 ];

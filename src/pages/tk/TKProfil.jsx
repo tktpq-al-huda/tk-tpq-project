@@ -89,7 +89,7 @@ export default function TKProfil() {
         <div className="mb-24">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-extrabold text-huda-dark mb-4">Program Unggulan TK Kami</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Mendukung pendekatan *Pembelajaran Mendalam* untuk mengoptimalkan masa *golden age* anak Anda.</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Mendukung pendekatan <strong p> Pembelajaran Mendalam</strong> untuk mengoptimalkan masa <strong p>Golden Age anak</strong> Anda.</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

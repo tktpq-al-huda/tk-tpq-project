@@ -52,7 +52,7 @@ export default function Navbar() {
             <Link to="/kegiatan-tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">Kegiatan TPQ</Link>
             
             {/* TAMBAHAN BARU: Menu Informasi Mobile */}
-            <Link to="/informasi" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-gray-50 text-lg">Informasi & Berita</Link>
+            <Link to="/informasi" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-gray-50 text-lg">Informasi & Fasilitas</Link>
             
             <Link to="/kontak" onClick={closeMenu} className="text-center px-4 py-4 mt-4 rounded-full font-extrabold text-white bg-huda-green hover:bg-huda-dark text-lg shadow-lg">Kontak Kami</Link>
           </div>

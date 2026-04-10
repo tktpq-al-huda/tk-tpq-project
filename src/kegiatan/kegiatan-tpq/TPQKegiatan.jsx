@@ -8,9 +8,7 @@ const DATA_KEGIATAN_TPQ = [
     desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
     icon: 'book',
     gallery: [
-      'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=800&q=80',
-      'https://img.freepik.com/premium-photo/group-muslim-children-reading-holy-books-quran-together-mosque_603656-4176.jpg?w=800&q=80',
-      'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=800&q=80'
+      '/foto-profil-kegiatan-tpq/klasikal-privat.jpg',
     ]
   },
   { 
@@ -19,9 +17,7 @@ const DATA_KEGIATAN_TPQ = [
     desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
     icon: 'mic',
     gallery: [
-      'https://img.freepik.com/free-photo/muslim-family-reading-quran-together_53876-20967.jpg?w=800&q=80',
-      'https://images.unsplash.com/photo-1511632765486-a01c80cb8fa6?auto=format&fit=crop&w=800&q=80',
-      'https://img.freepik.com/free-photo/kids-learning-about-islam_23-2149025816.jpg?w=800&q=80'
+      '/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg',
     ]
   },
   { 
@@ -30,9 +26,7 @@ const DATA_KEGIATAN_TPQ = [
     desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
     icon: 'users',
     gallery: [
-      'https://img.freepik.com/free-photo/teacher-teaching-kids-about-islam_23-2149025811.jpg?w=800&q=80',
-      'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80',
-      'https://img.freepik.com/free-photo/arab-boys-studying_53876-20959.jpg?w=800&q=80'
+      '/foto-profil-kegiatan-tpq/kisah-islami-akhlak.jpg',
     ]
   },
 ];
