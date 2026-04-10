@@ -17,10 +17,10 @@ const BERITA = [
     judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
     snippet: 'TK Islam Al-Huda mengadakan berbagai lomba seru untuk memeriahkan HUT RI...',
     fullText: 'Alhamdulillah, acara peringatan Hari Kemerdekaan Republik Indonesia di TK Islam Al-Huda berjalan dengan sangat meriah. Anak-anak sangat antusias mengikuti berbagai lomba seperti lomba mewarnai, lomba membawa kelereng, dan lomba menyanyi lagu nasional. Acara ini bertujuan untuk menanamkan rasa cinta tanah air sejak dini kepada anak-anak kita.',
-    thumbnail: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80',
+    thumbnail: '/foto-berita-pengumuman-acara/hut-ri-1.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=400&q=80'
+      '/foto-berita-pengumuman-acara/hut-ri-2.jpg',
+      '/foto-berita-pengumuman-acara/hut-ri-3.jpg'
     ]
   },
   {
@@ -40,9 +40,9 @@ const BERITA = [
     judul: 'Khotmil Qur\'an & Imtihan Santri TPQ',
     snippet: 'Momen mengharukan saat para santri TPQ Al-Huda melaksanakan ujian publik dan wisuda...',
     fullText: 'Masya Allah Tabarakallah. Ratusan pasang mata wali murid berkaca-kaca saat melihat putra-putrinya melantunkan ayat suci Al-Qur\'an dengan fasih di atas panggung. Acara Khotmil Qur\'an dan Imtihan angkatan ke-12 ini merupakan bukti komitmen TPQ Al-Huda dalam memberantas buta huruf Al-Qur\'an. Selamat kepada para santri yang telah lulus!',
-    thumbnail: 'https://img.freepik.com/premium-photo/group-muslim-children-reading-holy-books-quran-together-mosque_603656-4176.jpg',
+    thumbnail: '/foto-berita-pengumuman-acara/wisuda-tpq.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=400&q=80'
+      '/foto-berita-pengumuman-acara/wisuda-tpq.jpg'
     ]
   }
 ];
