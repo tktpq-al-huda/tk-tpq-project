@@ -49,7 +49,7 @@ export default function TPQProfil() {
 
         {/* Section 1: Sejarah & Pendekatan TPQ */}
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
-          <div className="relative group sticky top-32">
+          <div className="relative group lg:sticky lg:top-32">
             <div className="absolute inset-0 bg-huda-green rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
             
             {/* Foto Ilustrasi Belajar Mengaji */}

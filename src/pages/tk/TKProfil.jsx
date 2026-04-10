@@ -49,7 +49,7 @@ export default function TKProfil() {
 
         {/* Section 1: Sejarah, Pendekatan & Identitas Inti */}
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
-          <div className="relative group sticky top-32">
+          <div className="relative group lg:sticky lg:top-32">
             <div className="absolute inset-0 bg-huda-yellow rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
             <img src="/logo/tk-islam-al-huda.jpeg" alt="Kegiatan TK Islam Al-Huda" className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" />
           </div>
@@ -89,7 +89,7 @@ export default function TKProfil() {
         <div className="mb-24">
           <div className="text-center mb-16">
             <h3 className="text-4xl font-extrabold text-huda-dark mb-4">Program Unggulan TK Kami</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Mendukung pendekatan <strong p>Pembelajaran Mendalam</strong> untuk mengoptimalkan masa <strong p>Golden Age</strong> anak Anda.</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Mendukung pendekatan *Pembelajaran Mendalam* untuk mengoptimalkan masa *golden age* anak Anda.</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
