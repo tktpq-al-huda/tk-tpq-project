@@ -6,7 +6,7 @@ const DATA_KEGIATAN_TK = [
   { 
     id: 1, 
     title: 'Seni & Kreativitas', 
-    desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, dan membuat prakarya.', 
+    desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, membuat prakarya, dan eksperimen.', 
     icon: 'palette',
     gallery: [
       '/foto-profil-kegiatan-tk/seni-kreativitas.jpg',
@@ -17,7 +17,7 @@ const DATA_KEGIATAN_TK = [
   { 
     id: 2, 
     title: 'Praktik Ibadah', 
-    desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, dan hafalan doa-doa harian.', 
+    desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, serta hafalan hadits dan doa harian.', 
     icon: 'heart',
     gallery: [
       '/foto-profil-kegiatan-tk/praktik-ibadah.jpg', 
