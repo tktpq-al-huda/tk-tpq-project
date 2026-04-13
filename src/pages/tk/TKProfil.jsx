@@ -66,7 +66,7 @@ export default function TKProfil() {
             </p>
             
             <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
-              Sebagai Taman Kanak-kanak berstatus swasta di bawah naungan Dinas Pendidikan Provinsi DKI Jakarta, dan kami <strong p>melayani anak-anak usia 3–6 tahun</strong> dalam program pendidikan <strong p>Kelompok Bermain A dan B.</strong> Sekolah ini lahir dari kebutuhan masyarakat akan pendidikan anak usia dini yang berkualitas dan agamis di tengah dinamika perkotaan yang semakin kompleks.
+              Sebagai Taman Kanak-kanak berstatus swasta di bawah naungan Dinas Pendidikan Provinsi DKI Jakarta, dan kami <strong p>melayani anak-anak usia 3–6 tahun</strong> dalam program pendidikan <strong p>Kelompok Bermain. Kelompok A dan Kelompok B.</strong> Sekolah ini lahir dari kebutuhan masyarakat akan pendidikan anak usia dini yang berkualitas dan agamis di tengah dinamika perkotaan yang semakin kompleks.
             </p>
 
             <div className="bg-green-50 border-2 border-green-100 p-6 rounded-3xl mt-8 mb-8">
