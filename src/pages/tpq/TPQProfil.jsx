@@ -65,11 +65,11 @@ export default function TPQProfil() {
           </div>
           
           <div>
-            {/* Kotak Visi / Motto */}
+            {/* Kotak Motto */}
             <div className="bg-huda-green/10 border-l-8 border-huda-green p-6 rounded-r-3xl mb-8">
               <Quote className="text-huda-green w-10 h-10 mb-3 opacity-50" />
               <h4 className="text-3xl font-extrabold text-huda-dark italic leading-tight">" Generasi Qur'ani dan Berakhlak Mulia"</h4>
-              <p className="text-gray-600 font-bold mt-2">- Visi TPQ Al-Huda</p>
+              <p className="text-gray-600 font-bold mt-2">- Moto TPQ Al-Huda</p>
             </div>
 
             <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
