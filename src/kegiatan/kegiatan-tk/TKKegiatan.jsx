@@ -28,7 +28,7 @@ const DATA_KEGIATAN_TK = [
   { 
     id: 3, 
     title: 'Olahraga Gembira', 
-    desc: 'Senam ceria, permainan ketangkasan di luar ruangan untuk melatih keseimbangan dan kesehatan fisik.', 
+    desc: 'Senam ceria, permainan ketangkasan untuk melatih keseimbangan dan kesehatan fisik.', 
     icon: 'activity',
     gallery: [
       '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg',
@@ -39,7 +39,7 @@ const DATA_KEGIATAN_TK = [
   { 
     id: 4, 
     title: 'Ekstrakurikuler', 
-    desc: 'Kegiatan tambahan di luar jam pelajaran formal yang bertujuan mengembangkan minat, bakat, dan keterampilan siswa secara lebih luas.', 
+    desc: 'Kegiatan tambahan yang bertujuan mengembangkan minat, bakat, dan keterampilan siswa secara lebih luas.', 
     icon: 'extracurricular-activities',
     gallery: [
       '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg', 
@@ -77,7 +77,7 @@ export default function TKKegiatan() {
       <div className="text-center mb-20">
         <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Seru di TK</h2>
         <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
-        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang berbagai aktivitas yang menstimulasi kreativitas dan perkembangan otak anak di masa <strong>Golden Age</strong>. Klik kegiatan untuk melihat foto-fotonya!</p>
+        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang berbagai aktivitas yang menstimulasi kreativitas dan perkembangan otak anak di masa <strong>Golden Age</strong>.</p>
       </div>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

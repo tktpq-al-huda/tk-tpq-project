@@ -65,15 +65,35 @@ export default function TPQKegiatan() {
           <div 
             key={item.id} 
             onClick={() => setSelectedActivity(item)}
-            className="bg-white rounded-3xl shadow-xl p-10 transform hover:-translate-y-3 transition-all duration-300 border-t-8 border-huda-green hover:shadow-2xl cursor-pointer group"
+            className="bg-white rounded-3xl shadow-xl p-8 transform hover:-translate-y-3 transition-all duration-300 border-t-8 border-huda-green hover:shadow-2xl cursor-pointer group flex flex-col h-full"
           >
-            <div className="w-24 h-24 bg-green-50 text-huda-green rounded-2xl flex items-center justify-center mb-8 mx-auto transform -rotate-3 group-hover:-rotate-12 group-hover:scale-110 transition-all duration-300">
-              {getIcon(item.icon, 48)}
+            {/* Icon Besar */}
+            <div className="w-20 h-20 shrink-0 bg-green-50 text-huda-green rounded-2xl flex items-center justify-center mb-6 mx-auto transform -rotate-3 group-hover:-rotate-12 group-hover:scale-110 transition-all duration-300">
+              {getIcon(item.icon, 40)}
             </div>
-            <h3 className="text-2xl font-extrabold text-center text-huda-dark mb-4 group-hover:text-huda-green transition-colors">{item.title}</h3>
-            <p className="text-center text-gray-600 text-lg leading-relaxed mb-4">{item.desc}</p>
-            <div className="text-center text-huda-green font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
-              <ImageIcon size={16} /> Lihat Galeri
+            
+            <h3 className="text-2xl font-extrabold text-center text-huda-dark mb-3 group-hover:text-huda-green transition-colors">{item.title}</h3>
+            
+            {/* flex-grow membuat deskripsi mengisi ruang kosong agar gambar selalu di bawah */}
+            <p className="text-center text-gray-600 text-base leading-relaxed mb-6 flex-grow">{item.desc}</p>
+            
+            {/* Preview Gambar Kecil di Bawah */}
+            <div className="w-full h-36 rounded-2xl overflow-hidden relative mb-5 shadow-sm border-2 border-gray-50">
+              <img 
+                src={item.gallery[0]} // Mengambil gambar pertama dari array gallery
+                alt={`Preview ${item.title}`}
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "https://placehold.co/400x300/16a34a/ffffff?text=Preview+Kegiatan";
+                }}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+            </div>
+
+            {/* Tombol Lihat Detail Teks */}
+            <div className="text-center text-huda-green font-extrabold text-sm flex items-center justify-center gap-2 group-hover:scale-105 transition-transform">
+              <ImageIcon size={18} /> Lihat Detail
             </div>
           </div>
         ))}
