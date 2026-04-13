@@ -68,7 +68,7 @@ export default function Home() {
             <div className="bg-white text-gray-800 p-5 rounded-3xl rounded-br-none shadow-2xl border-4 border-huda-green max-w-[280px]">
               <p className="text-base font-bold leading-relaxed">
                 <span className="text-huda-green text-lg">Assalamu'alaikum!</span> 👋<br/>
-                Selamat datang di website TK-TPQ Islam Al-Huda. Yuk intip kegiatan seru kami!
+                Selamat datang di website TK Islam-TPQ  Al-Huda. Yuk intip kegiatan seru kami!
               </p>
             </div>
             <div className="w-24 h-24 bg-yellow-100 rounded-full border-4 border-white shadow-2xl overflow-hidden flex-shrink-0">
