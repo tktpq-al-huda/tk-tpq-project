@@ -114,7 +114,7 @@ export default function TKProfil() {
                 <Heart className="text-huda-green w-8 h-8" />
               </div>
               <h4 className="text-2xl font-bold text-gray-800 mb-3">Karakter Islami</h4>
-              <p className="text-gray-600 leading-relaxed">Pembiasaan adab harian seperti kemandirian, etika makan, berbagi, hingga tata cara sholat dan wudhu yang benar.</p>
+              <p className="text-gray-600 leading-relaxed">Menanamkan kecintaan pada Al-Qur'an sejak dini dengan hafalan surat pendek, doa harian, dan pengenalan hijaiyah serta membiasakan adab harian seperti etika makan, berbagi, hingga tata cara shalat dan wudhu yang benar.</p>
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
@@ -129,11 +129,11 @@ export default function TKProfil() {
 
         {/* Section 3: Call to Action (CTA) & Informasi Kontak Gabungan */}
         <div className="bg-huda-dark rounded-[3rem] p-10 md:p-14 text-center text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-huda-green rounded-full opacity-30 transform translate-x-16 -translate-y-16"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-huda-yellow rounded-full opacity-30 transform translate-x-16 -translate-y-16"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-huda-yellow rounded-full opacity-20 transform -translate-x-16 translate-y-16"></div>
           
           <div className="relative z-10">
-            <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Buah Hati Anda Bersama Kami!</h3>
+            <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Anak Anda Bersama Kami!</h3>
             <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
               Berikan pendidikan usia dini terbaik yang memadukan nilai Islam dan ilmu pengetahuan. Kuota pendaftaran terbatas!
             </p>
