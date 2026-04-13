@@ -46,12 +46,23 @@ index.html
 package.json
 postcss.config.js
 public/alhuda-icon.png
+public/foto-berita-pengumuman-acara/hut-ri-1.jpg
+public/foto-berita-pengumuman-acara/hut-ri-2.jpg
+public/foto-berita-pengumuman-acara/hut-ri-3.jpg
+public/foto-berita-pengumuman-acara/wisuda-tpq.jpg
 public/foto-profil-kegiatan-tk/cover-tk-al-huda.png
+public/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.jpg
 public/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg
 public/foto-profil-kegiatan-tk/kegiatan-berenang.jpg
+public/foto-profil-kegiatan-tk/praktik-ibadah-1.jpg
+public/foto-profil-kegiatan-tk/praktik-ibadah-2.jpg
 public/foto-profil-kegiatan-tk/praktik-ibadah.jpg
 public/foto-profil-kegiatan-tk/seni-kreativitas-1.jpg
+public/foto-profil-kegiatan-tk/seni-kreativitas-2.jpg
 public/foto-profil-kegiatan-tk/seni-kreativitas.jpg
+public/foto-profil-kegiatan-tpq/kisah-islami-akhlak.jpg
+public/foto-profil-kegiatan-tpq/klasikal-privat.jpg
+public/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg
 public/foto-sarana-prasarana/gedung-sekolah-nyaman.jpg
 public/foto-sarana-prasarana/ruang-kelas-sentra.jpg
 public/foto-sarana-prasarana/taman-bermain.jpg
@@ -333,98 +344,6 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
-</file>
-
-<file path="src/pages/Home.jsx">
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ArrowRight, X } from 'lucide-react';
-import { TestimonialMarquee } from '../components/TestimonialMarquee'; // Import komponen testimoni yang udah dibuat sebelumnya
-
-export default function Home() {
-  const navigate = useNavigate();
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    // Munculkan pop-up guru setelah 1.5 detik
-    const timer = setTimeout(() => setShowPopup(true), 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div className="animate-[fadeIn_0.5s_ease-out]">
-      <div className="flex flex-col md:flex-row min-h-[calc(100vh-80px)] mt-20">
-        
-        {/* Sisi TK */}
-        <div className="w-full md:w-1/2 min-h-[50vh] flex flex-col justify-center items-center p-8 relative overflow-hidden group bg-[#fefce8] border-b-4 md:border-b-0 md:border-r-4 border-white">
-          <div className="absolute inset-0 bg-[radial-gradient(#fef08a_2px,transparent_2px)] [background-size:30px_30px] opacity-40"></div>
-          <div className="absolute inset-0 bg-yellow-400 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
-          
-          <div className="z-10 flex flex-col items-center text-center transform transition-transform duration-700 group-hover:scale-105">
-            <div className="w-48 h-48 md:w-72 md:h-72 bg-white rounded-full p-4 shadow-2xl mb-8 flex items-center justify-center border-4 border-huda-yellow overflow-hidden relative">
-              {/* Gambar akan diambil dari folder public/logo/ */}
-              <img src="/logo/tk-islam-al-huda.jpeg" alt="Logo TK" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/facc15/000000?text=TK+Al-Huda"}} />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TK Islam Al-Huda</h1>
-            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Membangun Karakter Anak Cerdas, Ceria, dan Berakhlak Mulia Sejak Dini."</p>
-            <button onClick={() => navigate('/tk')} className="bg-huda-yellow text-huda-dark font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0">
-              Profil TK <ArrowRight className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-
-        {/* Sisi TPQ */}
-        <div className="w-full md:w-1/2 min-h-[50vh] flex flex-col justify-center items-center p-8 relative overflow-hidden group bg-[#f0fdf4]">
-          <div className="absolute inset-0 bg-[radial-gradient(#bbf7d0_2px,transparent_2px)] [background-size:30px_30px] opacity-40"></div>
-          <div className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
-          
-          <div className="z-10 flex flex-col items-center text-center transform transition-transform duration-700 group-hover:scale-105">
-            <div className="w-48 h-48 md:w-72 md:h-72 bg-white rounded-full p-4 shadow-2xl mb-8 flex items-center justify-center border-4 border-huda-green overflow-hidden relative">
-              {/* Gambar akan diambil dari folder public/logo/ */}
-              <img src="/logo/tpq-al-huda.jpeg" alt="Logo TPQ" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/16a34a/ffffff?text=TPQ+Al-Huda"}} />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TPQ Al-Huda</h1>
-            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Mencetak Generasi Pecinta Al-Qur'an yang Berakhlakul Karimah."</p>
-            <button onClick={() => navigate('/tpq')} className="bg-huda-green text-white font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-huda-dark hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-green-800 active:border-b-0 active:translate-y-0">
-              Profil TPQ <ArrowRight className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-
-      </div>
-      
-      {/* Memanggil Komponen Testimoni */}
-      <TestimonialMarquee />
-
-      {/* Pop-up Sapaan Guru */}
-      {showPopup && (
-        <div className="fixed bottom-6 right-6 z-50 animate-[bounceIn_0.8s_cubic-bezier(0.175,0.885,0.32,1.275)_forwards]">
-          <div className="flex items-end gap-3 animate-[float_3s_ease-in-out_infinite] relative">
-            <button onClick={() => setShowPopup(false)} className="absolute -top-3 -right-3 bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-600 shadow-lg z-10 border-2 border-white transition-colors">
-              <X size={18} strokeWidth={3} />
-            </button>
-            <div className="bg-white text-gray-800 p-5 rounded-3xl rounded-br-none shadow-2xl border-4 border-huda-green max-w-[280px]">
-              <p className="text-base font-bold leading-relaxed">
-                <span className="text-huda-green text-lg">Assalamu'alaikum!</span> 👋<br/>
-                Selamat datang di website TK-TPQ Islam Al-Huda. Yuk intip kegiatan seru kami!
-              </p>
-            </div>
-            <div className="w-24 h-24 bg-yellow-100 rounded-full border-4 border-white shadow-2xl overflow-hidden flex-shrink-0">
-              {/* Avatar Guru (SVG) */}
-              <svg viewBox="0 0 100 100" className="w-full h-full pt-2">
-                <circle cx="50" cy="40" r="18" fill="#fcd34d" />
-                <path d="M 25 90 Q 50 45 75 90 Z" fill="#16a34a" />
-                <circle cx="43" cy="38" r="2.5" fill="#374151" />
-                <circle cx="57" cy="38" r="2.5" fill="#374151" />
-                <path d="M 44 46 Q 50 52 56 46" stroke="#374151" strokeWidth="2.5" fill="transparent" strokeLinecap="round"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
 </file>
 
 <file path="src/pages/tk/DaftarTK.jsx">
@@ -968,543 +887,6 @@ If you are developing a production application, we recommend using TypeScript wi
 "# tk-tpq-project"
 </file>
 
-<file path="src/App.jsx">
-import React, { useEffect, Component } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-
-// Import Komponen & Halaman Utama
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Kontak from './pages/Kontak';
-import Informasi from './pages/Informasi'; 
-
-// Halaman TK
-import TKProfil from './pages/tk/TKProfil';
-import TKKegiatan from './kegiatan/kegiatan-tk/TKKegiatan';
-import DaftarTK from './pages/tk/DaftarTK';
-
-// Halaman TPQ
-import TPQProfil from './pages/tpq/TPQProfil';
-import TPQKegiatan from './kegiatan/kegiatan-tpq/TPQKegiatan';
-import DaftarTPQ from './pages/tpq/DaftarTPQ';
-
-// ==========================================
-// PENDETEKSI ERROR (MENCEGAH LAYAR PUTIH)
-// ==========================================
-class ErrorBoundary extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false, errorInfo: null, error: null };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true, error: error };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error("Error detail:", error, errorInfo);
-    this.setState({ errorInfo: errorInfo });
-  }
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="p-10 m-10 bg-red-50 border-2 border-red-500 rounded-2xl text-red-800 font-sans">
-          <h2 className="text-3xl font-bold mb-4">Oops! Ada Error di React 🐛</h2>
-          <p className="font-bold mb-2">Pesan Error:</p>
-          <code className="block bg-white p-4 rounded-lg shadow mb-4 text-red-600 font-mono">
-            {this.state.error && this.state.error.toString()}
-          </code>
-          <p className="mt-6 text-gray-600 font-bold">👉 Silakan cek tab Console atau perbaiki file yang bermasalah.</p>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-
-// Fitur otomatis scroll ke atas saat ganti halaman
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
-
-export default function App() {
-  return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col">
-        <Navbar />
-        
-        <main className="flex-grow">
-          <ErrorBoundary>
-            <Routes>
-              {/* Rute Utama */}
-              <Route path="/" element={<Home />} />
-              <Route path="/kontak" element={<Kontak />} />
-              
-              {/* Rute Halaman Informasi */}
-              <Route path="/informasi" element={<Informasi />} />
-              
-              {/* Rute TK */}
-              <Route path="/tk" element={<TKProfil />} />
-              <Route path="/kegiatan-tk" element={<TKKegiatan />} />
-              <Route path="/daftar-tk" element={<DaftarTK />} />
-              
-              {/* Rute TPQ */}
-              <Route path="/tpq" element={<TPQProfil />} />
-              <Route path="/kegiatan-tpq" element={<TPQKegiatan />} />
-              <Route path="/daftar-tpq" element={<DaftarTPQ />} />
-              
-              {/* Fallback 404 (Halaman tidak ditemukan) */}
-              <Route path="*" element={
-                <div className="pt-40 pb-20 px-6 text-center min-h-[60vh] flex flex-col items-center justify-center">
-                  <h2 className="text-3xl font-bold text-gray-400 mb-4">Halaman sedang dalam tahap pembuatan... 🚀</h2>
-                  <p className="text-gray-500">Silakan kembali ke Home.</p>
-                </div>
-              } />
-            </Routes>
-          </ErrorBoundary>
-        </main>
-
-        <footer className="bg-gray-900 text-gray-400 text-center py-10 mt-auto z-10">
-          <p className="text-2xl font-extrabold text-white mb-3">TK-TPQ Islam Al-Huda</p>
-          <p className="mb-4 text-sm max-w-md mx-auto">Mencetak Generasi Pecinta Al-Qur'an yang Cerdas dan Berakhlak Mulia.</p>
-          <p className="text-gray-500">&copy; {new Date().getFullYear()} Hak Cipta Dilindungi.</p>
-        </footer>
-
-        {/* Style Global untuk Animasi */}
-        <style dangerouslySetInnerHTML={{__html: `
-          @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-          .animate-scroll { display: flex; width: max-content; animation: scroll 35s linear infinite; }
-          @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-          @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
-          @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
-          /* Custom scrollbar untuk pop-up */
-          .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-          .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-          .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-          .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-        `}} />
-      </div>
-    </BrowserRouter>
-  );
-}
-</file>
-
-<file path="src/components/Navbar.jsx">
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Home, Menu, X } from 'lucide-react';
-
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const path = location.pathname;
-
-  const closeMenu = () => setIsOpen(false);
-
-  return (
-    <nav className="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          <div className="flex items-center">
-             <Link to="/" className="flex items-center gap-3 text-huda-green hover:text-huda-dark transition-colors" onClick={closeMenu}>
-              <Home className="w-8 h-8" />
-              <span className="font-extrabold text-2xl tracking-wide">Al-Huda</span>
-            </Link>
-          </div>
-
-          {/* Menu Desktop */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <Link to="/tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>TK Islam</Link>
-            <Link to="/kegiatan-tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>Kegiatan TK</Link>
-            <Link to="/tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>TPQ Al-Huda</Link>
-            <Link to="/kegiatan-tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>Kegiatan TPQ</Link>
-            
-            {/* TAMBAHAN BARU: Menu Informasi */}
-            <Link to="/informasi" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/informasi' ? 'text-huda-green border-b-4 border-huda-dark pb-1' : 'text-gray-600'}`}>Informasi</Link>
-            
-            <Link to="/kontak" className="font-extrabold text-base xl:text-lg bg-huda-green text-white px-6 xl:px-8 py-2.5 rounded-full hover:bg-huda-dark hover:shadow-xl transform hover:-translate-y-1 transition-all">Kontak</Link>
-          </div>
-
-          {/* Tombol Hamburger Mobile */}
-          <div className="flex items-center lg:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-huda-green">
-              {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Menu Mobile */}
-      {isOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl absolute w-full max-h-[80vh] overflow-y-auto">
-          <div className="px-4 pt-2 pb-6 space-y-3 flex flex-col">
-            <Link to="/tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">TK Islam Al-Huda</Link>
-            <Link to="/kegiatan-tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">Kegiatan TK</Link>
-            <Link to="/tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">TPQ Al-Huda</Link>
-            <Link to="/kegiatan-tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">Kegiatan TPQ</Link>
-            
-            {/* TAMBAHAN BARU: Menu Informasi Mobile */}
-            <Link to="/informasi" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-gray-50 text-lg">Informasi & Berita</Link>
-            
-            <Link to="/kontak" onClick={closeMenu} className="text-center px-4 py-4 mt-4 rounded-full font-extrabold text-white bg-huda-green hover:bg-huda-dark text-lg shadow-lg">Kontak Kami</Link>
-          </div>
-        </div>
-      )}
-    </nav>
-  );
-}
-</file>
-
-<file path="src/kegiatan/kegiatan-tpq/TPQKegiatan.jsx">
-import React, { useState } from 'react';
-import { BookOpen, Mic, Users, Star, Activity, Heart, X, Image as ImageIcon } from 'lucide-react';
-
-const DATA_KEGIATAN_TPQ = [
-  { 
-    id: 1, 
-    title: 'Klasikal & Privat', 
-    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
-    icon: 'book',
-    gallery: [
-      'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=800&q=80',
-      'https://img.freepik.com/premium-photo/group-muslim-children-reading-holy-books-quran-together-mosque_603656-4176.jpg?w=800&q=80',
-      'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  { 
-    id: 2, 
-    title: 'Muroja\'ah Bersama', 
-    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
-    icon: 'mic',
-    gallery: [
-      'https://img.freepik.com/free-photo/muslim-family-reading-quran-together_53876-20967.jpg?w=800&q=80',
-      'https://images.unsplash.com/photo-1511632765486-a01c80cb8fa6?auto=format&fit=crop&w=800&q=80',
-      'https://img.freepik.com/free-photo/kids-learning-about-islam_23-2149025816.jpg?w=800&q=80'
-    ]
-  },
-  { 
-    id: 3, 
-    title: 'Kisah Islami & Akhlak', 
-    desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
-    icon: 'users',
-    gallery: [
-      'https://img.freepik.com/free-photo/teacher-teaching-kids-about-islam_23-2149025811.jpg?w=800&q=80',
-      'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80',
-      'https://img.freepik.com/free-photo/arab-boys-studying_53876-20959.jpg?w=800&q=80'
-    ]
-  },
-];
-
-// Helper untuk Icons
-const getIcon = (iconName, size = 48) => {
-  switch (iconName) {
-    case 'book': return <BookOpen size={size} />;
-    case 'mic': return <Mic size={size} />;
-    case 'users': return <Users size={size} />;
-    case 'activity': return <Activity size={size} />;
-    case 'heart': return <Heart size={size} />;
-    default: return <Star size={size} />;
-  }
-};
-
-export default function TPQKegiatan() {
-  const [selectedActivity, setSelectedActivity] = useState(null);
-
-  if (selectedActivity) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'unset';
-  }
-
-  return (
-    <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen animate-[fadeIn_0.5s_ease-out]">
-      <div className="text-center mb-20">
-        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Harian TPQ</h2>
-        <div className="w-32 h-2 bg-huda-green mx-auto rounded-full"></div>
-        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang metode pembelajaran yang interaktif dan berjenjang. Klik kegiatan di bawah untuk melihat dokumentasi foto kami!</p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {DATA_KEGIATAN_TPQ.map((item) => (
-          <div 
-            key={item.id} 
-            onClick={() => setSelectedActivity(item)}
-            className="bg-white rounded-3xl shadow-xl p-10 transform hover:-translate-y-3 transition-all duration-300 border-t-8 border-huda-green hover:shadow-2xl cursor-pointer group"
-          >
-            <div className="w-24 h-24 bg-green-50 text-huda-green rounded-2xl flex items-center justify-center mb-8 mx-auto transform -rotate-3 group-hover:-rotate-12 group-hover:scale-110 transition-all duration-300">
-              {getIcon(item.icon, 48)}
-            </div>
-            <h3 className="text-2xl font-extrabold text-center text-huda-dark mb-4 group-hover:text-huda-green transition-colors">{item.title}</h3>
-            <p className="text-center text-gray-600 text-lg leading-relaxed mb-4">{item.desc}</p>
-            <div className="text-center text-huda-green font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
-              <ImageIcon size={16} /> Lihat Galeri
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* POP-UP / MODAL GALERI TPQ */}
-      {selectedActivity && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-          <div 
-            className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
-            onClick={() => setSelectedActivity(null)}
-          ></div>
-          
-          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl relative z-10 flex flex-col animate-[bounceIn_0.4s_ease-out] overflow-hidden">
-            
-            <button 
-              onClick={() => setSelectedActivity(null)}
-              className="absolute top-4 right-4 z-20 bg-gray-100 hover:bg-red-100 hover:text-red-600 text-gray-800 p-2 rounded-full transition-colors shadow-sm"
-            >
-              <X size={24} />
-            </button>
-
-            {/* Header Pop-up TPQ */}
-            <div className="p-6 sm:p-8 border-b border-gray-100 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 bg-green-50/50">
-              <div className="w-20 h-20 shrink-0 rounded-2xl bg-huda-green text-white flex items-center justify-center shadow-lg transform rotate-3">
-                  {getIcon(selectedActivity.icon, 40)}
-              </div>
-              <div className="text-center sm:text-left">
-                <h3 className="text-3xl font-extrabold text-huda-dark mb-2">{selectedActivity.title}</h3>
-                <p className="text-gray-600 leading-relaxed max-w-2xl">{selectedActivity.desc}</p>
-              </div>
-            </div>
-
-            {/* Area Galeri Foto */}
-            <div className="overflow-y-auto p-6 sm:p-8 custom-scrollbar bg-white flex-grow">
-               <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                  <ImageIcon className="text-huda-green" size={24} /> Dokumentasi {selectedActivity.title}
-               </h4>
-               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {selectedActivity.gallery.map((img, idx) => (
-                    <div key={idx} className="group relative rounded-2xl overflow-hidden shadow-md border-4 border-gray-50 aspect-[4/3] bg-gray-100">
-                      <img 
-                        src={img} 
-                        alt={`${selectedActivity.title} ${idx + 1}`} 
-                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = "https://placehold.co/800x600/16a34a/ffffff?text=Foto+Menyusul";
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
-                    </div>
-                  ))}
-               </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-    </div>
-  );
-}
-</file>
-
-<file path="src/pages/Informasi.jsx">
-import React, { useState } from 'react';
-import { Calendar, Megaphone, Building, X, ArrowRight, Clock, MapPin, Image as ImageIcon } from 'lucide-react';
-
-// --- DATA DUMMY FASILITAS ---
-const FASILITAS = [
-  { id: 1, title: 'Gedung Sekolah Nyaman', desc: 'Bangunan permanen, sirkulasi udara baik, dan lingkungan yang aman untuk anak-anak.', image: '/foto-sarana-prasarana/gedung-sekolah-nyaman.jpg' },
-  { id: 2, title: 'Taman Bermain (Playground)', desc: 'Area bermain outdoor dan indoor yang dilengkapi alat permainan edukatif dan aman.', image: '/foto-sarana-prasarana/taman-bermain.jpg' },
-  { id: 3, title: 'Ruang Kelas & Sentra', desc: 'Kelas dengan perlengkapan multimedia dan alat peraga edukatif lengkap.', image: '/foto-sarana-prasarana/ruang-kelas-sentra.jpg' },
-];
-
-// --- DATA DUMMY BERITA & ACARA ---
-const BERITA = [
-  {
-    id: 1,
-    kategori: 'Berita',
-    tanggal: '17 Agustus 2025',
-    judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
-    snippet: 'TK Islam Al-Huda mengadakan berbagai lomba seru untuk memeriahkan HUT RI...',
-    fullText: 'Alhamdulillah, acara peringatan Hari Kemerdekaan Republik Indonesia di TK Islam Al-Huda berjalan dengan sangat meriah. Anak-anak sangat antusias mengikuti berbagai lomba seperti lomba mewarnai, lomba membawa kelereng, dan lomba menyanyi lagu nasional. Acara ini bertujuan untuk menanamkan rasa cinta tanah air sejak dini kepada anak-anak kita.',
-    thumbnail: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=400&q=80'
-    ]
-  },
-  {
-    id: 2,
-    kategori: 'Pengumuman',
-    tanggal: '01 September 2026',
-    judul: 'Pembagian Raport Bayangan Semester Ganjil',
-    snippet: 'Diberitahukan kepada seluruh wali murid bahwa pembagian raport bayangan akan dilaksanakan pada...',
-    fullText: 'Assalamu\'alaikum Wr. Wb. Diberitahukan kepada seluruh wali murid TK dan TPQ Al-Huda, bahwa evaluasi tengah semester telah selesai. Pembagian raport bayangan akan dilaksanakan pada hari Sabtu, 12 September 2026 pukul 08.00 WIB s/d selesai. Kehadiran wali murid sangat kami harapkan untuk berkonsultasi langsung dengan wali kelas mengenai perkembangan ananda. Terima kasih.',
-    thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
-    gallery: []
-  },
-  {
-    id: 3,
-    kategori: 'Acara',
-    tanggal: '20 Oktober 2026',
-    judul: 'Khotmil Qur\'an & Imtihan Santri TPQ',
-    snippet: 'Momen mengharukan saat para santri TPQ Al-Huda melaksanakan ujian publik dan wisuda...',
-    fullText: 'Masya Allah Tabarakallah. Ratusan pasang mata wali murid berkaca-kaca saat melihat putra-putrinya melantunkan ayat suci Al-Qur\'an dengan fasih di atas panggung. Acara Khotmil Qur\'an dan Imtihan angkatan ke-12 ini merupakan bukti komitmen TPQ Al-Huda dalam memberantas buta huruf Al-Qur\'an. Selamat kepada para santri yang telah lulus!',
-    thumbnail: 'https://img.freepik.com/premium-photo/group-muslim-children-reading-holy-books-quran-together-mosque_603656-4176.jpg',
-    gallery: [
-      'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=400&q=80'
-    ]
-  }
-];
-
-export default function Informasi() {
-  const [selectedArticle, setSelectedArticle] = useState(null);
-
-  // Kunci scroll body saat popup terbuka
-  if (selectedArticle) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'unset';
-  }
-
-  return (
-    <div className="pt-32 pb-20 bg-gray-50 min-h-screen animate-[fadeIn_0.5s_ease-out]">
-      
-      {/* HEADER PAGE */}
-      <div className="text-center mb-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Informasi & Fasilitas</h2>
-        <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
-        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
-          Temukan berita terbaru, pengumuman sekolah, serta intip sarana prasarana yang ada di TK-TPQ Al-Huda.
-        </p>
-      </div>
-
-      {/* SECTION 1: SARANA PRASARANA */}
-      <div className="max-w-7xl mx-auto px-6 mb-24">
-        <div className="flex items-center gap-3 mb-8">
-          <Building className="w-8 h-8 text-huda-green" />
-          <h3 className="text-3xl font-extrabold text-gray-800">Sarana & Prasarana</h3>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {FASILITAS.map((fas) => (
-            <div key={fas.id} className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-              <div className="h-56 overflow-hidden">
-                <img src={fas.image} alt={fas.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-gray-800 mb-2">{fas.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{fas.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* SECTION 2: BERITA, ACARA & PENGUMUMAN */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center gap-3 mb-8">
-          <Megaphone className="w-8 h-8 text-huda-yellow" />
-          <h3 className="text-3xl font-extrabold text-gray-800">Berita & Pengumuman Terbaru</h3>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {BERITA.map((item) => (
-            <div 
-              key={item.id} 
-              onClick={() => setSelectedArticle(item)}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 cursor-pointer group hover:-translate-y-2 transition-all duration-300 flex flex-col"
-            >
-              <div className="h-48 overflow-hidden relative">
-                <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-huda-dark flex items-center gap-1 shadow-sm">
-                  {item.kategori === 'Berita' ? <Megaphone size={12}/> : item.kategori === 'Acara' ? <Calendar size={12}/> : <Clock size={12}/>}
-                  {item.kategori}
-                </div>
-                <img src={item.thumbnail} alt={item.judul} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              
-              <div className="p-6 flex flex-col flex-grow">
-                <p className="text-sm text-gray-400 font-semibold mb-2">{item.tanggal}</p>
-                <h4 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-huda-green transition-colors">{item.judul}</h4>
-                <p className="text-gray-600 leading-relaxed mb-6 line-clamp-2 flex-grow">{item.snippet}</p>
-                
-                <div className="flex items-center gap-2 text-huda-green font-bold text-sm mt-auto">
-                  Baca Selengkapnya <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* MODAL / POP-UP ARTIKEL */}
-      {selectedArticle && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-          {/* Background Overlay Gelap */}
-          <div 
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
-            onClick={() => setSelectedArticle(null)}
-          ></div>
-          
-          {/* Konten Pop-up */}
-          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl relative z-10 flex flex-col animate-[bounceIn_0.4s_ease-out] overflow-hidden">
-            
-            {/* Tombol Tutup */}
-            <button 
-              onClick={() => setSelectedArticle(null)}
-              className="absolute top-4 right-4 z-20 bg-white/50 hover:bg-white text-gray-800 p-2 rounded-full backdrop-blur transition-colors shadow-sm"
-            >
-              <X size={24} />
-            </button>
-
-            {/* Area Konten Scrollable */}
-            <div className="overflow-y-auto w-full h-full pb-8 custom-scrollbar">
-              {/* Cover Image */}
-              <div className="h-64 sm:h-80 w-full relative">
-                <img src={selectedArticle.thumbnail} alt={selectedArticle.judul} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-6 sm:p-8">
-                  <span className="bg-huda-yellow text-huda-dark text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">
-                    {selectedArticle.kategori}
-                  </span>
-                  <h2 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">{selectedArticle.judul}</h2>
-                  <p className="text-gray-300 mt-2 flex items-center gap-2 text-sm sm:text-base">
-                    <Calendar size={16} /> {selectedArticle.tanggal}
-                  </p>
-                </div>
-              </div>
-
-              {/* Isi Teks */}
-              <div className="p-6 sm:p-8">
-                <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line mb-8">
-                  {selectedArticle.fullText}
-                </p>
-
-                {/* Galeri Foto (Muncul jika ada foto tambahan) */}
-                {selectedArticle.gallery && selectedArticle.gallery.length > 0 && (
-                  <div className="border-t border-gray-100 pt-8 mt-4">
-                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                      <ImageIcon size={20} className="text-huda-green" /> Dokumentasi Kegiatan
-                    </h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      {selectedArticle.gallery.map((img, idx) => (
-                        <div key={idx} className="rounded-xl overflow-hidden h-32 sm:h-40 shadow-sm border border-gray-100">
-                          <img src={img} alt={`Galeri ${idx}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      )}
-
-    </div>
-  );
-}
-</file>
-
 <file path="src/pages/Kontak.jsx">
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Star, Send, CheckCircle, MessageCircle, Camera } from 'lucide-react';
@@ -1686,6 +1068,505 @@ export default function Kontak() {
 }
 </file>
 
+<file path="src/components/Navbar.jsx">
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Home, Menu, X } from 'lucide-react';
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const path = location.pathname;
+
+  const closeMenu = () => setIsOpen(false);
+
+  return (
+    <nav className="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-20">
+          <div className="flex items-center">
+             <Link to="/" className="flex items-center gap-3 text-huda-green hover:text-huda-dark transition-colors" onClick={closeMenu}>
+              <Home className="w-8 h-8" />
+              <span className="font-extrabold text-2xl tracking-wide">Al-Huda</span>
+            </Link>
+          </div>
+
+          {/* Menu Desktop */}
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <Link to="/tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>TK Islam</Link>
+            <Link to="/kegiatan-tk" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tk' ? 'text-huda-green border-b-4 border-huda-yellow pb-1' : 'text-gray-600'}`}>Kegiatan TK</Link>
+            <Link to="/tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>TPQ Al-Huda</Link>
+            <Link to="/kegiatan-tpq" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/kegiatan-tpq' ? 'text-huda-green border-b-4 border-huda-green pb-1' : 'text-gray-600'}`}>Kegiatan TPQ</Link>
+            
+            {/* TAMBAHAN BARU: Menu Informasi */}
+            <Link to="/informasi" className={`font-bold text-base xl:text-lg hover:text-huda-green transition-all ${path === '/informasi' ? 'text-huda-green border-b-4 border-huda-dark pb-1' : 'text-gray-600'}`}>Informasi</Link>
+            
+            <Link to="/kontak" className="font-extrabold text-base xl:text-lg bg-huda-green text-white px-6 xl:px-8 py-2.5 rounded-full hover:bg-huda-dark hover:shadow-xl transform hover:-translate-y-1 transition-all">Kontak</Link>
+          </div>
+
+          {/* Tombol Hamburger Mobile */}
+          <div className="flex items-center lg:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-huda-green">
+              {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Menu Mobile */}
+      {isOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl absolute w-full max-h-[80vh] overflow-y-auto">
+          <div className="px-4 pt-2 pb-6 space-y-3 flex flex-col">
+            <Link to="/tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">TK Islam Al-Huda</Link>
+            <Link to="/kegiatan-tk" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-yellow-50 text-lg">Kegiatan TK</Link>
+            <Link to="/tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">TPQ Al-Huda</Link>
+            <Link to="/kegiatan-tpq" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-green-50 text-lg">Kegiatan TPQ</Link>
+            
+            {/* TAMBAHAN BARU: Menu Informasi Mobile */}
+            <Link to="/informasi" onClick={closeMenu} className="text-left px-4 py-3 rounded-lg font-bold text-gray-700 hover:text-huda-green hover:bg-gray-50 text-lg">Informasi & Fasilitas</Link>
+            
+            <Link to="/kontak" onClick={closeMenu} className="text-center px-4 py-4 mt-4 rounded-full font-extrabold text-white bg-huda-green hover:bg-huda-dark text-lg shadow-lg">Kontak Kami</Link>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
+</file>
+
+<file path="src/kegiatan/kegiatan-tpq/TPQKegiatan.jsx">
+import React, { useState } from 'react';
+import { BookOpen, Mic, Users, Star, Activity, Heart, X, Image as ImageIcon } from 'lucide-react';
+
+const DATA_KEGIATAN_TPQ = [
+  { 
+    id: 1, 
+    title: 'Klasikal & Privat', 
+    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
+    icon: 'book',
+    gallery: [
+      '/foto-profil-kegiatan-tpq/klasikal-privat.jpg',
+    ]
+  },
+  { 
+    id: 2, 
+    title: 'Muroja\'ah Bersama', 
+    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
+    icon: 'mic',
+    gallery: [
+      '/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg',
+    ]
+  },
+  { 
+    id: 3, 
+    title: 'Kisah Islami & Akhlak', 
+    desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
+    icon: 'users',
+    gallery: [
+      '/foto-profil-kegiatan-tpq/kisah-islami-akhlak.jpg',
+    ]
+  },
+];
+
+// Helper untuk Icons
+const getIcon = (iconName, size = 48) => {
+  switch (iconName) {
+    case 'book': return <BookOpen size={size} />;
+    case 'mic': return <Mic size={size} />;
+    case 'users': return <Users size={size} />;
+    case 'activity': return <Activity size={size} />;
+    case 'heart': return <Heart size={size} />;
+    default: return <Star size={size} />;
+  }
+};
+
+export default function TPQKegiatan() {
+  const [selectedActivity, setSelectedActivity] = useState(null);
+
+  if (selectedActivity) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+
+  return (
+    <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen animate-[fadeIn_0.5s_ease-out]">
+      <div className="text-center mb-20">
+        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Harian TPQ</h2>
+        <div className="w-32 h-2 bg-huda-green mx-auto rounded-full"></div>
+        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang metode pembelajaran yang interaktif dan berjenjang. Klik kegiatan di bawah untuk melihat dokumentasi foto kami!</p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {DATA_KEGIATAN_TPQ.map((item) => (
+          <div 
+            key={item.id} 
+            onClick={() => setSelectedActivity(item)}
+            className="bg-white rounded-3xl shadow-xl p-10 transform hover:-translate-y-3 transition-all duration-300 border-t-8 border-huda-green hover:shadow-2xl cursor-pointer group"
+          >
+            <div className="w-24 h-24 bg-green-50 text-huda-green rounded-2xl flex items-center justify-center mb-8 mx-auto transform -rotate-3 group-hover:-rotate-12 group-hover:scale-110 transition-all duration-300">
+              {getIcon(item.icon, 48)}
+            </div>
+            <h3 className="text-2xl font-extrabold text-center text-huda-dark mb-4 group-hover:text-huda-green transition-colors">{item.title}</h3>
+            <p className="text-center text-gray-600 text-lg leading-relaxed mb-4">{item.desc}</p>
+            <div className="text-center text-huda-green font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+              <ImageIcon size={16} /> Lihat Galeri
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* POP-UP / MODAL GALERI TPQ */}
+      {selectedActivity && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          <div 
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
+            onClick={() => setSelectedActivity(null)}
+          ></div>
+          
+          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl relative z-10 flex flex-col animate-[bounceIn_0.4s_ease-out] overflow-hidden">
+            
+            <button 
+              onClick={() => setSelectedActivity(null)}
+              className="absolute top-4 right-4 z-20 bg-gray-100 hover:bg-red-100 hover:text-red-600 text-gray-800 p-2 rounded-full transition-colors shadow-sm"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Header Pop-up TPQ */}
+            <div className="p-6 sm:p-8 border-b border-gray-100 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 bg-green-50/50">
+              <div className="w-20 h-20 shrink-0 rounded-2xl bg-huda-green text-white flex items-center justify-center shadow-lg transform rotate-3">
+                  {getIcon(selectedActivity.icon, 40)}
+              </div>
+              <div className="text-center sm:text-left">
+                <h3 className="text-3xl font-extrabold text-huda-dark mb-2">{selectedActivity.title}</h3>
+                <p className="text-gray-600 leading-relaxed max-w-2xl">{selectedActivity.desc}</p>
+              </div>
+            </div>
+
+            {/* Area Galeri Foto */}
+            <div className="overflow-y-auto p-6 sm:p-8 custom-scrollbar bg-white flex-grow">
+               <h4 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                  <ImageIcon className="text-huda-green" size={24} /> Dokumentasi {selectedActivity.title}
+               </h4>
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {selectedActivity.gallery.map((img, idx) => (
+                    <div key={idx} className="group relative rounded-2xl overflow-hidden shadow-md border-4 border-gray-50 aspect-[4/3] bg-gray-100">
+                      <img 
+                        src={img} 
+                        alt={`${selectedActivity.title} ${idx + 1}`} 
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "https://placehold.co/800x600/16a34a/ffffff?text=Foto+Menyusul";
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                    </div>
+                  ))}
+               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/Home.jsx">
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ArrowRight, X } from 'lucide-react';
+import { TestimonialMarquee } from '../components/TestimonialMarquee'; // Import komponen testimoni yang udah dibuat sebelumnya
+
+export default function Home() {
+  const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Munculkan pop-up guru setelah 1.5 detik
+    const timer = setTimeout(() => setShowPopup(true), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="animate-[fadeIn_0.5s_ease-out]">
+      <div className="flex flex-col md:flex-row min-h-[calc(100vh-80px)] mt-20">
+        
+        {/* Sisi TK */}
+        <div className="w-full md:w-1/2 min-h-[50vh] flex flex-col justify-center items-center p-8 relative overflow-hidden group bg-[#fefce8] border-b-4 md:border-b-0 md:border-r-4 border-white">
+          <div className="absolute inset-0 bg-[radial-gradient(#fef08a_2px,transparent_2px)] [background-size:30px_30px] opacity-40"></div>
+          <div className="absolute inset-0 bg-yellow-400 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+          
+          <div className="z-10 flex flex-col items-center text-center transform transition-transform duration-700 group-hover:scale-105">
+            <div className="w-48 h-48 md:w-72 md:h-72 bg-white rounded-full p-4 shadow-2xl mb-8 flex items-center justify-center border-4 border-huda-yellow overflow-hidden relative">
+              {/* Gambar akan diambil dari folder public/logo/ */}
+              <img src="/logo/tk-islam-al-huda.jpeg" alt="Logo TK" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/facc15/000000?text=TK+Al-Huda"}} />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TK Islam Al-Huda</h1>
+            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Menjadi Wadah Penyelenggara Pendidikan TK Unggulan Guna Membina anak-anak Muslim yang Mandiri, Kreatif, dan Berakhlak Islami."</p>
+            <button onClick={() => navigate('/tk')} className="bg-huda-yellow text-huda-dark font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0">
+              Profil TK <ArrowRight className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+
+        {/* Sisi TPQ */}
+        <div className="w-full md:w-1/2 min-h-[50vh] flex flex-col justify-center items-center p-8 relative overflow-hidden group bg-[#f0fdf4]">
+          <div className="absolute inset-0 bg-[radial-gradient(#bbf7d0_2px,transparent_2px)] [background-size:30px_30px] opacity-40"></div>
+          <div className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+          
+          <div className="z-10 flex flex-col items-center text-center transform transition-transform duration-700 group-hover:scale-105">
+            <div className="w-48 h-48 md:w-72 md:h-72 bg-white rounded-full p-4 shadow-2xl mb-8 flex items-center justify-center border-4 border-huda-green overflow-hidden relative">
+              {/* Gambar akan diambil dari folder public/logo/ */}
+              <img src="/logo/tpq-al-huda.jpeg" alt="Logo TPQ" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/16a34a/ffffff?text=TPQ+Al-Huda"}} />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TPQ Al-Huda</h1>
+            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Mencetak Generasi Pecinta Al-Qur'an yang Berakhlakul Karimah."</p>
+            <button onClick={() => navigate('/tpq')} className="bg-huda-green text-white font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-huda-dark hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-green-800 active:border-b-0 active:translate-y-0">
+              Profil TPQ <ArrowRight className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+
+      </div>
+      
+      {/* Memanggil Komponen Testimoni */}
+      <TestimonialMarquee />
+
+      {/* Pop-up Sapaan Guru */}
+      {showPopup && (
+        <div className="fixed bottom-6 right-6 z-50 animate-[bounceIn_0.8s_cubic-bezier(0.175,0.885,0.32,1.275)_forwards]">
+          <div className="flex items-end gap-3 animate-[float_3s_ease-in-out_infinite] relative">
+            <button onClick={() => setShowPopup(false)} className="absolute -top-3 -right-3 bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-600 shadow-lg z-10 border-2 border-white transition-colors">
+              <X size={18} strokeWidth={3} />
+            </button>
+            <div className="bg-white text-gray-800 p-5 rounded-3xl rounded-br-none shadow-2xl border-4 border-huda-green max-w-[280px]">
+              <p className="text-base font-bold leading-relaxed">
+                <span className="text-huda-green text-lg">Assalamu'alaikum!</span> 👋<br/>
+                Selamat datang di website TK Islam-TPQ  Al-Huda. Yuk intip kegiatan seru kami!
+              </p>
+            </div>
+            <div className="w-24 h-24 bg-yellow-100 rounded-full border-4 border-white shadow-2xl overflow-hidden flex-shrink-0">
+              {/* Avatar Guru (SVG) */}
+              <svg viewBox="0 0 100 100" className="w-full h-full pt-2">
+                <circle cx="50" cy="40" r="18" fill="#fcd34d" />
+                <path d="M 25 90 Q 50 45 75 90 Z" fill="#16a34a" />
+                <circle cx="43" cy="38" r="2.5" fill="#374151" />
+                <circle cx="57" cy="38" r="2.5" fill="#374151" />
+                <path d="M 44 46 Q 50 52 56 46" stroke="#374151" strokeWidth="2.5" fill="transparent" strokeLinecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/Informasi.jsx">
+import React, { useState } from 'react';
+import { Calendar, Megaphone, Building, X, ArrowRight, Clock, MapPin, Image as ImageIcon } from 'lucide-react';
+
+// --- DATA DUMMY FASILITAS ---
+const FASILITAS = [
+  { id: 1, title: 'Gedung Sekolah Nyaman', desc: 'Bangunan permanen, sirkulasi udara baik, dan lingkungan yang aman untuk anak-anak.', image: '/foto-sarana-prasarana/gedung-sekolah-nyaman.jpg' },
+  { id: 2, title: 'Taman Bermain (Playground)', desc: 'Area bermain outdoor dan indoor yang dilengkapi alat permainan edukatif dan aman.', image: '/foto-sarana-prasarana/taman-bermain.jpg' },
+  { id: 3, title: 'Ruang Kelas & Sentra', desc: 'Kelas dengan perlengkapan multimedia dan alat peraga edukatif lengkap.', image: '/foto-sarana-prasarana/ruang-kelas-sentra.jpg' },
+];
+
+// --- DATA DUMMY BERITA & ACARA ---
+const BERITA = [
+  {
+    id: 1,
+    kategori: 'Berita',
+    tanggal: '17 Agustus 2025',
+    judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
+    snippet: 'TK Islam Al-Huda mengadakan berbagai lomba seru untuk memeriahkan HUT RI...',
+    fullText: 'Alhamdulillah, acara peringatan Hari Kemerdekaan Republik Indonesia di TK Islam Al-Huda berjalan dengan sangat meriah. Anak-anak sangat antusias mengikuti berbagai lomba seperti lomba mewarnai, lomba membawa kelereng, dan lomba menyanyi lagu nasional. Acara ini bertujuan untuk menanamkan rasa cinta tanah air sejak dini kepada anak-anak kita.',
+    thumbnail: '/foto-berita-pengumuman-acara/hut-ri-1.jpg',
+    gallery: [
+      '/foto-berita-pengumuman-acara/hut-ri-2.jpg',
+      '/foto-berita-pengumuman-acara/hut-ri-3.jpg'
+    ]
+  },
+  {
+    id: 2,
+    kategori: 'Pengumuman',
+    tanggal: '01 September 2026',
+    judul: 'Pembagian Raport Bayangan Semester Ganjil',
+    snippet: 'Diberitahukan kepada seluruh wali murid bahwa pembagian raport bayangan akan dilaksanakan pada...',
+    fullText: 'Assalamu\'alaikum Wr. Wb. Diberitahukan kepada seluruh wali murid TK dan TPQ Al-Huda, bahwa evaluasi tengah semester telah selesai. Pembagian raport bayangan akan dilaksanakan pada hari Sabtu, 12 September 2026 pukul 08.00 WIB s/d selesai. Kehadiran wali murid sangat kami harapkan untuk berkonsultasi langsung dengan wali kelas mengenai perkembangan ananda. Terima kasih.',
+    thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
+    gallery: []
+  },
+  {
+    id: 3,
+    kategori: 'Acara',
+    tanggal: '20 Oktober 2026',
+    judul: 'Khotmil Qur\'an & Imtihan Santri TPQ',
+    snippet: 'Momen mengharukan saat para santri TPQ Al-Huda melaksanakan ujian publik dan wisuda...',
+    fullText: 'Masya Allah Tabarakallah. Ratusan pasang mata wali murid berkaca-kaca saat melihat putra-putrinya melantunkan ayat suci Al-Qur\'an dengan fasih di atas panggung. Acara Khotmil Qur\'an dan Imtihan angkatan ke-12 ini merupakan bukti komitmen TPQ Al-Huda dalam memberantas buta huruf Al-Qur\'an. Selamat kepada para santri yang telah lulus!',
+    thumbnail: '/foto-berita-pengumuman-acara/wisuda-tpq.jpg',
+    gallery: [
+      '/foto-berita-pengumuman-acara/wisuda-tpq.jpg'
+    ]
+  }
+];
+
+export default function Informasi() {
+  const [selectedArticle, setSelectedArticle] = useState(null);
+
+  // Kunci scroll body saat popup terbuka
+  if (selectedArticle) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+
+  return (
+    <div className="pt-32 pb-20 bg-gray-50 min-h-screen animate-[fadeIn_0.5s_ease-out]">
+      
+      {/* HEADER PAGE */}
+      <div className="text-center mb-16 px-6 max-w-7xl mx-auto">
+        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Informasi & Fasilitas</h2>
+        <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
+        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
+          Temukan berita terbaru, pengumuman sekolah, serta intip sarana prasarana yang ada di TK-TPQ Al-Huda.
+        </p>
+      </div>
+
+      {/* SECTION 1: SARANA PRASARANA */}
+      <div className="max-w-7xl mx-auto px-6 mb-24">
+        <div className="flex items-center gap-3 mb-8">
+          <Building className="w-8 h-8 text-huda-green" />
+          <h3 className="text-3xl font-extrabold text-gray-800">Sarana & Prasarana</h3>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {FASILITAS.map((fas) => (
+            <div key={fas.id} className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+              <div className="h-56 overflow-hidden">
+                <img src={fas.image} alt={fas.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-bold text-gray-800 mb-2">{fas.title}</h4>
+                <p className="text-gray-600 leading-relaxed">{fas.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* SECTION 2: BERITA, ACARA & PENGUMUMAN */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center gap-3 mb-8">
+          <Megaphone className="w-8 h-8 text-huda-yellow" />
+          <h3 className="text-3xl font-extrabold text-gray-800">Berita & Pengumuman Terbaru</h3>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {BERITA.map((item) => (
+            <div 
+              key={item.id} 
+              onClick={() => setSelectedArticle(item)}
+              className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 cursor-pointer group hover:-translate-y-2 transition-all duration-300 flex flex-col"
+            >
+              <div className="h-48 overflow-hidden relative">
+                <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-huda-dark flex items-center gap-1 shadow-sm">
+                  {item.kategori === 'Berita' ? <Megaphone size={12}/> : item.kategori === 'Acara' ? <Calendar size={12}/> : <Clock size={12}/>}
+                  {item.kategori}
+                </div>
+                <img src={item.thumbnail} alt={item.judul} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              
+              <div className="p-6 flex flex-col flex-grow">
+                <p className="text-sm text-gray-400 font-semibold mb-2">{item.tanggal}</p>
+                <h4 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-huda-green transition-colors">{item.judul}</h4>
+                <p className="text-gray-600 leading-relaxed mb-6 line-clamp-2 flex-grow">{item.snippet}</p>
+                
+                <div className="flex items-center gap-2 text-huda-green font-bold text-sm mt-auto">
+                  Baca Selengkapnya <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* MODAL / POP-UP ARTIKEL */}
+      {selectedArticle && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          {/* Background Overlay Gelap */}
+          <div 
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
+            onClick={() => setSelectedArticle(null)}
+          ></div>
+          
+          {/* Konten Pop-up */}
+          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl relative z-10 flex flex-col animate-[bounceIn_0.4s_ease-out] overflow-hidden">
+            
+            {/* Tombol Tutup */}
+            <button 
+              onClick={() => setSelectedArticle(null)}
+              className="absolute top-4 right-4 z-20 bg-white/50 hover:bg-white text-gray-800 p-2 rounded-full backdrop-blur transition-colors shadow-sm"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Area Konten Scrollable */}
+            <div className="overflow-y-auto w-full h-full pb-8 custom-scrollbar">
+              {/* Cover Image */}
+              <div className="h-64 sm:h-80 w-full relative">
+                <img src={selectedArticle.thumbnail} alt={selectedArticle.judul} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6 sm:p-8">
+                  <span className="bg-huda-yellow text-huda-dark text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">
+                    {selectedArticle.kategori}
+                  </span>
+                  <h2 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">{selectedArticle.judul}</h2>
+                  <p className="text-gray-300 mt-2 flex items-center gap-2 text-sm sm:text-base">
+                    <Calendar size={16} /> {selectedArticle.tanggal}
+                  </p>
+                </div>
+              </div>
+
+              {/* Isi Teks */}
+              <div className="p-6 sm:p-8">
+                <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line mb-8">
+                  {selectedArticle.fullText}
+                </p>
+
+                {/* Galeri Foto (Muncul jika ada foto tambahan) */}
+                {selectedArticle.gallery && selectedArticle.gallery.length > 0 && (
+                  <div className="border-t border-gray-100 pt-8 mt-4">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                      <ImageIcon size={20} className="text-huda-green" /> Dokumentasi Kegiatan
+                    </h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                      {selectedArticle.gallery.map((img, idx) => (
+                        <div key={idx} className="rounded-xl overflow-hidden h-32 sm:h-40 shadow-sm border border-gray-100">
+                          <img src={img} alt={`Galeri ${idx}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      )}
+
+    </div>
+  );
+}
+</file>
+
 <file path="src/kegiatan/kegiatan-tk/TKKegiatan.jsx">
 import React, { useState } from 'react';
 import { Palette, Heart, Activity, BookOpen, Users, Star, X, Image as ImageIcon } from 'lucide-react';
@@ -1698,9 +1579,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, dan membuat prakarya.', 
     icon: 'palette',
     gallery: [
-      '/foto-kegiatan-tk/Seni %26 Kreativitas.jpg', // Foto aslimu (menggunakan %26 untuk simbol &)
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80'
+      '/foto-profil-kegiatan-tk/seni-kreativitas.jpg',
+      '/foto-profil-kegiatan-tk/seni-kreativitas-1.jpg',
+      '/foto-profil-kegiatan-tk/seni-kreativitas-2.jpg'
     ]
   },
   { 
@@ -1709,9 +1590,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, dan hafalan doa-doa harian.', 
     icon: 'heart',
     gallery: [
-      '/foto-kegiatan-tk/Praktik Ibadah.jpg', // Foto aslimu
-      'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80',
-      'https://img.freepik.com/free-photo/muslim-kids-reading-quran_53876-20956.jpg?w=800&q=80'
+      '/foto-profil-kegiatan-tk/praktik-ibadah.jpg', // Foto aslimu
+      '/foto-profil-kegiatan-tk/praktik-ibadah-1.jpg',
+      '/foto-profil-kegiatan-tk/praktik-ibadah-2.jpg'
     ]
   },
   { 
@@ -1720,9 +1601,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Senam ceria, permainan ketangkasan di luar ruangan untuk melatih keseimbangan dan kesehatan fisik.', 
     icon: 'activity',
     gallery: [
-      '/foto-kegiatan-tk/foto-olahraga-gembira.jpg', // Foto aslimu
-      'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=800&q=80'
+      '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg', // Foto aslimu
+      '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg',
+      '/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.jpg'
     ]
   },
 ];
@@ -1835,220 +1716,6 @@ export default function TKKegiatan() {
 }
 </file>
 
-<file path="src/pages/tk/TKProfil.jsx">
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { 
-  CheckCircle, BookOpen, Heart, Activity, ArrowRight, 
-  MessageCircle, MapPin, Phone, Hash, Award, Clock, Quote, Mail
-} from 'lucide-react';
-
-// SVG Icon Instagram Manual untuk mengatasi error lucide-react
-const InstagramIcon = ({ size = 24, className = "" }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-  </svg>
-);
-
-export default function TKProfil() {
-  const navigate = useNavigate();
-
-  // Fungsi untuk membuka WhatsApp khusus Admin TK
-  const handleWhatsApp = () => {
-    window.open('https://wa.me/6282125640715?text=Assalamu%27alaikum%20Admin%20TK%20Islam%20Al-Huda,%20saya%20ingin%20bertanya%20seputar%20pendaftaran%20dan%20program%20TK.', '_blank');
-  };
-
-  // Komponen Helper untuk Kotak Info Profil (Versi lebih ringkas)
-  const InfoCard = ({ icon, label, value, className = "" }) => (
-    <div className={`flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${className}`}>
-      <div className="bg-green-100 p-3 rounded-xl text-huda-green flex-shrink-0">
-        {icon}
-      </div>
-      <div>
-        <p className="text-sm text-gray-500 font-bold mb-1">{label}</p>
-        <p className="text-gray-800 font-semibold leading-snug">{value}</p>
-      </div>
-    </div>
-  );
-
-  return (
-    <div className="relative min-h-screen bg-gray-50 animate-[fadeIn_0.5s_ease-out]">
-      
-      {/* Container Utama */}
-      <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
-        
-        {/* Header Title */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Profil TK Islam Al-Huda</h2>
-          <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
-        </div>
-
-        {/* Section 1: Sejarah, Pendekatan & Identitas Inti */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
-          <div className="relative group sticky top-32">
-            <div className="absolute inset-0 bg-huda-yellow rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
-            <img src="/logo/tk-islam-al-huda.jpeg" alt="Kegiatan TK Islam Al-Huda" className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" />
-          </div>
-          
-          <div>
-            <div className="bg-huda-yellow/20 border-l-8 border-huda-yellow p-6 rounded-r-3xl mb-8">
-              <Quote className="text-huda-yellow w-10 h-10 mb-3 opacity-50" />
-              <h4 className="text-3xl font-extrabold text-huda-dark italic leading-tight">"Mandiri, Kreatif, Berakhlak Islami"</h4>
-              <p className="text-gray-600 font-bold mt-2">- Motto TK Islam Al-Huda</p>
-            </div>
-
-            <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
-              <strong className="text-huda-green">TK Islam Al-Huda</strong> merupakan lembaga pendidikan anak usia dini yang berkomitmen untuk memberikan layanan pendidikan berkualitas dengan pendekatan IMTAQ dan Pembelajaran Mendalam. Kami berdiri pada tahun 2013 di kawasan komplek Jl. Bambu Apus Raya Pondok Bambu, Duren Sawit, Jakarta Timur.
-            </p>
-            
-            <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
-              Sebagai Taman Kanak-kanak berstatus swasta di bawah naungan Dinas Pendidikan Provinsi DKI Jakarta, kami melayani anak-anak usia 3–6 tahun dalam program pendidikan kelompok Bermain A dan B. Sekolah ini lahir dari kebutuhan masyarakat akan pendidikan anak usia dini yang berkualitas dan agamis di tengah dinamika perkotaan yang semakin kompleks.
-            </p>
-
-            <div className="bg-green-50 border-2 border-green-100 p-6 rounded-3xl mt-8 mb-8">
-              <h3 className="text-xl font-extrabold text-huda-dark mb-3">✨ Transformasi 2025</h3>
-              <p className="text-gray-700 leading-relaxed text-justify">
-                Sekolah mengadopsi pendekatan <strong>IMTAQ</strong> dan <strong>Pembelajaran Mendalam</strong> sebagai fondasi utama dalam meningkatkan mutu pembelajaran. Perubahan ini bukan sekadar pergantian metode, melainkan transformasi paradigma yang menempatkan anak sebagai pembelajar aktif yang memiliki potensi luar biasa untuk berkembang dalam pengenalan IMTAQ, suasana yang berkesadaran, bermakna, dan menggembirakan.
-              </p>
-            </div>
-
-            {/* Kolom Info Identitas Langsung di bawah Sejarah */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              <InfoCard icon={<Hash size={24} />} label="No. NPSN" value="20111944" />
-              <InfoCard icon={<Award size={24} />} label="Status Akreditasi" value="Terakreditasi – B" />
-              <InfoCard icon={<Clock size={24} />} label="Hari & Jam Belajar" value="Senin s/d Jum'at (08.00 - 11.00 WIB)" className="sm:col-span-2" />
-            </div>
-          </div>
-        </div>
-
-        {/* Section 2: Program Unggulan */}
-        <div className="mb-24">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-extrabold text-huda-dark mb-4">Program Unggulan TK Kami</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Mendukung pendekatan <strong p>Pembelajaran Mendalam</strong> untuk mengoptimalkan masa <strong p>Golden Age</strong> anak Anda.</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-green hover:-translate-y-2 transition-transform duration-300">
-              <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                <BookOpen className="text-huda-green w-8 h-8" />
-              </div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-3">Tahfidz Cilik</h4>
-              <p className="text-gray-600 leading-relaxed">Menanamkan kecintaan pada Al-Qur'an sejak dini dengan hafalan surat pendek, doa harian, dan pengenalan hijaiyah.</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
-              <div className="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                <Activity className="text-huda-yellow w-8 h-8" />
-              </div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-3">Eksplorasi Kreatif</h4>
-              <p className="text-gray-600 leading-relaxed">Memaksimalkan sensor motorik halus dan kasar melalui aktivitas seni, kerajinan tangan, dan permainan fisik edukatif.</p>
-            </div>
-
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-green hover:-translate-y-2 transition-transform duration-300">
-              <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                <Heart className="text-huda-green w-8 h-8" />
-              </div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-3">Karakter Islami</h4>
-              <p className="text-gray-600 leading-relaxed">Pembiasaan adab harian seperti kemandirian, etika makan, berbagi, hingga tata cara sholat dan wudhu yang benar.</p>
-            </div>
-
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
-              <div className="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                <CheckCircle className="text-huda-yellow w-8 h-8" />
-              </div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-3">Calistung Asyik</h4>
-              <p className="text-gray-600 leading-relaxed">Pengenalan dasar membaca, menulis, dan berhitung tanpa paksaan, melalui metode bermain interaktif yang menyenangkan.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Section 3: Call to Action (CTA) & Informasi Kontak Gabungan */}
-        <div className="bg-huda-dark rounded-[3rem] p-10 md:p-14 text-center text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-huda-green rounded-full opacity-30 transform translate-x-16 -translate-y-16"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-huda-yellow rounded-full opacity-20 transform -translate-x-16 translate-y-16"></div>
-          
-          <div className="relative z-10">
-            <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Buah Hati Anda Bersama Kami!</h3>
-            <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-              Berikan pendidikan usia dini terbaik yang memadukan nilai Islam dan ilmu pengetahuan. Kuota pendaftaran terbatas!
-            </p>
-            
-            <button 
-              onClick={() => navigate('/daftar-tk')} 
-              className="bg-huda-yellow text-huda-dark font-extrabold text-2xl px-12 py-5 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 mx-auto border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0 mb-16"
-            >
-              Klik Untuk Daftar <ArrowRight className="w-8 h-8" />
-            </button>
-
-            {/* Area Informasi Kontak & Lokasi Baru */}
-            <div className="pt-12 border-t border-gray-600/50 flex flex-col items-center">
-              <p className="text-xl font-bold text-huda-yellow mb-8">Informasi Kontak & Lokasi Resmi TK</p>
-              
-              <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
-                {/* Kiri: Alamat Lengkap */}
-                <div className="bg-white/10 p-6 rounded-3xl flex items-start gap-4 hover:bg-white/20 transition-colors">
-                  <MapPin className="w-8 h-8 text-huda-yellow flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-bold text-white mb-2 text-lg">Alamat Lengkap</p>
-                    <p className="text-gray-300 leading-relaxed">Jl. Bambu Apus Raya No.85, Kel. Pondok Bambu, Kec. Duren Sawit, Jakarta Timur. 13430</p>
-                  </div>
-                </div>
-                
-                {/* Kanan: Telepon, Email, Sosmed */}
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <a href="tel:0218616313" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
-                    <Phone className="w-6 h-6 text-huda-yellow" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Telepon Sekolah</p>
-                      <p className="text-gray-300 font-semibold">021 8616313</p>
-                    </div>
-                  </a>
-                  
-                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
-                    <Mail className="w-6 h-6 text-huda-yellow" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Email Resmi</p>
-                      <p className="text-gray-300 text-sm break-all font-semibold">tkislamalhuda313<br/>@gmail.com</p>
-                    </div>
-                  </a>
-                  
-                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex items-center gap-4">
-                    <InstagramIcon className="w-7 h-7 text-huda-yellow" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Instagram</p>
-                      <p className="text-gray-300 font-semibold">@tkialhuda.pondokbambu</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      {/* Floating Button WhatsApp khusus TK */}
-      <button 
-        onClick={handleWhatsApp}
-        className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white px-6 py-4 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.4)] flex items-center gap-3 hover:bg-[#20bd5a] hover:scale-105 transition-all duration-300 group"
-      >
-        <MessageCircle className="w-8 h-8" />
-        <span className="font-bold text-lg tracking-wide hidden sm:block">Tanya Admin TK</span>
-        
-        <span className="absolute -top-1 -right-1 flex h-5 w-5">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-5 w-5 bg-red-500 border-2 border-white"></span>
-        </span>
-      </button>
-
-    </div>
-  );
-}
-</file>
-
 <file path="src/pages/tpq/TPQProfil.jsx">
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -2101,7 +1768,7 @@ export default function TPQProfil() {
 
         {/* Section 1: Sejarah & Pendekatan TPQ */}
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
-          <div className="relative group sticky top-32">
+          <div className="relative group lg:sticky lg:top-32">
             <div className="absolute inset-0 bg-huda-green rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
             
             {/* Foto Ilustrasi Belajar Mengaji */}
@@ -2280,6 +1947,344 @@ export default function TPQProfil() {
       >
         <MessageCircle className="w-8 h-8" />
         <span className="font-bold text-lg tracking-wide hidden sm:block">Tanya Admin TPQ</span>
+        <span className="absolute -top-1 -right-1 flex h-5 w-5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-5 w-5 bg-red-500 border-2 border-white"></span>
+        </span>
+      </button>
+
+    </div>
+  );
+}
+</file>
+
+<file path="src/App.jsx">
+import React, { useEffect, Component } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+
+// Import Komponen & Halaman Utama
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Kontak from './pages/Kontak';
+import Informasi from './pages/Informasi'; 
+
+// Halaman TK
+import TKProfil from './pages/tk/TKProfil';
+import TKKegiatan from './kegiatan/kegiatan-tk/TKKegiatan';
+import DaftarTK from './pages/tk/DaftarTK';
+
+// Halaman TPQ
+import TPQProfil from './pages/tpq/TPQProfil';
+import TPQKegiatan from './kegiatan/kegiatan-tpq/TPQKegiatan';
+import DaftarTPQ from './pages/tpq/DaftarTPQ';
+
+// ==========================================
+// PENDETEKSI ERROR (MENCEGAH LAYAR PUTIH)
+// ==========================================
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, errorInfo: null, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error: error };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error("Error detail:", error, errorInfo);
+    this.setState({ errorInfo: errorInfo });
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-10 m-10 bg-red-50 border-2 border-red-500 rounded-2xl text-red-800 font-sans">
+          <h2 className="text-3xl font-bold mb-4">Oops! Ada Error di React 🐛</h2>
+          <p className="font-bold mb-2">Pesan Error:</p>
+          <code className="block bg-white p-4 rounded-lg shadow mb-4 text-red-600 font-mono">
+            {this.state.error && this.state.error.toString()}
+          </code>
+          <p className="mt-6 text-gray-600 font-bold">👉 Silakan cek tab Console atau perbaiki file yang bermasalah.</p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// Fitur otomatis scroll ke atas saat ganti halaman
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col">
+        <Navbar />
+        
+        <main className="flex-grow">
+          <ErrorBoundary>
+            <Routes>
+              {/* Rute Utama */}
+              <Route path="/" element={<Home />} />
+              <Route path="/kontak" element={<Kontak />} />
+              
+              {/* Rute Halaman Informasi */}
+              <Route path="/informasi" element={<Informasi />} />
+              
+              {/* Rute TK */}
+              <Route path="/tk" element={<TKProfil />} />
+              <Route path="/kegiatan-tk" element={<TKKegiatan />} />
+              <Route path="/daftar-tk" element={<DaftarTK />} />
+              
+              {/* Rute TPQ */}
+              <Route path="/tpq" element={<TPQProfil />} />
+              <Route path="/kegiatan-tpq" element={<TPQKegiatan />} />
+              <Route path="/daftar-tpq" element={<DaftarTPQ />} />
+              
+              {/* Fallback 404 (Halaman tidak ditemukan) */}
+              <Route path="*" element={
+                <div className="pt-40 pb-20 px-6 text-center min-h-[60vh] flex flex-col items-center justify-center">
+                  <h2 className="text-3xl font-bold text-gray-400 mb-4">Halaman sedang dalam tahap pembuatan... 🚀</h2>
+                  <p className="text-gray-500">Silakan kembali ke Home.</p>
+                </div>
+              } />
+            </Routes>
+          </ErrorBoundary>
+        </main>
+
+        <footer className="bg-gray-900 text-gray-400 text-center py-10 mt-auto z-10">
+          <p className="text-2xl font-extrabold text-white mb-3">TK Islam-TPQ Al-Huda</p>
+          <p className="mb-4 text-sm max-w-md mx-auto">Mencetak Generasi yang Bertaqwa, Berakhlak Mulia, Cerdas dan Mampu Berkompetisi</p>
+          <p className="text-gray-500">&copy; {new Date().getFullYear()} Hak Cipta Dilindungi.</p>
+        </footer>
+
+        {/* Style Global untuk Animasi */}
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+          .animate-scroll { display: flex; width: max-content; animation: scroll 35s linear infinite; }
+          @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+          @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+          @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
+          /* Custom scrollbar untuk pop-up */
+          .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+          .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+          .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        `}} />
+      </div>
+    </BrowserRouter>
+  );
+}
+</file>
+
+<file path="src/pages/tk/TKProfil.jsx">
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { 
+  CheckCircle, BookOpen, Heart, Activity, ArrowRight, 
+  MessageCircle, MapPin, Phone, Hash, Award, Clock, Quote, Mail
+} from 'lucide-react';
+
+// SVG Icon Instagram Manual untuk mengatasi error lucide-react
+const InstagramIcon = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+
+export default function TKProfil() {
+  const navigate = useNavigate();
+
+  // Fungsi untuk membuka WhatsApp khusus Admin TK
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/6282125640715?text=Assalamu%27alaikum%20Admin%20TK%20Islam%20Al-Huda,%20saya%20ingin%20bertanya%20seputar%20pendaftaran%20dan%20program%20TK.', '_blank');
+  };
+
+  // Komponen Helper untuk Kotak Info Profil (Versi lebih ringkas)
+  const InfoCard = ({ icon, label, value, className = "" }) => (
+    <div className={`flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${className}`}>
+      <div className="bg-green-100 p-3 rounded-xl text-huda-green flex-shrink-0">
+        {icon}
+      </div>
+      <div>
+        <p className="text-sm text-gray-500 font-bold mb-1">{label}</p>
+        <p className="text-gray-800 font-semibold leading-snug">{value}</p>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="relative min-h-screen bg-gray-50 animate-[fadeIn_0.5s_ease-out]">
+      
+      {/* Container Utama */}
+      <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        
+        {/* Header Title */}
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Profil TK Islam Al-Huda</h2>
+          <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
+        </div>
+
+        {/* Section 1: Sejarah, Pendekatan & Identitas Inti */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+          <div className="relative group lg:sticky lg:top-32">
+            <div className="absolute inset-0 bg-huda-yellow rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
+            <img src="/logo/tk-islam-al-huda.jpeg" alt="Kegiatan TK Islam Al-Huda" className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" />
+          </div>
+          
+          <div>
+            <div className="bg-huda-yellow/20 border-l-8 border-huda-yellow p-6 rounded-r-3xl mb-8">
+              <Quote className="text-huda-yellow w-10 h-10 mb-3 opacity-50" />
+              <h4 className="text-3xl font-extrabold text-huda-dark italic leading-tight">"Mandiri, Kreatif, Berakhlak Islami"</h4>
+              <p className="text-gray-600 font-bold mt-2">- Motto TK Islam Al-Huda</p>
+            </div>
+
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
+              <strong className="text-huda-green">TK Islam Al-Huda</strong> merupakan lembaga pendidikan anak usia dini yang berkomitmen untuk memberikan layanan pendidikan berkualitas dengan pendekatan IMTAQ dan Pembelajaran Mendalam. Kami berdiri pada tahun 2013 di kawasan komplek Jl. Bambu Apus Raya Pondok Bambu, Duren Sawit, Jakarta Timur.
+            </p>
+            
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
+              Sebagai Taman Kanak-kanak berstatus swasta di bawah naungan Dinas Pendidikan Provinsi DKI Jakarta, dan kami <strong p>melayani anak-anak usia 3–6 tahun</strong> dalam program pendidikan <strong p>Kelompok Bermain, kelompok A dan kelompok B.</strong> Sekolah ini lahir dari kebutuhan masyarakat akan pendidikan anak usia dini yang berkualitas dan agamis di tengah dinamika perkotaan yang semakin kompleks.
+            </p>
+
+            <div className="bg-green-50 border-2 border-green-100 p-6 rounded-3xl mt-8 mb-8">
+              <h3 className="text-xl font-extrabold text-huda-dark mb-3">✨ Transformasi 2025</h3>
+              <p className="text-gray-700 leading-relaxed text-justify">
+                Sekolah mengadopsi pendekatan <strong>IMTAQ</strong> dan <strong>Pembelajaran Mendalam</strong> sebagai fondasi utama dalam meningkatkan mutu pembelajaran. Perubahan ini bukan sekadar pergantian metode, melainkan transformasi paradigma yang menempatkan anak sebagai pembelajar aktif yang memiliki potensi luar biasa untuk berkembang dalam pengenalan IMTAQ, suasana yang berkesadaran, bermakna, dan menggembirakan.
+              </p>
+            </div>
+
+            {/* Kolom Info Identitas Langsung di bawah Sejarah */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <InfoCard icon={<Hash size={24} />} label="No. NPSN" value="20111944" />
+              <InfoCard icon={<Award size={24} />} label="Status Akreditasi" value="Terakreditasi – B" />
+              <InfoCard icon={<Clock size={24} />} label="Hari & Jam Belajar" value="Senin s/d Jum'at (08.00 - 11.00 WIB)" className="sm:col-span-2" />
+            </div>
+          </div>
+        </div>
+
+        {/* Section 2: Program Unggulan */}
+        <div className="mb-24">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-extrabold text-huda-dark mb-4">Program Unggulan TK Kami</h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Mendukung pendekatan <strong p> Pembelajaran Mendalam</strong> untuk mengoptimalkan masa <strong p>Golden Age anak</strong> Anda.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-green hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <BookOpen className="text-huda-green w-8 h-8" />
+              </div>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Tahfidz Cilik</h4>
+              <p className="text-gray-600 leading-relaxed">Menanamkan kecintaan pada Al-Qur'an sejak dini dengan hafalan surat pendek, doa harian, dan pengenalan hijaiyah.</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <Activity className="text-huda-yellow w-8 h-8" />
+              </div>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Eksplorasi Kreatif</h4>
+              <p className="text-gray-600 leading-relaxed">Memaksimalkan sensor motorik halus dan kasar melalui aktivitas seni, kerajinan tangan, dan permainan fisik edukatif.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-green hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <Heart className="text-huda-green w-8 h-8" />
+              </div>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Karakter Islami</h4>
+              <p className="text-gray-600 leading-relaxed">Pembiasaan adab harian seperti kemandirian, etika makan, berbagi, hingga tata cara sholat dan wudhu yang benar.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                <CheckCircle className="text-huda-yellow w-8 h-8" />
+              </div>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Calistung Asyik</h4>
+              <p className="text-gray-600 leading-relaxed">Pengenalan dasar membaca, menulis, dan berhitung tanpa paksaan, melalui metode bermain interaktif yang menyenangkan.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 3: Call to Action (CTA) & Informasi Kontak Gabungan */}
+        <div className="bg-huda-dark rounded-[3rem] p-10 md:p-14 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-huda-green rounded-full opacity-30 transform translate-x-16 -translate-y-16"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-huda-yellow rounded-full opacity-20 transform -translate-x-16 translate-y-16"></div>
+          
+          <div className="relative z-10">
+            <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Buah Hati Anda Bersama Kami!</h3>
+            <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+              Berikan pendidikan usia dini terbaik yang memadukan nilai Islam dan ilmu pengetahuan. Kuota pendaftaran terbatas!
+            </p>
+            
+            <button 
+              onClick={() => navigate('/daftar-tk')} 
+              className="bg-huda-yellow text-huda-dark font-extrabold text-2xl px-12 py-5 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 mx-auto border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0 mb-16"
+            >
+              Klik Untuk Daftar <ArrowRight className="w-8 h-8" />
+            </button>
+
+            {/* Area Informasi Kontak & Lokasi Baru */}
+            <div className="pt-12 border-t border-gray-600/50 flex flex-col items-center">
+              <p className="text-xl font-bold text-huda-yellow mb-8">Informasi Kontak & Lokasi Resmi TK</p>
+              
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
+                {/* Kiri: Alamat Lengkap */}
+                <div className="bg-white/10 p-6 rounded-3xl flex items-start gap-4 hover:bg-white/20 transition-colors">
+                  <MapPin className="w-8 h-8 text-huda-yellow flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-bold text-white mb-2 text-lg">Alamat Lengkap</p>
+                    <p className="text-gray-300 leading-relaxed">Jl. Bambu Apus Raya No.85, Kel. Pondok Bambu, Kec. Duren Sawit, Jakarta Timur. 13430</p>
+                  </div>
+                </div>
+                
+                {/* Kanan: Telepon, Email, Sosmed */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <a href="tel:0218616313" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
+                    <Phone className="w-6 h-6 text-huda-yellow" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">Telepon Sekolah</p>
+                      <p className="text-gray-300 font-semibold">021 8616313</p>
+                    </div>
+                  </a>
+                  
+                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
+                    <Mail className="w-6 h-6 text-huda-yellow" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">Email Resmi</p>
+                      <p className="text-gray-300 text-sm break-all font-semibold">tkislamalhuda313<br/>@gmail.com</p>
+                    </div>
+                  </a>
+                  
+                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex items-center gap-4">
+                    <InstagramIcon className="w-7 h-7 text-huda-yellow" />
+                    <div>
+                      <p className="font-bold text-white text-sm mb-1">Instagram</p>
+                      <p className="text-gray-300 font-semibold">@tkialhuda.pondokbambu</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Floating Button WhatsApp khusus TK */}
+      <button 
+        onClick={handleWhatsApp}
+        className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white px-6 py-4 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.4)] flex items-center gap-3 hover:bg-[#20bd5a] hover:scale-105 transition-all duration-300 group"
+      >
+        <MessageCircle className="w-8 h-8" />
+        <span className="font-bold text-lg tracking-wide hidden sm:block">Tanya Admin TK</span>
+        
         <span className="absolute -top-1 -right-1 flex h-5 w-5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-5 w-5 bg-red-500 border-2 border-white"></span>
