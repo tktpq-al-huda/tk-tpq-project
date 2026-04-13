@@ -22,11 +22,20 @@ const DATA_KEGIATAN_TPQ = [
   },
   { 
     id: 3, 
-    title: 'Kisah Islami & Akhlak', 
-    desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
+    title: 'Kegiatan fiqih & Tauhid', 
+    desc: 'Fondasi utama pendidikan Islam yang berfokus pada pengetahuan akidah (tauhid) dan tata cara ibadah (fiqih).', 
     icon: 'users',
     gallery: [
       '/foto-profil-kegiatan-tpq/kisah-islami-akhlak.jpg',
+    ]
+  },
+ { 
+    id: 4, 
+    title: 'Praktik Ibadah', 
+    desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, serta hafalan hadits dan doa harian.', 
+    icon: 'half-moon',
+    gallery: [
+      '/foto-profil-kegiatan-tk/praktik-ibadah.jpg',
     ]
   },
 ];
@@ -38,7 +47,7 @@ const getIcon = (iconName, size = 48) => {
     case 'mic': return <Mic size={size} />;
     case 'users': return <Users size={size} />;
     case 'activity': return <Activity size={size} />;
-    case 'heart': return <Heart size={size} />;
+    case 'half-moon': return <Heart size={size} />;
     default: return <Star size={size} />;
   }
 };
@@ -57,7 +66,7 @@ export default function TPQKegiatan() {
       <div className="text-center mb-20">
         <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Kegiatan Harian TPQ</h2>
         <div className="w-32 h-2 bg-huda-green mx-auto rounded-full"></div>
-        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang metode pembelajaran yang interaktif dan berjenjang. Klik kegiatan di bawah untuk melihat dokumentasi foto kami!</p>
+        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Kami merancang metode pembelajaran yang interaktif dan berjenjang.</p>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
