@@ -133,7 +133,7 @@ export default function TKProfil() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-huda-yellow rounded-full opacity-10 transform -translate-x-16 translate-y-16"></div>
           
           <div className="relative z-10">
-            <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Buah Hati Anda Bersama Kami!</h3>
+            <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Anak Anda Bersama Kami!</h3>
             <p className="text-xl md:text-2xl text-black-300 font-semibold mb-10 max-w-3xl mx-auto">
               Berikan pendidikan usia dini terbaik yang memadukan nilai Islam dan ilmu pengetahuan. Kuota pendaftaran terbatas!
             </p>
