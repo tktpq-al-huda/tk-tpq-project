@@ -98,7 +98,7 @@ export default function TKProfil() {
                 <BookOpen className="text-huda-green w-8 h-8" />
               </div>
               <h4 className="text-2xl font-bold text-gray-800 mb-3">Pembiasaan Kemandirian</h4>
-              <p className="text-gray-600 leading-relaxed">Membiasakan anak usisa dini dalam bersikap dan prilaku dengan tidak bergantung pada orang lain dan selalu berusaha menyelesaikan tugas dan tanggung jawabnya sendiri.</p>
+              <p className="text-gray-600 leading-relaxed">Membiasakan anak usia dini dalam bersikap dan perilaku dengan tidak bergantung pada orang lain dan selalu berusaha menyelesaikan tugas dan tanggung jawabnya sendiri.</p>
             </div>
             
             <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
