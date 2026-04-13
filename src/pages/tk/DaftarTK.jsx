@@ -198,7 +198,7 @@ export default function DaftarTK() {
                 {formStatus === 'loading' ? (
                   'Memproses Data...'
                 ) : (
-                  <><Send size={24} /> Kirim Formulir Pendaftaran</>
+                  <><Send size={24} /> Kirim Pendaftaran TK</>
                 )}
               </button>
               

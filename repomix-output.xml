@@ -60,9 +60,12 @@ public/foto-profil-kegiatan-tk/praktik-ibadah.jpg
 public/foto-profil-kegiatan-tk/seni-kreativitas-1.jpg
 public/foto-profil-kegiatan-tk/seni-kreativitas-2.jpg
 public/foto-profil-kegiatan-tk/seni-kreativitas.jpg
+public/foto-profil-kegiatan-tpq/eksul-rebana.jpeg
+public/foto-profil-kegiatan-tpq/eskul-rebana-2.jpg
 public/foto-profil-kegiatan-tpq/kisah-islami-akhlak.jpg
 public/foto-profil-kegiatan-tpq/klasikal-privat.jpg
 public/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg
+public/foto-profil-kegiatan-tpq/praktik-ibadah-tpq.jpg
 public/foto-sarana-prasarana/gedung-sekolah-nyaman.jpg
 public/foto-sarana-prasarana/ruang-kelas-sentra.jpg
 public/foto-sarana-prasarana/taman-bermain.jpg
@@ -1051,7 +1054,7 @@ export default function DaftarTK() {
                 {formStatus === 'loading' ? (
                   'Memproses Data...'
                 ) : (
-                  <><Send size={24} /> Kirim Formulir Pendaftaran</>
+                  <><Send size={24} /> Kirim Pendaftaran TK</>
                 )}
               </button>
               
@@ -1557,20 +1560,22 @@ import { BookOpen, Mic, Users, Star, Activity, Heart, X, Image as ImageIcon } fr
 const DATA_KEGIATAN_TPQ = [
   { 
     id: 1, 
-    title: 'Klasikal & Privat', 
-    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
+    title: 'Klasikal & Privat serta Muroja\'ah Bersama', 
+    desc: 'Belajar membaca iqro dan Al Quran secara tartil dgn bimbingan langsung (privat) oleh Asatidz serta Kegiatan Murajaah Bersama mengulang hafalan surat pendek (Juz 30).', 
     icon: 'book',
     gallery: [
       '/foto-profil-kegiatan-tpq/klasikal-privat.jpg',
+      '/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg',
     ]
   },
   { 
     id: 2, 
-    title: 'Muroja\'ah Bersama', 
-    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
+    title: 'Ekstrakurikuler', 
+    desc: 'Kegiatan Tambahan yang bertujuan mengembangkan minat, bakat dan keterampilan santri TPQ.', 
     icon: 'mic',
     gallery: [
-      '/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg',
+      '/foto-profil-kegiatan-tpq/eksul-rebana.jpeg',
+      '/foto-profil-kegiatan-tpq/eskul-rebana-2.jpg'
     ]
   },
   { 
@@ -1588,7 +1593,7 @@ const DATA_KEGIATAN_TPQ = [
     desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, serta hafalan hadits dan doa harian.', 
     icon: 'half-moon',
     gallery: [
-      '/foto-profil-kegiatan-tk/praktik-ibadah.jpg',
+      '/foto-profil-kegiatan-tpq/praktik-ibadah-tpq.jpg',
     ]
   },
 ];
@@ -1997,7 +2002,6 @@ const DATA_KEGIATAN_TK = [
     icon: 'activity',
     gallery: [
       '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg',
-      '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg',
       '/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.jpg'
     ]
   },
@@ -2007,9 +2011,7 @@ const DATA_KEGIATAN_TK = [
     desc: 'Kegiatan tambahan yang bertujuan mengembangkan minat, bakat, dan keterampilan siswa secara lebih luas.', 
     icon: 'extracurricular-activities',
     gallery: [
-      '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg', 
       '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg',
-      '/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.jpg'
     ]
   },
 ];
