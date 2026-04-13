@@ -51,7 +51,7 @@ export default function TKProfil() {
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
           <div className="relative group lg:sticky lg:top-32">
             <div className="absolute inset-0 bg-huda-yellow rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
-            <img src="/logo/tk-islam-al-huda.jpeg" alt="Kegiatan TK Islam Al-Huda" className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" />
+            <img src="/logo/tk-islam-al-huda.jpeg" alt="Kegiatan TK Islam Al-Huda" className="relative rounded-[3rem] shadow-2xl border-8 border-white object-contain bg-white p-6 w-full h-[300px] md:h-[500px]" />
           </div>
           
           <div>
@@ -127,61 +127,58 @@ export default function TKProfil() {
           </div>
         </div>
 
-        {/* Section 3: Call to Action (CTA) & Informasi Kontak Gabungan */}
-        <div className="bg-huda-dark rounded-[3rem] p-10 md:p-14 text-center text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-huda-yellow rounded-full opacity-30 transform translate-x-16 -translate-y-16"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-huda-yellow rounded-full opacity-20 transform -translate-x-16 translate-y-16"></div>
+        {/* Section 3: Call to Action (CTA) & Informasi Kontak */}
+        <div className="bg-huda-yellow/20 rounded-[3rem] p-10 md:p-14 text-center text-black/80 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-huda-yellow rounded-full opacity-10 transform translate-x-16 -translate-y-16"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-huda-yellow rounded-full opacity-10 transform -translate-x-16 translate-y-16"></div>
           
           <div className="relative z-10">
-            <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Anak Anda Bersama Kami!</h3>
-            <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+            <h3 className="text-4xl md:text-5xl font-extrabold mb-6">Kembangkan Potensi Buah Hati Anda Bersama Kami!</h3>
+            <p className="text-xl md:text-2xl text-black-300 font-semibold mb-10 max-w-3xl mx-auto">
               Berikan pendidikan usia dini terbaik yang memadukan nilai Islam dan ilmu pengetahuan. Kuota pendaftaran terbatas!
             </p>
             
             <button 
               onClick={() => navigate('/daftar-tk')} 
-              className="bg-huda-yellow text-huda-dark font-extrabold text-2xl px-12 py-5 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 mx-auto border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0 mb-16"
+              className="bg-huda-yellow text-huda-dark font-extrabold text-2xl px-12 py-5 rounded-full shadow-2xl hover:bg-yellow-500 transform hover:-translate-y-2 transition-all flex items-center gap-3 mx-auto border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0 mb-16"
             >
               Klik Untuk Daftar <ArrowRight className="w-8 h-8" />
             </button>
 
-            {/* Area Informasi Kontak & Lokasi Baru */}
-            <div className="pt-12 border-t border-gray-600/50 flex flex-col items-center">
-              <p className="text-xl font-bold text-huda-yellow mb-8">Informasi Kontak & Lokasi Resmi TK</p>
+            <div className="pt-12 border-t border-gray-700 flex flex-col items-center">
+              <p className="text-xl font-extrabold text-huda-black mb-8">Informasi Kontak & Lokasi Resmi TK</p>
               
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
-                {/* Kiri: Alamat Lengkap */}
-                <div className="bg-white/10 p-6 rounded-3xl flex items-start gap-4 hover:bg-white/20 transition-colors">
+                <div className="bg-white border border-grey-500/20 p-6 rounded-3xl flex items-start gap-4 hover:bg-grey-500/20 transition-colors shadow-lg">
                   <MapPin className="w-8 h-8 text-huda-yellow flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-bold text-white mb-2 text-lg">Alamat Lengkap</p>
-                    <p className="text-gray-300 leading-relaxed">Jl. Bambu Apus Raya No.85, Kel. Pondok Bambu, Kec. Duren Sawit, Jakarta Timur. 13430</p>
+                    <p className="font-extrabold text-grey/20 mb-2 text-lg">Alamat Lengkap</p>
+                    <p className="text-gray font-semibold leading-relaxed">Jl. Bambu Apus Raya No.85, Kel. Pondok Bambu, Kec. Duren Sawit, Jakarta Timur. 13430</p>
                   </div>
                 </div>
                 
-                {/* Kanan: Telepon, Email, Sosmed */}
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <a href="tel:0218616313" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
+                  <a href="tel:0218616313" className="bg-white border border-yellow-500/20 hover:bg-yellow-500/20 transition-colors shadow-lg p-5 rounded-3xl flex flex-col gap-3">
                     <Phone className="w-6 h-6 text-huda-yellow" />
                     <div>
-                      <p className="font-bold text-white text-sm mb-1">Telepon Sekolah</p>
-                      <p className="text-gray-300 font-semibold">021 8616313</p>
+                      <p className="font-extrabold text-black text-sm mb-1">Telepon Sekolah</p>
+                      <p className="text-gray font-bold">021 8616313</p>
                     </div>
                   </a>
                   
-                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
+                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white border border-yellow-500/20 hover:bg-yellow-500/20 transition-colors shadow-lg p-5 rounded-3xl flex flex-col gap-3">
                     <Mail className="w-6 h-6 text-huda-yellow" />
                     <div>
-                      <p className="font-bold text-white text-sm mb-1">Email Resmi</p>
-                      <p className="text-gray-300 text-sm break-all font-semibold">tkislamalhuda313<br/>@gmail.com</p>
+                      <p className="font-extrabold text-black text-sm mb-1">Email Resmi</p>
+                      <p className="text-gray text-sm break-all font-bold">tkislamalhuda313<br/>@gmail.com</p>
                     </div>
                   </a>
                   
-                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex items-center gap-4">
+                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white border border-yellow-500/20 hover:bg-yellow-500/20 transition-colors shadow-lg p-5 rounded-3xl flex items-center gap-4">
                     <InstagramIcon className="w-7 h-7 text-huda-yellow" />
                     <div>
-                      <p className="font-bold text-white text-sm mb-1">Instagram</p>
-                      <p className="text-gray-300 font-semibold">@tkialhuda.pondokbambu</p>
+                      <p className="font-extrabold text-black text-sm mb-1">Instagram</p>
+                      <p className="text-gray font-bold">@tkialhuda.pondokbambu</p>
                     </div>
                   </a>
                 </div>
@@ -192,7 +189,6 @@ export default function TKProfil() {
 
       </div>
 
-      {/* Floating Button WhatsApp khusus TK */}
       <button 
         onClick={handleWhatsApp}
         className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white px-6 py-4 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.4)] flex items-center gap-3 hover:bg-[#20bd5a] hover:scale-105 transition-all duration-300 group"
