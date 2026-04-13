@@ -70,7 +70,7 @@ export default function DaftarTK() {
 
         {/* Header Form */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4">Pendaftaran Santri TK</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4">Pendaftaran Murid TK</h2>
           <div className="w-24 h-2 bg-huda-yellow mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-gray-600">Lengkapi formulir di bawah ini untuk mendaftarkan putra-putri Anda ke TK Islam Al-Huda.</p>
         </div>
@@ -112,7 +112,7 @@ export default function DaftarTK() {
               <div className="mb-10">
                 <div className="flex items-center gap-3 mb-6 border-b-2 border-gray-100 pb-4">
                   <div className="bg-yellow-100 p-2 rounded-lg text-huda-yellow"><User size={24} /></div>
-                  <h3 className="text-2xl font-bold text-gray-800">A. Data Calon Santri</h3>
+                  <h3 className="text-2xl font-bold text-gray-800">A. Data Calon Murid</h3>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
