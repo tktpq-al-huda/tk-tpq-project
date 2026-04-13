@@ -32,7 +32,6 @@ const DATA_KEGIATAN_TK = [
     icon: 'activity',
     gallery: [
       '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg',
-      '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg',
       '/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.jpg'
     ]
   },
@@ -42,9 +41,7 @@ const DATA_KEGIATAN_TK = [
     desc: 'Kegiatan tambahan yang bertujuan mengembangkan minat, bakat, dan keterampilan siswa secara lebih luas.', 
     icon: 'extracurricular-activities',
     gallery: [
-      '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg', 
       '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg',
-      '/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.jpg'
     ]
   },
 ];

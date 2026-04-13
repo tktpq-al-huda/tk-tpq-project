@@ -4,20 +4,22 @@ import { BookOpen, Mic, Users, Star, Activity, Heart, X, Image as ImageIcon } fr
 const DATA_KEGIATAN_TPQ = [
   { 
     id: 1, 
-    title: 'Klasikal & Privat', 
-    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
+    title: 'Klasikal & Privat serta Muroja\'ah Bersama', 
+    desc: 'Belajar membaca iqro dan Al Quran secara tartil dgn bimbingan langsung (privat) oleh Asatidz serta Kegiatan Murajaah Bersama mengulang hafalan surat pendek (Juz 30).', 
     icon: 'book',
     gallery: [
       '/foto-profil-kegiatan-tpq/klasikal-privat.jpg',
+      '/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg',
     ]
   },
   { 
     id: 2, 
-    title: 'Muroja\'ah Bersama', 
-    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
+    title: 'Ekstrakurikuler', 
+    desc: 'Kegiatan Tambahan yang bertujuan mengembangkan minat, bakat dan keterampilan santri TPQ.', 
     icon: 'mic',
     gallery: [
-      '/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg',
+      '/foto-profil-kegiatan-tpq/eksul-rebana.jpeg',
+      '/foto-profil-kegiatan-tpq/eskul-rebana-2.jpg'
     ]
   },
   { 
@@ -35,7 +37,7 @@ const DATA_KEGIATAN_TPQ = [
     desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, serta hafalan hadits dan doa harian.', 
     icon: 'half-moon',
     gallery: [
-      '/foto-profil-kegiatan-tk/praktik-ibadah.jpg',
+      '/foto-profil-kegiatan-tpq/praktik-ibadah-tpq.jpg',
     ]
   },
 ];
