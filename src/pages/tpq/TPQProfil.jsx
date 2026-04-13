@@ -52,15 +52,15 @@ export default function TPQProfil() {
           <div className="relative group lg:sticky lg:top-32">
             <div className="absolute inset-0 bg-huda-green rounded-[3rem] transform translate-x-6 translate-y-6 transition-transform group-hover:translate-x-8 group-hover:translate-y-8 duration-500"></div>
             
-            {/* Foto Ilustrasi Belajar Mengaji */}
+            {/* Foto Ilustrasi Belajar Mengaji / Logo TPQ */}
             <img 
               src="/logo/tpq-al-huda.jpeg" 
-              alt="Anak-anak belajar mengaji TPQ Al-Huda" 
+              alt="Logo TPQ Al-Huda" 
               onError={(e) => {
                 e.target.onerror = null; 
                 e.target.src = "https://placehold.co/1000x500/16a34a/ffffff?text=Ilustrasi+Anak+Mengaji";
               }}
-              className="relative rounded-[3rem] shadow-2xl border-8 border-white object-cover w-full h-[500px]" 
+              className="relative rounded-[3rem] shadow-2xl border-8 border-white object-contain bg-white p-6 w-full h-[300px] md:h-[500px]" 
             />
           </div>
           
@@ -68,12 +68,12 @@ export default function TPQProfil() {
             {/* Kotak Visi / Motto */}
             <div className="bg-huda-green/10 border-l-8 border-huda-green p-6 rounded-r-3xl mb-8">
               <Quote className="text-huda-green w-10 h-10 mb-3 opacity-50" />
-              <h4 className="text-3xl font-extrabold text-huda-dark italic leading-tight">"Mandiri, Kreatif, Berakhlak Islami"</h4>
+              <h4 className="text-3xl font-extrabold text-huda-dark italic leading-tight">" Generasi Qur'ani dan Berakhlak Mulia"</h4>
               <p className="text-gray-600 font-bold mt-2">- Visi TPQ Al-Huda</p>
             </div>
 
             <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
-              Taman Pendidikan al-Qur'an (TPQ) adalah sebuah tempat yang indah dan nyaman. Oleh karena itu proses belajar dan mengajar TPQ harus mampu mencerminkan, menciptakan iklim yang indah, nyaman dan menyenangkan. Menurut As’ad Humam, Taman Pendidikan al-Qur'an (TPQ) adalah <strong className="text-huda-dark">“Lembaga Pendidikan dan Pengajaran Al-Qur'an untuk anak usia SD (7-12 tahun)”</strong>.
+              Taman Pendidikan Al-Qur'an (TPQ) adalah sebuah tempat yang indah dan nyaman. Oleh karena itu proses belajar dan mengajar TPQ harus mampu mencerminkan, menciptakan suasana yang indah, nyaman dan menyenangkan. TPQ Al Huda adalah <strong p>Lembaga Pendidikan dan Pengajaran Iqro sampai dengan Al Quran untuk anak usia 3 s/d 17 tahun.”</strong>.
             </p>
             
             <p className="text-gray-600 mb-8 text-lg leading-relaxed text-justify">
@@ -126,7 +126,7 @@ export default function TPQProfil() {
                 <BookOpen className="text-huda-green w-8 h-8" />
               </div>
               <h4 className="text-2xl font-bold text-gray-800 mb-3">Tuntas Iqro & Al-Qur'an</h4>
-              <p className="text-gray-600 leading-relaxed">Metode pembelajaran klasikal dan privat (sorogan) yang efektif untuk mempercepat kelancaran membaca Al-Qur'an sesuai tajwid.</p>
+              <p className="text-gray-600 leading-relaxed">Metode pembelajaran klasikal dan privat yang efektif untuk mempercepat kelancaran membaca Al-Qur'an sesuai tajwid.</p>
             </div>
             
             <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
@@ -141,16 +141,16 @@ export default function TPQProfil() {
               <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                 <Heart className="text-huda-green w-8 h-8" />
               </div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-3">Bina Fikih & Akidah</h4>
-              <p className="text-gray-600 leading-relaxed">Materi tambahan yang disisipkan melalui metode bercerita, meliputi rukun iman, rukun Islam, tata cara wudhu, dan gerakan sholat.</p>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Fikih & Akidah</h4>
+              <p className="text-gray-600 leading-relaxed">Materi tambahan yang disisipkan melalui metode bercerita, meliputi rukun iman, rukun Islam, tata cara wudhu, gerakan sholat, serta do'a dan hadits pilihan.</p>
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-huda-yellow hover:-translate-y-2 transition-transform duration-300">
               <div className="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                 <Award className="text-huda-yellow w-8 h-8" />
               </div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-3">Khotmil Qur'an & Imtihan</h4>
-              <p className="text-gray-600 leading-relaxed">Acara wisuda dan uji publik bagi santri yang telah menyelesaikan target pembelajaran dan hafalan sebagai bentuk apresiasi.</p>
+              <h4 className="text-2xl font-bold text-gray-800 mb-3">Wisuda Tahfizh dan Haflah Akhirussanah</h4>
+              <p className="text-gray-600 leading-relaxed">Acara wisuda dan uji publik bagi santri yang telah menyelesaikan target pembelajaran dan hafalan sebagai bentuk apresiasi. Serta penampilan kreatifitas Santri TPQ.</p>
             </div>
           </div>
         </div>
