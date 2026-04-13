@@ -98,7 +98,7 @@ export default function App() {
 
         <footer className="bg-gray-900 text-gray-400 text-center py-10 mt-auto z-10">
           <p className="text-2xl font-extrabold text-white mb-3">TK Islam-TPQ Al-Huda</p>
-          <p className="mb-4 text-sm max-w-md mx-auto">Mencetak generasi yang bertaqwa, berakhlak mulia, cerdas dan mampu berkompetisi.</p>
+          <p className="mb-4 text-sm max-w-md mx-auto">Mencetak Generasi yang Bertaqwa, Berakhlak Mulia, Cerdas dan Mampu Berkompetisi</p>
           <p className="text-gray-500">&copy; {new Date().getFullYear()} Hak Cipta Dilindungi.</p>
         </footer>
 

@@ -28,7 +28,7 @@ export default function Home() {
               <img src="/logo/tk-islam-al-huda.jpeg" alt="Logo TK" className="w-full h-full object-contain" onError={(e) => {e.target.src="https://placehold.co/400x400/facc15/000000?text=TK+Al-Huda"}} />
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-huda-dark mb-4 drop-shadow-sm">TK Islam Al-Huda</h1>
-            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Membangun Karakter Anak Cerdas, Ceria, dan Berakhlak Mulia Sejak Dini."</p>
+            <p className="text-lg md:text-xl font-bold text-gray-700 mb-10 max-w-md leading-relaxed">"Menjadi Wadah Penyelenggara Pendidikan TK Unggulan Guna Membina anak-anak Muslim yang Mandiri, Kreatif, dan Berakhlak Islami."</p>
             <button onClick={() => navigate('/tk')} className="bg-huda-yellow text-huda-dark font-extrabold text-xl px-10 py-4 rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all flex items-center gap-3 border-b-4 border-yellow-600 active:border-b-0 active:translate-y-0">
               Profil TK <ArrowRight className="w-6 h-6" />
             </button>
