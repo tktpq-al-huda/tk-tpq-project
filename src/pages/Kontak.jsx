@@ -87,7 +87,7 @@ export default function Kontak() {
               </div>
               {/* Instagram */}
               <div className="flex items-center gap-4">
-                <div className="bg-white/10 p-3 rounded-2xl shrink-0"><InstagramIcon /></div>
+                <div className="bg-white/10 p-3 rounded-2xl shrink-0"><InstagramIcon className="text-huda-yellow" size={28} /></div>
                 <div>
                   <p className="text-sm text-gray-400 font-bold mb-1">Sosial Media</p>
                   <p className="font-semibold text-gray-100">@tktpq_alhuda</p>
