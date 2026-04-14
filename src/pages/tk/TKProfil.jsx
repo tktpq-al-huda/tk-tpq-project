@@ -190,7 +190,7 @@ export default function TKProfil() {
                   <a href="tel:0218616313" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex flex-col gap-3">
                     <Phone className="w-6 h-6 text-huda-yellow" />
                     <div>
-                      <p className="font-extrabold text-gray-900 text-sm mb-1">Telepon Sekolah</p>
+                      <p className="font-extrabold text-gray-900 text-sm mb-1">Telepon</p>
                       <p className="text-gray-600 font-bold">021 8616313</p>
                     </div>
                   </a>

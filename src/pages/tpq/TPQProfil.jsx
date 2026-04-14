@@ -193,8 +193,8 @@ export default function TPQProfil() {
                   <a href="https://wa.me/6287869974676" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
                     <Phone className="w-6 h-6 text-huda-green" />
                     <div>
-                      <p className="font-bold text-white text-sm mb-1">WhatsApp Admin</p>
-                      <p className="text-gray-300 font-semibold">0878 6997 4676</p>
+                      <p className="font-bold text-white text-sm mb-1">Telepon</p>
+                      <p className="text-gray-300 font-semibold">021 8616313</p>
                     </div>
                   </a>
                   
