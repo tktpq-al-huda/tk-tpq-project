@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Star, Send, CheckCircle, MessageCircle, Camera } from 'lucide-react';
+import { MapPin, Phone, Mail, Star, Send, CheckCircle, MessageCircle } from 'lucide-react';
 
 const InstagramIcon = ({ className = "" }) => (
   <svg className={`w-7 h-7 ${className}`} fill="currentColor" viewBox="0 0 24 24">
@@ -31,15 +31,20 @@ export default function Kontak() {
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });
+      // Tampilkan pesan sukses, tapi biarkan rating tetap ada untuk menentukan pop-up
       setFeedbackStatus('success');
-      setFormData({ nama: '', layanan: 'TK Islam Al-Huda', pesan: '' });
-      setRating(0);
-      setTimeout(() => setFeedbackStatus(''), 5000);
     } catch (error) {
       console.error('Error:', error);
       alert("Gagal mengirim ulasan. Coba lagi nanti.");
       setFeedbackStatus('');
     }
+  };
+
+  // Fungsi untuk mereset form kembali ke awal setelah selesai
+  const resetForm = () => {
+    setFeedbackStatus('');
+    setRating(0);
+    setFormData({ nama: '', layanan: 'TK Islam Al-Huda', pesan: '' });
   };
 
   return (
@@ -59,7 +64,6 @@ export default function Kontak() {
           <div className="relative z-10">
             <h3 className="text-3xl font-extrabold text-huda-yellow mb-8">Informasi Layanan</h3>
             <div className="space-y-8 text-lg">
-              {/* Alamat */}
               <div className="flex items-start gap-4">
                 <div className="bg-white/10 p-3 rounded-2xl shrink-0"><MapPin className="text-huda-yellow" size={28} /></div>
                 <div>
@@ -69,24 +73,22 @@ export default function Kontak() {
                   </p>
                 </div>
               </div>
-              {/* WhatsApp */}
               <div className="flex items-center gap-4">
                 <div className="bg-white/10 p-3 rounded-2xl shrink-0"><Phone className="text-huda-yellow" size={28} /></div>
                 <div>
-                  <p className="text-sm text-gray-400 font-bold mb-1">Telepon / WhatsApp</p>
-                  <p className="font-semibold text-gray-100">+62 821-2564-0715</p>
+                  <p className="text-sm text-gray-400 font-bold mb-1">Telepon</p>
+                  <p className="font-semibold text-gray-100">+6221 8616313</p>
                 </div>
               </div>
-              {/* Email */}
               <div className="flex items-center gap-4">
                 <div className="bg-white/10 p-3 rounded-2xl shrink-0"><Mail className="text-huda-yellow" size={28} /></div>
                 <div>
                   <p className="text-sm text-gray-400 font-bold mb-1">Email Resmi</p>
-                  <p className="font-semibold text-gray-100">info@tktpq-alhuda.sch.id</p>
+                  <p className="font-semibold text-gray-100">tktpqalhuda@gmail.com</p>
                 </div>
               </div>
               
-              {/* Sosial Media (Digabung) */}
+              {/* Sosial Media */}
               <div className="flex items-start gap-4">
                 <div className="bg-white/10 p-3 rounded-2xl shrink-0 mt-1"><InstagramIcon className="text-huda-yellow" /></div>
                 <div>
@@ -131,13 +133,43 @@ export default function Kontak() {
             <h3 className="text-4xl font-extrabold text-huda-dark mb-4">Beri Kami Penilaian</h3>
             <p className="text-lg text-gray-600">Masukan dan testimoni Anda akan kami tampilkan di halaman utama website.</p>
           </div>
+          
           {feedbackStatus === 'success' ? (
-            <div className="bg-green-50 border-2 border-green-200 p-8 rounded-[2rem] text-center">
-              <CheckCircle className="w-20 h-20 text-huda-green mx-auto mb-6" />
-              <h4 className="text-3xl font-extrabold text-gray-800 mb-3">Terima Kasih!</h4>
-              <p className="text-lg text-gray-600">Feedback Anda telah tersimpan dan akan segera tampil di halaman Home.</p>
-            </div>
+            /* HASIL SETELAH SUBMIT: Dipisah berdasarkan jumlah bintang */
+            rating <= 3 ? (
+              // Tampilan untuk Rating 1, 2, 3 (Keluhan / Evaluasi Internal)
+              <div className="bg-yellow-50 border-2 border-yellow-200 p-8 md:p-12 rounded-[2rem] text-center animate-[bounceIn_0.4s_ease-out]">
+                <CheckCircle className="w-20 h-20 text-yellow-500 mx-auto mb-6" />
+                <h4 className="text-3xl font-extrabold text-gray-800 mb-3">Terima Kasih!</h4>
+                <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto">
+                  Masukan dan keluhan Anda telah kami terima dengan baik. Informasi ini akan menjadi bahan evaluasi penting untuk peningkatan layanan TK-TPQ Al-Huda ke depannya.
+                </p>
+                <button onClick={resetForm} className="bg-huda-dark text-white font-bold px-8 py-3 rounded-full hover:bg-gray-800 transition-colors">
+                  Selesai
+                </button>
+              </div>
+            ) : (
+              // Tampilan untuk Rating 4 dan 5 (Diarahkan ke Google Maps)
+              <div className="bg-green-50 border-2 border-green-200 p-8 md:p-12 rounded-[2rem] text-center animate-[bounceIn_0.4s_ease-out] shadow-inner">
+                <Star className="w-20 h-20 text-huda-yellow mx-auto mb-4 fill-current drop-shadow-md" />
+                <h4 className="text-3xl font-extrabold text-huda-dark mb-4">Terima Kasih Banyak! ❤️</h4>
+                <p className="text-gray-700 mb-8 max-w-md mx-auto text-lg leading-relaxed">
+                  Ulasan positif Anda telah kami simpan. Maukah Bunda/Ayah membagikan pengalaman luar biasa ini ke Google Maps agar lebih banyak orang mengetahuinya?
+                </p>
+                
+                {/* Ganti Href dengan Link Google Maps asli sekolah jika sudah ada */}
+                <a href="https://www.google.com/maps/search/?api=1&query=TK+Islam+Al-Huda+Pondok+Bambu" target="_blank" rel="noreferrer" onClick={resetForm}
+                  className="inline-flex items-center justify-center gap-3 bg-huda-green text-white font-extrabold text-xl px-8 py-5 rounded-2xl hover:bg-huda-dark transition-all shadow-xl transform hover:-translate-y-1 w-full sm:w-auto">
+                  <MapPin size={28} /> Ya, Beri Ulasan di Google Maps
+                </a>
+                
+                <button onClick={resetForm} className="mt-6 text-gray-500 hover:text-gray-800 font-bold underline text-sm block mx-auto transition-colors">
+                  Mungkin Nanti Saja
+                </button>
+              </div>
+            )
           ) : (
+            /* FORM UTAMA (Sebelum Submit) */
             <form onSubmit={handleFeedbackSubmit} className="space-y-8 bg-gray-50 p-8 md:p-10 rounded-[2rem] border border-gray-200">
               <div className="text-center">
                 <label className="block text-gray-700 font-bold mb-4 text-lg">Seberapa puas Anda dengan pelayanan kami?</label>
@@ -151,9 +183,10 @@ export default function Kontak() {
                   ))}
                 </div>
               </div>
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-700 font-bold mb-3 text-sm ml-2">Nama Wali Murid</label>
+                  <label className="block text-gray-700 font-bold mb-3 text-sm ml-2">Nama</label>
                   <input type="text" required value={formData.nama} onChange={(e) => setFormData({...formData, nama: e.target.value})}
                     className="w-full px-5 py-4 bg-white border border-gray-300 rounded-2xl focus:outline-none focus:border-huda-green transition-all"
                     placeholder="Contoh: Bunda Fathan" />
@@ -168,12 +201,16 @@ export default function Kontak() {
                   </select>
                 </div>
               </div>
+              
               <div>
-                <label className="block text-gray-700 font-bold mb-3 text-sm ml-2">Ulasan / Testimoni</label>
+                <label className="block text-gray-700 font-bold mb-3 text-sm ml-2">
+                  {rating > 0 && rating <= 3 ? "Keluhan / Masukan Anda" : "Ulasan / Testimoni"}
+                </label>
                 <textarea rows="4" required value={formData.pesan} onChange={(e) => setFormData({...formData, pesan: e.target.value})}
                   className="w-full px-5 py-4 bg-white border border-gray-300 rounded-2xl focus:outline-none focus:border-huda-green transition-all"
-                  placeholder="Tuliskan pengalaman luar biasa anak Anda..."></textarea>
+                  placeholder={rating > 0 && rating <= 3 ? "Beri tahu kami apa yang perlu diperbaiki..." : "Tuliskan pengalaman luar biasa anak Anda..."}></textarea>
               </div>
+              
               <button type="submit" disabled={feedbackStatus === 'loading'}
                 className="w-full bg-huda-green text-white font-extrabold text-xl py-5 rounded-2xl hover:bg-huda-dark shadow-xl transform hover:-translate-y-1 transition-all flex items-center justify-center gap-3 disabled:opacity-70">
                 {feedbackStatus === 'loading' ? 'Mengirim Data...' : <><Send size={24} /> Kirim Testimoni</>}

@@ -47,9 +47,9 @@ export const DATA_KEGIATAN_TPQ = [
 ];
 
 export const DATA_TESTIMONI = [
-  { id: 1, nama: 'Bunda Fathan', rating: 5, teks: 'Alhamdulillah sejak di TK Al-Huda, Fathan jadi lebih mandiri dan hafal banyak doa sehari-hari.' },
-  { id: 2, nama: 'Ayah Aisyah', rating: 5, teks: 'Guru-gurunya sangat sabar dan penyayang. TPQ-nya juga bagus, bacaan Aisyah makin tartil sesuai tajwid.' },
-  { id: 3, nama: 'Bunda Rafa', rating: 4, teks: 'Fasilitas sangat lengkap, bersih, dan aman. Anak saya selalu bersemangat kalau waktunya berangkat sekolah.' },
-  { id: 4, nama: 'Ayah Bima', rating: 5, teks: 'Program unggulannya sangat terasa dampaknya pada adab dan akhlak anak di rumah. Sangat direkomendasikan!' },
-  { id: 5, nama: 'Bunda Kirana', rating: 5, teks: 'Lingkungannya asri dan kondusif untuk anak-anak bermain dan belajar agama.' },
+  { id: 1, nama: 'Bunda Fathan', rating: 5, teks: 'Alhamdulillah sejak di TK Al-Huda, Fathan jadi lebih mandiri dan hafal banyak doa sehari-hari.', layanan: 'TK Islam Al-Huda', tahun: 'TA 2023/2024' },
+  { id: 2, nama: 'Ayah Aisyah', rating: 5, teks: 'Guru-gurunya sangat sabar dan penyayang. TPQ-nya juga bagus, bacaan Aisyah makin tartil sesuai tajwid.', layanan: 'TPQ Al-Huda', tahun: 'TA 2024/2025' },
+  { id: 3, nama: 'Bunda Rafa', rating: 4, teks: 'Fasilitas sangat lengkap, bersih, dan aman. Anak saya selalu bersemangat kalau waktunya berangkat sekolah.', layanan: 'Fasilitas Umum', tahun: 'TA 2023/2024' },
+  { id: 4, nama: 'Ayah Bima', rating: 5, teks: 'Program unggulannya sangat terasa dampaknya pada adab dan akhlak anak di rumah. Sangat direkomendasikan!', layanan: 'TK Islam Al-Huda', tahun: 'TA 2024/2025' },
+  { id: 5, nama: 'Bunda Kirana', rating: 5, teks: 'Lingkungannya asri dan kondusif untuk anak-anak bermain dan belajar agama.', layanan: 'TPQ Al-Huda', tahun: 'TA 2024/2025' },
 ];
