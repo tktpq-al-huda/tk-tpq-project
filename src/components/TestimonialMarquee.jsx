@@ -1,37 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { Star, CheckCircle } from 'lucide-react';
-import { DATA_TESTIMONI } from '../data'; 
+import { DATA_TESTIMONI } from '../data/index.js'; 
 
 export const TestimonialMarquee = () => {
-  const [testimonials, setTestimonials] = useState(DATA_TESTIMONI);
+  const [testimonials, setTestimonials] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // MENGGUNAKAN URL GOOGLE SCRIPT ULASAN MILIKMU
+  // URL GOOGLE SCRIPT ULASAN MILIKMU
   const SCRIPT_URL_ULASAN = 'https://script.google.com/macros/s/AKfycbwpkb5U9UgP1ei9x8wqfXB3hBnmaDVuzQ4BY2sfUNXSPEickC5YtjAJhjp_UPx5VI5guQ/exec';
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        // Trik Anti-Cache: Menambahkan parameter waktu agar browser selalu mengambil data paling baru
         const urlDenganAntiCache = `${SCRIPT_URL_ULASAN}?t=${new Date().getTime()}`;
-        
         const response = await fetch(urlDenganAntiCache);
         const data = await response.json();
         
         if (data.result === 'success' && data.data && data.data.length > 0) {
-          // Menambahkan label Tahun Ajaran secara otomatis untuk ulasan baru dari website
-          const newReviews = data.data.map(review => ({
-            ...review,
-            tahun: review.tahun || 'TA 2025/2026'
-          }));
+          // ========================================================
+          // FILTER RAHASIA: HANYA TAMPILKAN RATING 4 ATAU 5 SAJA
+          // ========================================================
+          const filteredReviews = data.data
+            .filter(review => parseInt(review.rating) >= 4) // Hanya ambil yang bintang 4 ke atas
+            .map(review => ({
+              ...review,
+              tahun: review.tahun || 'TA 2025/2026'
+            }));
           
-          // Menggabungkan data dari Google Sheet (terbaru) dengan data statis dari web
-          setTestimonials([...newReviews, ...DATA_TESTIMONI]);
-        } else if (data.result === 'error') {
-          console.error("Error dari Google Script:", data.error);
+          // Gabungkan data dari Sheet (yang sudah difilter) dengan data statis (yang juga difilter)
+          const filteredStatic = DATA_TESTIMONI.filter(r => r.rating >= 4);
+          setTestimonials([...filteredReviews, ...filteredStatic]);
+        } else {
+           // Jika sheet kosong, gunakan data statis yang positif
+           setTestimonials(DATA_TESTIMONI.filter(r => r.rating >= 4));
         }
       } catch (error) {
-        console.error("Gagal menarik ulasan dari Google Sheet. Cek koneksi atau New Deployment:", error);
+        console.error("Gagal menarik ulasan dari Google Sheet:", error);
+        // Jika gagal konek, tetap tampilkan data statis yang positif
+        setTestimonials(DATA_TESTIMONI.filter(r => r.rating >= 4));
       } finally {
         setIsLoading(false);
       }
@@ -40,8 +46,9 @@ export const TestimonialMarquee = () => {
     fetchReviews();
   }, []);
 
-  // Menggandakan array agar efek berjalannya (marquee) tidak terputus
-  const duplicatedTestimonials = [...testimonials, ...testimonials];
+  // Jika data masih kosong setelah loading (jaga-jaga), gunakan data dummy
+  const displayData = testimonials.length > 0 ? testimonials : DATA_TESTIMONI.filter(r => r.rating >= 4);
+  const duplicatedTestimonials = [...displayData, ...displayData];
 
   return (
     <div className="w-full bg-huda-dark py-12 overflow-hidden relative border-t-4 border-huda-yellow">

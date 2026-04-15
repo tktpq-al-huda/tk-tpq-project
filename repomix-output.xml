@@ -189,155 +189,6 @@ export default {
 <svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
 </file>
 
-<file path="src/components/TestimonialMarquee.jsx">
-import React, { useState, useEffect } from 'react';
-import { Star, CheckCircle } from 'lucide-react';
-import { DATA_TESTIMONI } from '../data'; 
-
-export const TestimonialMarquee = () => {
-  const [testimonials, setTestimonials] = useState(DATA_TESTIMONI);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // MENGGUNAKAN URL GOOGLE SCRIPT ULASAN MILIKMU
-  const SCRIPT_URL_ULASAN = 'https://script.google.com/macros/s/AKfycbwpkb5U9UgP1ei9x8wqfXB3hBnmaDVuzQ4BY2sfUNXSPEickC5YtjAJhjp_UPx5VI5guQ/exec';
-
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        // Trik Anti-Cache: Menambahkan parameter waktu agar browser selalu mengambil data paling baru
-        const urlDenganAntiCache = `${SCRIPT_URL_ULASAN}?t=${new Date().getTime()}`;
-        
-        const response = await fetch(urlDenganAntiCache);
-        const data = await response.json();
-        
-        if (data.result === 'success' && data.data && data.data.length > 0) {
-          // Menambahkan label Tahun Ajaran secara otomatis untuk ulasan baru dari website
-          const newReviews = data.data.map(review => ({
-            ...review,
-            tahun: review.tahun || 'TA 2025/2026'
-          }));
-          
-          // Menggabungkan data dari Google Sheet (terbaru) dengan data statis dari web
-          setTestimonials([...newReviews, ...DATA_TESTIMONI]);
-        } else if (data.result === 'error') {
-          console.error("Error dari Google Script:", data.error);
-        }
-      } catch (error) {
-        console.error("Gagal menarik ulasan dari Google Sheet. Cek koneksi atau New Deployment:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchReviews();
-  }, []);
-
-  // Menggandakan array agar efek berjalannya (marquee) tidak terputus
-  const duplicatedTestimonials = [...testimonials, ...testimonials];
-
-  return (
-    <div className="w-full bg-huda-dark py-12 overflow-hidden relative border-t-4 border-huda-yellow">
-      <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold text-white mb-2">Apa Kata Orang Tua Murid?</h3>
-        <div className="w-16 h-1 bg-huda-yellow mx-auto rounded-full mb-4"></div>
-        {isLoading && <p className="text-gray-400 text-sm animate-pulse">Menarik ulasan terbaru...</p>}
-      </div>
-
-      <div className="animate-scroll flex gap-6 px-4 hover:[animation-play-state:paused]">
-        {duplicatedTestimonials.map((testimoni, idx) => (
-          <div key={idx} className="bg-white rounded-2xl p-6 shadow-xl w-80 flex-shrink-0 flex flex-col justify-between transform transition-transform hover:scale-105">
-            <div>
-              <div className="flex text-huda-yellow mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={20} className={i < (testimoni.rating || 5) ? "fill-current" : "text-gray-300"} />
-                ))}
-              </div>
-              <p className="text-gray-600 italic mb-4">"{testimoni.teks}"</p>
-            </div>
-            <div>
-              <p className="font-bold text-huda-green border-t border-gray-100 pt-3 flex items-center gap-2">
-                <CheckCircle size={16} className="flex-shrink-0" /> 
-                <span className="truncate">{testimoni.nama}</span>
-              </p>
-              <div className="flex justify-between items-center mt-2">
-                {testimoni.layanan && (
-                  <span className="text-[10px] font-bold bg-gray-100 text-gray-500 px-2 py-1 rounded-md">
-                    {testimoni.layanan}
-                  </span>
-                )}
-                {testimoni.tahun && (
-                  <span className="text-[10px] font-extrabold bg-yellow-100 text-huda-dark px-2 py-1 rounded-md">
-                    {testimoni.tahun}
-                  </span>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-</file>
-
-<file path="src/data/index.js">
-export const DATA_KEGIATAN_TK = [
-  { 
-    id: 1, 
-    title: 'Seni & Kreativitas', 
-    desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, dan membuat prakarya.', 
-    icon: 'palette',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80'
-  },
-  { 
-    id: 2, 
-    title: 'Praktik Ibadah', 
-    desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, dan hafalan doa-doa harian.', 
-    icon: 'heart',
-    image: 'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80'
-  },
-  { 
-    id: 3, 
-    title: 'Olahraga Gembira', 
-    desc: 'Senam ceria, permainan ketangkasan di luar ruangan untuk melatih keseimbangan dan kesehatan fisik.', 
-    icon: 'activity',
-    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80'
-  },
-];
-
-export const DATA_KEGIATAN_TPQ = [
-  { 
-    id: 1, 
-    title: 'Klasikal & Privat', 
-    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
-    icon: 'book',
-    image: 'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=800&q=80'
-  },
-  { 
-    id: 2, 
-    title: 'Muroja\'ah Bersama', 
-    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
-    icon: 'mic',
-    image: 'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=800&q=80'
-  },
-  { 
-    id: 3, 
-    title: 'Kisah Islami & Akhlak', 
-    desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
-    icon: 'users',
-    image: 'https://images.unsplash.com/photo-1511632765486-a01c80cb8fa6?auto=format&fit=crop&w=800&q=80'
-  },
-];
-
-export const DATA_TESTIMONI = [
-  { id: 1, nama: 'Bunda Fathan', rating: 5, teks: 'Alhamdulillah sejak di TK Al-Huda, Fathan jadi lebih mandiri dan hafal banyak doa sehari-hari.', layanan: 'TK Islam Al-Huda', tahun: 'TA 2023/2024' },
-  { id: 2, nama: 'Ayah Aisyah', rating: 5, teks: 'Guru-gurunya sangat sabar dan penyayang. TPQ-nya juga bagus, bacaan Aisyah makin tartil sesuai tajwid.', layanan: 'TPQ Al-Huda', tahun: 'TA 2024/2025' },
-  { id: 3, nama: 'Bunda Rafa', rating: 4, teks: 'Fasilitas sangat lengkap, bersih, dan aman. Anak saya selalu bersemangat kalau waktunya berangkat sekolah.', layanan: 'Fasilitas Umum', tahun: 'TA 2023/2024' },
-  { id: 4, nama: 'Ayah Bima', rating: 5, teks: 'Program unggulannya sangat terasa dampaknya pada adab dan akhlak anak di rumah. Sangat direkomendasikan!', layanan: 'TK Islam Al-Huda', tahun: 'TA 2024/2025' },
-  { id: 5, nama: 'Bunda Kirana', rating: 5, teks: 'Lingkungannya asri dan kondusif untuk anak-anak bermain dan belajar agama.', layanan: 'TPQ Al-Huda', tahun: 'TA 2024/2025' },
-];
-</file>
-
 <file path="src/index.css">
 /* src/index.css — YANG BENAR */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
@@ -683,6 +534,162 @@ The React Compiler is not enabled on this template because of its impact on dev 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 "# tk-tpq-project" 
 "# tk-tpq-project"
+</file>
+
+<file path="src/components/TestimonialMarquee.jsx">
+import React, { useState, useEffect } from 'react';
+import { Star, CheckCircle } from 'lucide-react';
+import { DATA_TESTIMONI } from '../data/index.js'; 
+
+export const TestimonialMarquee = () => {
+  const [testimonials, setTestimonials] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // URL GOOGLE SCRIPT ULASAN MILIKMU
+  const SCRIPT_URL_ULASAN = 'https://script.google.com/macros/s/AKfycbwpkb5U9UgP1ei9x8wqfXB3hBnmaDVuzQ4BY2sfUNXSPEickC5YtjAJhjp_UPx5VI5guQ/exec';
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const urlDenganAntiCache = `${SCRIPT_URL_ULASAN}?t=${new Date().getTime()}`;
+        const response = await fetch(urlDenganAntiCache);
+        const data = await response.json();
+        
+        if (data.result === 'success' && data.data && data.data.length > 0) {
+          // ========================================================
+          // FILTER RAHASIA: HANYA TAMPILKAN RATING 4 ATAU 5 SAJA
+          // ========================================================
+          const filteredReviews = data.data
+            .filter(review => parseInt(review.rating) >= 4) // Hanya ambil yang bintang 4 ke atas
+            .map(review => ({
+              ...review,
+              tahun: review.tahun || 'TA 2025/2026'
+            }));
+          
+          // Gabungkan data dari Sheet (yang sudah difilter) dengan data statis (yang juga difilter)
+          const filteredStatic = DATA_TESTIMONI.filter(r => r.rating >= 4);
+          setTestimonials([...filteredReviews, ...filteredStatic]);
+        } else {
+           // Jika sheet kosong, gunakan data statis yang positif
+           setTestimonials(DATA_TESTIMONI.filter(r => r.rating >= 4));
+        }
+      } catch (error) {
+        console.error("Gagal menarik ulasan dari Google Sheet:", error);
+        // Jika gagal konek, tetap tampilkan data statis yang positif
+        setTestimonials(DATA_TESTIMONI.filter(r => r.rating >= 4));
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
+  // Jika data masih kosong setelah loading (jaga-jaga), gunakan data dummy
+  const displayData = testimonials.length > 0 ? testimonials : DATA_TESTIMONI.filter(r => r.rating >= 4);
+  const duplicatedTestimonials = [...displayData, ...displayData];
+
+  return (
+    <div className="w-full bg-huda-dark py-12 overflow-hidden relative border-t-4 border-huda-yellow">
+      <div className="text-center mb-8">
+        <h3 className="text-2xl font-bold text-white mb-2">Apa Kata Orang Tua Murid?</h3>
+        <div className="w-16 h-1 bg-huda-yellow mx-auto rounded-full mb-4"></div>
+        {isLoading && <p className="text-gray-400 text-sm animate-pulse">Menarik ulasan terbaru...</p>}
+      </div>
+
+      <div className="animate-scroll flex gap-6 px-4 hover:[animation-play-state:paused]">
+        {duplicatedTestimonials.map((testimoni, idx) => (
+          <div key={idx} className="bg-white rounded-2xl p-6 shadow-xl w-80 flex-shrink-0 flex flex-col justify-between transform transition-transform hover:scale-105">
+            <div>
+              <div className="flex text-huda-yellow mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={20} className={i < (testimoni.rating || 5) ? "fill-current" : "text-gray-300"} />
+                ))}
+              </div>
+              <p className="text-gray-600 italic mb-4">"{testimoni.teks}"</p>
+            </div>
+            <div>
+              <p className="font-bold text-huda-green border-t border-gray-100 pt-3 flex items-center gap-2">
+                <CheckCircle size={16} className="flex-shrink-0" /> 
+                <span className="truncate">{testimoni.nama}</span>
+              </p>
+              <div className="flex justify-between items-center mt-2">
+                {testimoni.layanan && (
+                  <span className="text-[10px] font-bold bg-gray-100 text-gray-500 px-2 py-1 rounded-md">
+                    {testimoni.layanan}
+                  </span>
+                )}
+                {testimoni.tahun && (
+                  <span className="text-[10px] font-extrabold bg-yellow-100 text-huda-dark px-2 py-1 rounded-md">
+                    {testimoni.tahun}
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+</file>
+
+<file path="src/data/index.js">
+export const DATA_KEGIATAN_TK = [
+  { 
+    id: 1, 
+    title: 'Seni & Kreativitas', 
+    desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, dan membuat prakarya.', 
+    icon: 'palette',
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80'
+  },
+  { 
+    id: 2, 
+    title: 'Praktik Ibadah', 
+    desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, dan hafalan doa-doa harian.', 
+    icon: 'heart',
+    image: 'https://images.unsplash.com/photo-1584598173971-b7cc2b0a5fa3?auto=format&fit=crop&w=800&q=80'
+  },
+  { 
+    id: 3, 
+    title: 'Olahraga Gembira', 
+    desc: 'Senam ceria, permainan ketangkasan di luar ruangan untuk melatih keseimbangan dan kesehatan fisik.', 
+    icon: 'activity',
+    image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80'
+  },
+];
+
+export const DATA_KEGIATAN_TPQ = [
+  { 
+    id: 1, 
+    title: 'Klasikal & Privat', 
+    desc: 'Belajar membaca Iqro dan Al-Qur\'an secara tartil dengan bimbingan langsung (privat) oleh asatidz.', 
+    icon: 'book',
+    image: 'https://images.unsplash.com/photo-1609599006353-e629aaab21fc?auto=format&fit=crop&w=800&q=80'
+  },
+  { 
+    id: 2, 
+    title: 'Muroja\'ah Bersama', 
+    desc: 'Kegiatan mengulang hafalan surat-surat pendek (Juz 30) secara bersama-sama agar hafalan semakin kuat.', 
+    icon: 'mic',
+    image: 'https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=800&q=80'
+  },
+  { 
+    id: 3, 
+    title: 'Kisah Islami & Akhlak', 
+    desc: 'Penyampaian sirah Nabawiyah, kisah para sahabat, dan penanaman adab serta akhlakul karimah.', 
+    icon: 'users',
+    image: 'https://images.unsplash.com/photo-1511632765486-a01c80cb8fa6?auto=format&fit=crop&w=800&q=80'
+  },
+];
+
+export const DATA_TESTIMONI = [
+  { id: 1, nama: 'Bunda Fathan', rating: 5, teks: 'Alhamdulillah sejak di TK Al-Huda, Fathan jadi lebih mandiri dan hafal banyak doa sehari-hari.', layanan: 'TK Islam Al-Huda', tahun: 'TA 2023/2024' },
+  { id: 2, nama: 'Ayah Aisyah', rating: 5, teks: 'Guru-gurunya sangat sabar dan penyayang. TPQ-nya juga bagus, bacaan Aisyah makin tartil sesuai tajwid.', layanan: 'TPQ Al-Huda', tahun: 'TA 2024/2025' },
+  { id: 3, nama: 'Bunda Rafa', rating: 4, teks: 'Fasilitas sangat lengkap, bersih, dan aman. Anak saya selalu bersemangat kalau waktunya berangkat sekolah.', layanan: 'Fasilitas Umum', tahun: 'TA 2023/2024' },
+  { id: 4, nama: 'Ayah Bima', rating: 5, teks: 'Program unggulannya sangat terasa dampaknya pada adab dan akhlak anak di rumah. Sangat direkomendasikan!', layanan: 'TK Islam Al-Huda', tahun: 'TA 2024/2025' },
+  { id: 5, nama: 'Bunda Kirana', rating: 5, teks: 'Lingkungannya asri dan kondusif untuk anak-anak bermain dan belajar agama.', layanan: 'TPQ Al-Huda', tahun: 'TA 2024/2025' },
+];
 </file>
 
 <file path="src/components/Navbar.jsx">
@@ -1261,6 +1268,130 @@ export default function DaftarTK() {
 }
 </file>
 
+<file path="src/App.jsx">
+import React, { useEffect, Component } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+
+// Import Komponen & Halaman Utama
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Kontak from './pages/Kontak';
+import Informasi from './pages/Informasi'; 
+
+// Halaman TK
+import TKProfil from './pages/tk/TKProfil';
+import TKKegiatan from './kegiatan/kegiatan-tk/TKKegiatan';
+import DaftarTK from './pages/tk/DaftarTK';
+
+// Halaman TPQ
+import TPQProfil from './pages/tpq/TPQProfil';
+import TPQKegiatan from './kegiatan/kegiatan-tpq/TPQKegiatan';
+import DaftarTPQ from './pages/tpq/DaftarTPQ';
+
+// ==========================================
+// PENDETEKSI ERROR (MENCEGAH LAYAR PUTIH)
+// ==========================================
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, errorInfo: null, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error: error };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error("Error detail:", error, errorInfo);
+    this.setState({ errorInfo: errorInfo });
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-10 m-10 bg-red-50 border-2 border-red-500 rounded-2xl text-red-800 font-sans">
+          <h2 className="text-3xl font-bold mb-4">Oops! Ada Error di React 🐛</h2>
+          <p className="font-bold mb-2">Pesan Error:</p>
+          <code className="block bg-white p-4 rounded-lg shadow mb-4 text-red-600 font-mono">
+            {this.state.error && this.state.error.toString()}
+          </code>
+          <p className="mt-6 text-gray-600 font-bold">👉 Silakan cek tab Console atau perbaiki file yang bermasalah.</p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// Fitur otomatis scroll ke atas saat ganti halaman
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col">
+        <Navbar />
+        
+        <main className="flex-grow">
+          <ErrorBoundary>
+            <Routes>
+              {/* Rute Utama */}
+              <Route path="/" element={<Home />} />
+              <Route path="/kontak" element={<Kontak />} />
+              
+              {/* Rute Halaman Informasi */}
+              <Route path="/informasi" element={<Informasi />} />
+              
+              {/* Rute TK */}
+              <Route path="/tk" element={<TKProfil />} />
+              <Route path="/kegiatan-tk" element={<TKKegiatan />} />
+              <Route path="/daftar-tk" element={<DaftarTK />} />
+              
+              {/* Rute TPQ */}
+              <Route path="/tpq" element={<TPQProfil />} />
+              <Route path="/kegiatan-tpq" element={<TPQKegiatan />} />
+              <Route path="/daftar-tpq" element={<DaftarTPQ />} />
+              
+              {/* Fallback 404 (Halaman tidak ditemukan) */}
+              <Route path="*" element={
+                <div className="pt-40 pb-20 px-6 text-center min-h-[60vh] flex flex-col items-center justify-center">
+                  <h2 className="text-3xl font-bold text-gray-400 mb-4">Halaman sedang dalam tahap pembuatan... 🚀</h2>
+                  <p className="text-gray-500">Silakan kembali ke Home.</p>
+                </div>
+              } />
+            </Routes>
+          </ErrorBoundary>
+        </main>
+
+        <footer className="bg-gray-900 text-gray-400 text-center py-10 mt-auto z-10">
+          <p className="text-2xl font-extrabold text-white mb-3">TK Islam-TPQ Al-Huda</p>
+          <p className="mb-4 text-sm max-w-md mx-auto">Mencetak Generasi yang Bertaqwa, Berakhlak Mulia, Cerdas dan Mampu Berkompetisi</p>
+          <p className="text-gray-500">&copy; {new Date().getFullYear()} Hak Cipta Dilindungi.</p>
+        </footer>
+
+        {/* Style Global untuk Animasi */}
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+          .animate-scroll { display: flex; width: max-content; animation: scroll 35s linear infinite; }
+          @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+          @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+          @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
+          /* Custom scrollbar untuk pop-up */
+          .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+          .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+          .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        `}} />
+      </div>
+    </BrowserRouter>
+  );
+}
+</file>
+
 <file path="src/pages/Kontak.jsx">
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Star, Send, CheckCircle, MessageCircle } from 'lucide-react';
@@ -1484,130 +1615,6 @@ export default function Kontak() {
         </div>
       </div>
     </div>
-  );
-}
-</file>
-
-<file path="src/App.jsx">
-import React, { useEffect, Component } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-
-// Import Komponen & Halaman Utama
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Kontak from './pages/Kontak';
-import Informasi from './pages/Informasi'; 
-
-// Halaman TK
-import TKProfil from './pages/tk/TKProfil';
-import TKKegiatan from './kegiatan/kegiatan-tk/TKKegiatan';
-import DaftarTK from './pages/tk/DaftarTK';
-
-// Halaman TPQ
-import TPQProfil from './pages/tpq/TPQProfil';
-import TPQKegiatan from './kegiatan/kegiatan-tpq/TPQKegiatan';
-import DaftarTPQ from './pages/tpq/DaftarTPQ';
-
-// ==========================================
-// PENDETEKSI ERROR (MENCEGAH LAYAR PUTIH)
-// ==========================================
-class ErrorBoundary extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false, errorInfo: null, error: null };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true, error: error };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error("Error detail:", error, errorInfo);
-    this.setState({ errorInfo: errorInfo });
-  }
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="p-10 m-10 bg-red-50 border-2 border-red-500 rounded-2xl text-red-800 font-sans">
-          <h2 className="text-3xl font-bold mb-4">Oops! Ada Error di React 🐛</h2>
-          <p className="font-bold mb-2">Pesan Error:</p>
-          <code className="block bg-white p-4 rounded-lg shadow mb-4 text-red-600 font-mono">
-            {this.state.error && this.state.error.toString()}
-          </code>
-          <p className="mt-6 text-gray-600 font-bold">👉 Silakan cek tab Console atau perbaiki file yang bermasalah.</p>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-
-// Fitur otomatis scroll ke atas saat ganti halaman
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
-
-export default function App() {
-  return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="min-h-screen bg-gray-50 text-gray-800 font-sans flex flex-col">
-        <Navbar />
-        
-        <main className="flex-grow">
-          <ErrorBoundary>
-            <Routes>
-              {/* Rute Utama */}
-              <Route path="/" element={<Home />} />
-              <Route path="/kontak" element={<Kontak />} />
-              
-              {/* Rute Halaman Informasi */}
-              <Route path="/informasi" element={<Informasi />} />
-              
-              {/* Rute TK */}
-              <Route path="/tk" element={<TKProfil />} />
-              <Route path="/kegiatan-tk" element={<TKKegiatan />} />
-              <Route path="/daftar-tk" element={<DaftarTK />} />
-              
-              {/* Rute TPQ */}
-              <Route path="/tpq" element={<TPQProfil />} />
-              <Route path="/kegiatan-tpq" element={<TPQKegiatan />} />
-              <Route path="/daftar-tpq" element={<DaftarTPQ />} />
-              
-              {/* Fallback 404 (Halaman tidak ditemukan) */}
-              <Route path="*" element={
-                <div className="pt-40 pb-20 px-6 text-center min-h-[60vh] flex flex-col items-center justify-center">
-                  <h2 className="text-3xl font-bold text-gray-400 mb-4">Halaman sedang dalam tahap pembuatan... 🚀</h2>
-                  <p className="text-gray-500">Silakan kembali ke Home.</p>
-                </div>
-              } />
-            </Routes>
-          </ErrorBoundary>
-        </main>
-
-        <footer className="bg-gray-900 text-gray-400 text-center py-10 mt-auto z-10">
-          <p className="text-2xl font-extrabold text-white mb-3">TK Islam-TPQ Al-Huda</p>
-          <p className="mb-4 text-sm max-w-md mx-auto">Mencetak Generasi yang Bertaqwa, Berakhlak Mulia, Cerdas dan Mampu Berkompetisi</p>
-          <p className="text-gray-500">&copy; {new Date().getFullYear()} Hak Cipta Dilindungi.</p>
-        </footer>
-
-        {/* Style Global untuk Animasi */}
-        <style dangerouslySetInnerHTML={{__html: `
-          @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-          .animate-scroll { display: flex; width: max-content; animation: scroll 35s linear infinite; }
-          @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-          @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
-          @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
-          /* Custom scrollbar untuk pop-up */
-          .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-          .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-          .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-          .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-        `}} />
-      </div>
-    </BrowserRouter>
   );
 }
 </file>
