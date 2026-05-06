@@ -58,7 +58,7 @@ export const TestimonialMarquee = () => {
         {isLoading && <p className="text-gray-400 text-sm animate-pulse">Menarik ulasan terbaru...</p>}
       </div>
 
-      <div className="animate-scroll flex gap-6 px-4 hover:[animation-play-state:paused]">
+      <div className="animate-scroll flex gap-6 px-4">
         {duplicatedTestimonials.map((testimoni, idx) => (
           <div key={idx} className="bg-white rounded-2xl p-6 shadow-xl w-80 flex-shrink-0 flex flex-col justify-between transform transition-transform hover:scale-105">
             <div>
