@@ -191,7 +191,7 @@ export default function TKProfil() {
                     <Phone className="w-6 h-6 text-huda-yellow" />
                     <div>
                       <p className="font-extrabold text-gray-900 text-sm mb-1">Telepon</p>
-                      <p className="text-gray-600 font-bold">: 0821 25640715</p>
+                      <p className="text-gray-600 font-bold">0821 25640715</p>
                     </div>
                   </a>
                   
