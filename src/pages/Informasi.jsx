@@ -11,6 +11,20 @@ const FASILITAS = [
 // --- DATA DUMMY BERITA & ACARA ---
 const BERITA = [
   {
+    id: 4, // ID baru untuk ditaruh di paling atas
+    kategori: 'Acara',
+    tanggal: '4 Mei 2026',
+    judul: 'Keseruan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng',
+    snippet: 'Anak-anak belajar kemandirian dan kerja sama melalui berbagai wahana outbound yang sangat menyenangkan...',
+    fullText: 'Alhamdulillah, kegiatan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng telah berjalan dengan lancar dan penuh kegembiraan. Dalam kegiatan ini, anak-anak diajak untuk berinteraksi langsung dengan alam dan melatih kemandirian serta keberanian mereka.\n\nBerbagai wahana seru dan menantang diikuti oleh para siswa dengan antusias, mulai dari meniti jembatan jaring di atas persawahan, bekerja sama memindahkan air dengan pipa, hingga menyusuri danau menggunakan rakit bambu. Kegiatan outbound ini sangat bermanfaat untuk melatih motorik kasar, kekompakan tim, dan rasa percaya diri anak-anak. Terima kasih kepada para guru dan orang tua murid yang telah mendukung suksesnya acara ini!',
+    thumbnail: '/foto-berita-pengumuman-acara/field trip-1.jpg',
+    gallery: [
+      '/foto-berita-pengumuman-acara/field trip-2.jpg',
+      '/foto-berita-pengumuman-acara/field-trip-3.jpg',
+      '/foto-berita-pengumuman-acara/field-trip-4.jpg'
+    ]
+  },
+  {
     id: 1,
     kategori: 'Berita',
     tanggal: '17 Agustus 2025',
@@ -37,7 +51,7 @@ const BERITA = [
     id: 3,
     kategori: 'Acara',
     tanggal: '20 Oktober 2026',
-    judul: 'Khotmil Qur\'an & Imtihan Santri TPQ',
+    judul: 'Haflah Akhirussanah dan Wisuda Tahfizh',
     snippet: 'Momen mengharukan saat para santri TPQ Al-Huda melaksanakan ujian publik dan wisuda...',
     fullText: 'Masya Allah Tabarakallah. Ratusan pasang mata wali murid berkaca-kaca saat melihat putra-putrinya melantunkan ayat suci Al-Qur\'an dengan fasih di atas panggung. Acara Khotmil Qur\'an dan Imtihan angkatan ke-12 ini merupakan bukti komitmen TPQ Al-Huda dalam memberantas buta huruf Al-Qur\'an. Selamat kepada para santri yang telah lulus!',
     thumbnail: '/foto-berita-pengumuman-acara/wisuda-tpq.jpg',
