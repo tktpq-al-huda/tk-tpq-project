@@ -11,7 +11,7 @@ const FASILITAS = [
 // --- DATA DUMMY BERITA & ACARA ---
 const BERITA = [
   {
-    id: 4, // ID baru untuk ditaruh di paling atas
+    id: 1, // ID baru untuk ditaruh di paling atas
     kategori: 'Acara',
     tanggal: '4 Mei 2026',
     judul: 'Keseruan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng',
@@ -19,13 +19,13 @@ const BERITA = [
     fullText: 'Alhamdulillah, kegiatan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng telah berjalan dengan lancar dan penuh kegembiraan. Dalam kegiatan ini, anak-anak diajak untuk berinteraksi langsung dengan alam dan melatih kemandirian serta keberanian mereka.\n\nBerbagai wahana seru dan menantang diikuti oleh para siswa dengan antusias, mulai dari meniti jembatan jaring di atas persawahan, bekerja sama memindahkan air dengan pipa, hingga menyusuri danau menggunakan rakit bambu. Kegiatan outbound ini sangat bermanfaat untuk melatih motorik kasar, kekompakan tim, dan rasa percaya diri anak-anak. Terima kasih kepada para guru dan orang tua murid yang telah mendukung suksesnya acara ini!',
     thumbnail: '/foto-berita-pengumuman-acara/field trip-1.jpg',
     gallery: [
-      '/foto-berita-pengumuman-acara/field trip-2.jpg',
+      '/foto-berita-pengumuman-acara/field trip-4.jpg',
       '/foto-berita-pengumuman-acara/field-trip-3.jpg',
-      '/foto-berita-pengumuman-acara/field-trip-4.jpg'
+      '/foto-berita-pengumuman-acara/field-trip-2.jpg'
     ]
   },
   {
-    id: 1,
+    id: 2,
     kategori: 'Berita',
     tanggal: '17 Agustus 2025',
     judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
@@ -38,7 +38,7 @@ const BERITA = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     kategori: 'Pengumuman',
     tanggal: '01 September 2026',
     judul: 'Pembagian Raport Bayangan Semester Ganjil',
@@ -48,7 +48,7 @@ const BERITA = [
     gallery: []
   },
   {
-    id: 3,
+    id: 4,
     kategori: 'Acara',
     tanggal: '20 Oktober 2026',
     judul: 'Haflah Akhirussanah dan Wisuda Tahfizh',
