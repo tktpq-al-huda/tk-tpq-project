@@ -194,7 +194,7 @@ export default function TPQProfil() {
                     <Phone className="w-6 h-6 text-huda-green" />
                     <div>
                       <p className="font-bold text-white text-sm mb-1">Telepon</p>
-                      <p className="text-gray-300 font-semibold">021 8616313</p>
+                      <p className="text-gray-300 font-semibold">0878 69974676</p>
                     </div>
                   </a>
                   
