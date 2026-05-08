@@ -74,13 +74,29 @@ export default function Kontak() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="bg-white/10 p-3 rounded-2xl shrink-0"><Phone className="text-huda-yellow" size={28} /></div>
-                <div>
-                  <p className="text-sm text-gray-400 font-bold mb-1">Telepon</p>
-                  <p className="font-semibold text-gray-100">Sekolah : +6221 8616313</p>
-                  <p className="font-semibold text-gray-100">TK      : +62821 25640715</p>
-                  <p className="font-semibold text-gray-100">TPQ     : +62878 69974676</p>
+              <div className="bg-white/10 p-3 rounded-2xl shrink-0">
+                <Phone className="text-huda-yellow" size={28} />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400 font-bold mb-2">Telepon</p>
+                
+                {/* Menggunakan Grid agar titik dua (:) dan nomor sejajar sempurna */}
+                <div className="grid grid-cols-[auto_auto_1fr] gap-x-3 gap-y-1 font-semibold text-gray-100 text-base md:text-lg">
+                  
+                  <span className="text-left">Sekolah</span>
+                  <span>:</span>
+                  <span>+6221 8616313</span>
+
+                  <span className="text-left">TK</span>
+                  <span>:</span>
+                  <span>+62821 25640715</span>
+
+                  <span className="text-left">TPQ</span>
+                  <span>:</span>
+                  <span>+62878 69974676</span>
+                  
                 </div>
+              </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="bg-white/10 p-3 rounded-2xl shrink-0"><Mail className="text-huda-yellow" size={28} /></div>
