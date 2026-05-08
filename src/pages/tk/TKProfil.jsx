@@ -5,7 +5,7 @@ import {
   MessageCircle, MapPin, Phone, Hash, Award, Clock, Quote, Mail, Star
 } from 'lucide-react';
 
-// SVG Icon Instagram Manual untuk mengatasi error lucide-react
+// SVG Icon Instagram Manual
 const InstagramIcon = ({ size = 24, className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -17,12 +17,10 @@ const InstagramIcon = ({ size = 24, className = "" }) => (
 export default function TKProfil() {
   const navigate = useNavigate();
 
-  // Fungsi untuk membuka WhatsApp khusus Admin TK
   const handleWhatsApp = () => {
     window.open('https://wa.me/6282125640715?text=Assalamu%27alaikum%20Admin%20TK%20Islam%20Al-Huda,%20saya%20ingin%20bertanya%20seputar%20pendaftaran%20dan%20program%20TK.', '_blank');
   };
 
-  // Komponen Helper untuk Kotak Info Profil
   const InfoCard = ({ icon, label, value, className = "" }) => (
     <div className={`flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${className}`}>
       <div className="bg-green-100 p-3 rounded-xl text-huda-green flex-shrink-0">
@@ -76,14 +74,12 @@ export default function TKProfil() {
               </p>
             </div>
 
-            {/* Kolom Info Identitas */}
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
               <InfoCard icon={<Hash size={24} />} label="No. NPSN" value="20111944" />
               <InfoCard icon={<Award size={24} />} label="Status Akreditasi" value="Terakreditasi – B" />
               <InfoCard icon={<Clock size={24} />} label="Hari & Jam Belajar" value="Senin s/d Jum'at (08.00 - 11.00 WIB)" className="sm:col-span-2" />
             </div>
 
-            {/* Misi TK */}
             <h3 className="text-3xl font-extrabold text-huda-green mb-6">Misi Kami</h3>
             <ul className="space-y-4 text-gray-700 text-lg font-medium">
               <li className="flex items-start gap-4">
@@ -177,41 +173,60 @@ export default function TKProfil() {
             <div className="pt-12 border-t border-gray-300 flex flex-col items-center">
               <p className="text-xl font-extrabold text-gray-900 mb-8">Informasi Kontak & Lokasi Resmi TK</p>
               
-              <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
-                <div className="bg-white border border-gray-200 p-6 rounded-3xl flex items-start gap-4 hover:bg-gray-50 transition-colors shadow-sm">
-                  <MapPin className="w-8 h-8 text-huda-yellow flex-shrink-0 mt-1" />
+              <div className="flex flex-col gap-5 max-w-4xl w-full text-left mx-auto">
+                
+                {/* Alamat Lengkap */}
+                <div className="bg-white border border-gray-200 p-6 rounded-3xl flex items-center gap-5 shadow-sm">
+                  <MapPin className="w-8 h-8 text-huda-yellow flex-shrink-0" />
                   <div>
-                    <p className="font-extrabold text-gray-800 mb-2 text-lg">Alamat Lengkap</p>
+                    <p className="font-extrabold text-gray-800 mb-1 text-lg">Alamat Lengkap</p>
                     <p className="text-gray-600 font-semibold leading-relaxed">Jl. Bambu Apus Raya No.85, Kel. Pondok Bambu, Kec. Duren Sawit, Jakarta Timur. 13430</p>
                   </div>
                 </div>
                 
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <a href="tel:0218616313" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex flex-col gap-3">
-                    <Phone className="w-6 h-6 text-huda-yellow" />
-                    <div>
-                      <p className="font-extrabold text-gray-900 text-sm mb-1">Telepon</p>
-                      <p className="text-gray-600 font-bold">0821 25640715</p>
+                {/* --- GRID 2 KOLOM ABSOLUT (Ukuran Kotak Pasti Sama) --- */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                  
+                  {/* Kotak 1: Link WhatsApp */}
+                  <a href="https://wa.me/6282125640715" target="_blank" rel="noreferrer" className="bg-white border border-gray-200 hover:bg-green-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden">
+                    <MessageCircle className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-gray-900 text-sm mb-1 truncate">WhatsApp Admin</p>
+                      <p className="text-gray-600 font-bold truncate">0821 25640715</p>
+                    </div>
+                  </a>
+
+                  {/* Kotak 2: Telepon Sekolah */}
+                  <a href="tel:0218616313" className="bg-white border border-gray-200 hover:bg-yellow-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden">
+                    <Phone className="w-8 h-8 text-huda-yellow group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-gray-900 text-sm mb-1 truncate">Telepon Sekolah</p>
+                      <p className="text-gray-600 font-bold truncate">021 8616313</p>
+                    </div>
+                  </a>
+
+                  {/* Kotak 3: Link Email */}
+                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden">
+                    <Mail className="w-8 h-8 text-huda-yellow group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-gray-900 text-sm mb-1 truncate">Email Resmi</p>
+                      <p className="text-gray-600 font-bold truncate">tkislamalhuda313@gmail.com</p>
                     </div>
                   </a>
                   
-                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex flex-col gap-3">
-                    <Mail className="w-6 h-6 text-huda-yellow" />
-                    <div>
-                      <p className="font-extrabold text-gray-900 text-sm mb-1">Email Resmi</p>
-                      <p className="text-gray-600 text-sm break-all font-bold">tkislamalhuda313<br/>@gmail.com</p>
+                  {/* Kotak 4: Link Instagram */}
+                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden">
+                    <InstagramIcon className="w-8 h-8 text-huda-yellow group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-gray-900 text-sm mb-1 truncate">Instagram</p>
+                      <p className="text-gray-600 font-bold truncate">@tkialhuda.pondokbambu</p>
                     </div>
                   </a>
                   
-                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4">
-                    <InstagramIcon className="w-7 h-7 text-huda-yellow" />
-                    <div>
-                      <p className="font-extrabold text-gray-900 text-sm mb-1">Instagram</p>
-                      <p className="text-gray-600 font-bold">@tkialhuda.pondokbambu</p>
-                    </div>
-                  </a>
                 </div>
+                {/* --- AKHIR GRID --- */}
               </div>
+              
             </div>
           </div>
         </div>

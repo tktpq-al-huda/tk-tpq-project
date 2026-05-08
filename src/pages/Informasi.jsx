@@ -26,7 +26,7 @@ const BERITA = [
   },
   {
     id: 2,
-    kategori: 'Berita',
+    kategori: 'Acara',
     tanggal: '17 Agustus 2025',
     judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
     snippet: 'TK Islam Al-Huda mengadakan berbagai lomba seru untuk memeriahkan HUT RI...',

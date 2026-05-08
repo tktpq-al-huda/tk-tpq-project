@@ -43,7 +43,7 @@ const DATA_KEGIATAN_TK = [
     // TAMBAHAN: subItems untuk menampilkan macam-macam kegiatan secara detail
     subItems: [
       { name: 'Berenang', desc: 'Melatih motorik kasar, keberanian, dan kemandirian anak di dalam air dengan pengawasan penuh dari guru.', img: '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg' },
-      { name: 'Baca Tulis Qur\'an (BTQ)', desc: 'Pendalaman pengenalan huruf hijaiyah dan dasar-dasar membaca Al-Qur\'an sejak dini.', img: '/foto-profil-kegiatan-tk/btq4.jpeg' },
+      { name: 'Baca Tulis Qur\'an (BTQ)', desc: 'Pendalaman pengenalan huruf Hijaiyah, dasar-dasar membaca Al-Qur\'an dan Bahasa Arab dasar sejak dini.', img: '/foto-profil-kegiatan-tk/btq4.jpeg' },
       { name: 'Seni Mewarnai / Menggambar', desc: 'Eksplorasi warna dan bentuk untuk mengasah jiwa seni dan fokus anak.', img: '/foto-profil-kegiatan-tk/btq5.jpeg' },
     ],
     gallery: [

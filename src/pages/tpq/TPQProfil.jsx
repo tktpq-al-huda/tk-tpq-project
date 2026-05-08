@@ -73,7 +73,7 @@ export default function TPQProfil() {
             </div>
 
             <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
-              Taman Pendidikan Al-Qur'an (TPQ) adalah sebuah tempat yang indah dan nyaman. Oleh karena itu proses belajar dan mengajar TPQ harus mampu mencerminkan, menciptakan suasana yang indah, nyaman dan menyenangkan. TPQ Al Huda adalah <strong p>Lembaga Pendidikan dan Pengajaran Iqro sampai dengan Al Quran untuk anak usia 3 s/d 17 tahun.”</strong>.
+              Taman Pendidikan Al-Qur'an (TPQ) adalah sebuah tempat yang indah dan nyaman. Oleh karena itu proses belajar dan mengajar TPQ harus mampu mencerminkan, menciptakan suasana yang indah, nyaman dan menyenangkan. TPQ Al Huda adalah <strong>Lembaga Pendidikan dan Pengajaran Iqro sampai dengan Al Quran untuk anak usia 3 s/d 17 tahun.”</strong>.
             </p>
             
             <p className="text-gray-600 mb-8 text-lg leading-relaxed text-justify">
@@ -178,42 +178,58 @@ export default function TPQProfil() {
             <div className="pt-12 border-t border-gray-600/50 flex flex-col items-center">
               <p className="text-xl font-bold text-huda-green mb-8">Informasi Kontak & Lokasi Resmi TPQ</p>
               
-              <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
-                {/* Kiri: Alamat Lengkap */}
-                <div className="bg-white/10 p-6 rounded-3xl flex items-start gap-4 hover:bg-white/20 transition-colors">
-                  <MapPin className="w-8 h-8 text-huda-green flex-shrink-0 mt-1" />
+              <div className="flex flex-col gap-5 max-w-4xl w-full text-left mx-auto">
+                
+                {/* Alamat Lengkap */}
+                <div className="bg-white/10 p-6 rounded-3xl flex items-center gap-5 hover:bg-white/20 transition-colors shadow-sm backdrop-blur-sm">
+                  <MapPin className="w-8 h-8 text-huda-green flex-shrink-0" />
                   <div>
-                    <p className="font-bold text-white mb-2 text-lg">Alamat Lengkap</p>
-                    <p className="text-gray-300 leading-relaxed">Jl. Bambu Apus Raya No. 85, Pondok Bambu, Kec. Duren Sawit, Jakarta Timur</p>
+                    <p className="font-extrabold text-white mb-1 text-lg">Alamat Lengkap</p>
+                    <p className="text-gray-300 font-semibold leading-relaxed">Jl. Bambu Apus Raya No. 85, Pondok Bambu, Kec. Duren Sawit, Jakarta Timur</p>
                   </div>
                 </div>
                 
-                {/* Kanan: Telepon, Email, Sosmed */}
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <a href="https://wa.me/6287869974676" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
-                    <Phone className="w-6 h-6 text-huda-green" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Telepon</p>
-                      <p className="text-gray-300 font-semibold">0878 69974676</p>
+                {/* --- GRID 2 KOLOM ABSOLUT (Ukuran Kotak Pasti Sama) --- */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                  
+                  {/* Kotak 1: Link WhatsApp */}
+                  <a href="https://wa.me/6287869974676" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden backdrop-blur-sm">
+                    <MessageCircle className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-white text-sm mb-1 truncate">WhatsApp Admin</p>
+                      <p className="text-gray-300 font-bold truncate">0878 69974676</p>
+                    </div>
+                  </a>
+
+                  {/* Kotak 2: Telepon Sekolah */}
+                  <a href="tel:0218616313" className="bg-white/10 hover:bg-white/20 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden backdrop-blur-sm">
+                    <Phone className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-white text-sm mb-1 truncate">Telepon Sekolah</p>
+                      <p className="text-gray-300 font-bold truncate">021 8616313</p>
+                    </div>
+                  </a>
+
+                  {/* Kotak 3: Link Email */}
+                  <a href="mailto:tpqalhuda.pondokbambu@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden backdrop-blur-sm">
+                    <Mail className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-white text-sm mb-1 truncate">Email Resmi</p>
+                      <p className="text-gray-300 font-bold truncate">tpqalhuda.pondokbambu@gmail.com</p>
                     </div>
                   </a>
                   
-                  <a href="mailto:tpqalhuda.pondokbambu@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
-                    <Mail className="w-6 h-6 text-huda-green" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Email Resmi</p>
-                      <p className="text-gray-300 text-sm break-all font-semibold">tpqalhuda.pondokbambu<br/>@gmail.com</p>
+                  {/* Kotak 4: Link Instagram */}
+                  <a href="https://instagram.com/tpqalhuda.pondokbambu" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden backdrop-blur-sm">
+                    <InstagramIcon className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-white text-sm mb-1 truncate">Instagram</p>
+                      <p className="text-gray-300 font-bold truncate">@tpqalhuda.pondokbambu</p>
                     </div>
                   </a>
                   
-                  <a href="https://instagram.com/tpqalhuda.pondokbambu" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex items-center gap-4">
-                    <InstagramIcon className="w-7 h-7 text-huda-green" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Instagram</p>
-                      <p className="text-gray-300 font-semibold">@tpqalhuda.pondokbambu</p>
-                    </div>
-                  </a>
                 </div>
+                {/* --- AKHIR GRID --- */}
               </div>
             </div>
           </div>

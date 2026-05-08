@@ -77,7 +77,9 @@ export default function Kontak() {
                 <div className="bg-white/10 p-3 rounded-2xl shrink-0"><Phone className="text-huda-yellow" size={28} /></div>
                 <div>
                   <p className="text-sm text-gray-400 font-bold mb-1">Telepon</p>
-                  <p className="font-semibold text-gray-100">+6221 8616313</p>
+                  <p className="font-semibold text-gray-100">Sekolah : +6221 8616313</p>
+                  <p className="font-semibold text-gray-100">TK      : +62821 25640715</p>
+                  <p className="font-semibold text-gray-100">TPQ     : +62878 69974676</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">

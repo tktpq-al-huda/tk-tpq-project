@@ -724,220 +724,6 @@ export default function Home() {
 }
 </file>
 
-<file path="src/pages/Informasi.jsx">
-import React, { useState } from 'react';
-import { Calendar, Megaphone, Building, X, ArrowRight, Clock, MapPin, Image as ImageIcon } from 'lucide-react';
-
-// --- DATA DUMMY FASILITAS ---
-const FASILITAS = [
-  { id: 1, title: 'Gedung Sekolah Nyaman', desc: 'Bangunan permanen, sirkulasi udara baik, dan lingkungan yang aman untuk anak-anak.', image: '/foto-sarana-prasarana/gedung-sekolah-nyaman.jpg' },
-  { id: 2, title: 'Taman Bermain (Playground)', desc: 'Area bermain outdoor dan indoor yang dilengkapi alat permainan edukatif dan aman.', image: '/foto-sarana-prasarana/taman-bermain.jpg' },
-  { id: 3, title: 'Ruang Kelas & Sentra', desc: 'Kelas dengan perlengkapan multimedia dan alat peraga edukatif lengkap.', image: '/foto-sarana-prasarana/ruang-kelas-sentra.jpg' },
-];
-
-// --- DATA DUMMY BERITA & ACARA ---
-const BERITA = [
-  {
-    id: 4, // ID baru untuk ditaruh di paling atas
-    kategori: 'Acara',
-    tanggal: '4 Mei 2026',
-    judul: 'Keseruan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng',
-    snippet: 'Anak-anak belajar kemandirian dan kerja sama melalui berbagai wahana outbound yang sangat menyenangkan...',
-    fullText: 'Alhamdulillah, kegiatan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng telah berjalan dengan lancar dan penuh kegembiraan. Dalam kegiatan ini, anak-anak diajak untuk berinteraksi langsung dengan alam dan melatih kemandirian serta keberanian mereka.\n\nBerbagai wahana seru dan menantang diikuti oleh para siswa dengan antusias, mulai dari meniti jembatan jaring di atas persawahan, bekerja sama memindahkan air dengan pipa, hingga menyusuri danau menggunakan rakit bambu. Kegiatan outbound ini sangat bermanfaat untuk melatih motorik kasar, kekompakan tim, dan rasa percaya diri anak-anak. Terima kasih kepada para guru dan orang tua murid yang telah mendukung suksesnya acara ini!',
-    thumbnail: '/foto-berita-pengumuman-acara/field-trip-1.jpg',
-    gallery: [
-      '/foto-berita-pengumuman-acara/field-trip-2.jpg',
-      '/foto-berita-pengumuman-acara/field-trip-3.jpg',
-      '/foto-berita-pengumuman-acara/field-trip-4.jpg'
-    ]
-  },
-  {
-    id: 1,
-    kategori: 'Berita',
-    tanggal: '17 Agustus 2025',
-    judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
-    snippet: 'TK Islam Al-Huda mengadakan berbagai lomba seru untuk memeriahkan HUT RI...',
-    fullText: 'Alhamdulillah, acara peringatan Hari Kemerdekaan Republik Indonesia di TK Islam Al-Huda berjalan dengan sangat meriah. Anak-anak sangat antusias mengikuti berbagai lomba seperti lomba mewarnai, lomba membawa kelereng, dan lomba menyanyi lagu nasional. Acara ini bertujuan untuk menanamkan rasa cinta tanah air sejak dini kepada anak-anak kita.',
-    thumbnail: '/foto-berita-pengumuman-acara/hut-ri-1.jpg',
-    gallery: [
-      '/foto-berita-pengumuman-acara/hut-ri-2.jpg',
-      '/foto-berita-pengumuman-acara/hut-ri-3.jpg'
-    ]
-  },
-  {
-    id: 2,
-    kategori: 'Pengumuman',
-    tanggal: '01 September 2026',
-    judul: 'Pembagian Raport Bayangan Semester Ganjil',
-    snippet: 'Diberitahukan kepada seluruh wali murid bahwa pembagian raport bayangan akan dilaksanakan pada...',
-    fullText: 'Assalamu\'alaikum Wr. Wb. Diberitahukan kepada seluruh wali murid TK dan TPQ Al-Huda, bahwa evaluasi tengah semester telah selesai. Pembagian raport bayangan akan dilaksanakan pada hari Sabtu, 12 September 2026 pukul 08.00 WIB s/d selesai. Kehadiran wali murid sangat kami harapkan untuk berkonsultasi langsung dengan wali kelas mengenai perkembangan ananda. Terima kasih.',
-    thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
-    gallery: []
-  },
-  {
-    id: 3,
-    kategori: 'Acara',
-    tanggal: '20 Oktober 2026',
-    judul: 'Haflah Akhirussanah dan Wisuda Tahfizh',
-    snippet: 'Momen mengharukan saat para santri TPQ Al-Huda melaksanakan ujian publik dan wisuda...',
-    fullText: 'Masya Allah Tabarakallah. Ratusan pasang mata wali murid berkaca-kaca saat melihat putra-putrinya melantunkan ayat suci Al-Qur\'an dengan fasih di atas panggung. Acara Khotmil Qur\'an dan Imtihan angkatan ke-12 ini merupakan bukti komitmen TPQ Al-Huda dalam memberantas buta huruf Al-Qur\'an. Selamat kepada para santri yang telah lulus!',
-    thumbnail: '/foto-berita-pengumuman-acara/wisuda-tpq.jpg',
-    gallery: [
-      '/foto-berita-pengumuman-acara/wisuda-tpq.jpg'
-    ]
-  }
-];
-
-export default function Informasi() {
-  const [selectedArticle, setSelectedArticle] = useState(null);
-
-  // Kunci scroll body saat popup terbuka
-  if (selectedArticle) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'unset';
-  }
-
-  return (
-    <div className="pt-32 pb-20 bg-gray-50 min-h-screen animate-[fadeIn_0.5s_ease-out]">
-      
-      {/* HEADER PAGE */}
-      <div className="text-center mb-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Informasi & Fasilitas</h2>
-        <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
-        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
-          Temukan berita terbaru, pengumuman sekolah, serta intip sarana prasarana yang ada di TK-TPQ Al-Huda.
-        </p>
-      </div>
-
-      {/* SECTION 1: SARANA PRASARANA */}
-      <div className="max-w-7xl mx-auto px-6 mb-24">
-        <div className="flex items-center gap-3 mb-8">
-          <Building className="w-8 h-8 text-huda-green" />
-          <h3 className="text-3xl font-extrabold text-gray-800">Sarana & Prasarana</h3>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {FASILITAS.map((fas) => (
-            <div key={fas.id} className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-              <div className="h-56 overflow-hidden">
-                <img src={fas.image} alt={fas.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-gray-800 mb-2">{fas.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{fas.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* SECTION 2: BERITA, ACARA & PENGUMUMAN */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center gap-3 mb-8">
-          <Megaphone className="w-8 h-8 text-huda-yellow" />
-          <h3 className="text-3xl font-extrabold text-gray-800">Berita & Pengumuman Terbaru</h3>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {BERITA.map((item) => (
-            <div 
-              key={item.id} 
-              onClick={() => setSelectedArticle(item)}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 cursor-pointer group hover:-translate-y-2 transition-all duration-300 flex flex-col"
-            >
-              <div className="h-48 overflow-hidden relative">
-                <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-huda-dark flex items-center gap-1 shadow-sm">
-                  {item.kategori === 'Berita' ? <Megaphone size={12}/> : item.kategori === 'Acara' ? <Calendar size={12}/> : <Clock size={12}/>}
-                  {item.kategori}
-                </div>
-                <img src={item.thumbnail} alt={item.judul} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              
-              <div className="p-6 flex flex-col flex-grow">
-                <p className="text-sm text-gray-400 font-semibold mb-2">{item.tanggal}</p>
-                <h4 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-huda-green transition-colors">{item.judul}</h4>
-                <p className="text-gray-600 leading-relaxed mb-6 line-clamp-2 flex-grow">{item.snippet}</p>
-                
-                <div className="flex items-center gap-2 text-huda-green font-bold text-sm mt-auto">
-                  Baca Selengkapnya <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* MODAL / POP-UP ARTIKEL */}
-      {selectedArticle && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-          {/* Background Overlay Gelap */}
-          <div 
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
-            onClick={() => setSelectedArticle(null)}
-          ></div>
-          
-          {/* Konten Pop-up */}
-          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl relative z-10 flex flex-col animate-[bounceIn_0.4s_ease-out] overflow-hidden">
-            
-            {/* Tombol Tutup */}
-            <button 
-              onClick={() => setSelectedArticle(null)}
-              className="absolute top-4 right-4 z-20 bg-white/50 hover:bg-white text-gray-800 p-2 rounded-full backdrop-blur transition-colors shadow-sm"
-            >
-              <X size={24} />
-            </button>
-
-            {/* Area Konten Scrollable */}
-            <div className="overflow-y-auto w-full h-full pb-8 custom-scrollbar">
-              {/* Cover Image */}
-              <div className="h-64 sm:h-80 w-full relative">
-                <img src={selectedArticle.thumbnail} alt={selectedArticle.judul} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-6 sm:p-8">
-                  <span className="bg-huda-yellow text-huda-dark text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">
-                    {selectedArticle.kategori}
-                  </span>
-                  <h2 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">{selectedArticle.judul}</h2>
-                  <p className="text-gray-300 mt-2 flex items-center gap-2 text-sm sm:text-base">
-                    <Calendar size={16} /> {selectedArticle.tanggal}
-                  </p>
-                </div>
-              </div>
-
-              {/* Isi Teks */}
-              <div className="p-6 sm:p-8">
-                <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line mb-8">
-                  {selectedArticle.fullText}
-                </p>
-
-                {/* Galeri Foto (Muncul jika ada foto tambahan) */}
-                {selectedArticle.gallery && selectedArticle.gallery.length > 0 && (
-                  <div className="border-t border-gray-100 pt-8 mt-4">
-                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                      <ImageIcon size={20} className="text-huda-green" /> Dokumentasi Kegiatan
-                    </h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      {selectedArticle.gallery.map((img, idx) => (
-                        <div key={idx} className="rounded-xl overflow-hidden h-32 sm:h-40 shadow-sm border border-gray-100">
-                          <img src={img} alt={`Galeri ${idx}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      )}
-
-    </div>
-  );
-}
-</file>
-
 <file path="src/components/TestimonialMarquee.jsx">
 import React, { useState, useEffect } from 'react';
 import { Star, CheckCircle } from 'lucide-react';
@@ -1336,6 +1122,220 @@ export default function App() {
         `}} />
       </div>
     </BrowserRouter>
+  );
+}
+</file>
+
+<file path="src/pages/Informasi.jsx">
+import React, { useState } from 'react';
+import { Calendar, Megaphone, Building, X, ArrowRight, Clock, MapPin, Image as ImageIcon } from 'lucide-react';
+
+// --- DATA DUMMY FASILITAS ---
+const FASILITAS = [
+  { id: 1, title: 'Gedung Sekolah Nyaman', desc: 'Bangunan permanen, sirkulasi udara baik, dan lingkungan yang aman untuk anak-anak.', image: '/foto-sarana-prasarana/gedung-sekolah-nyaman.jpg' },
+  { id: 2, title: 'Taman Bermain (Playground)', desc: 'Area bermain outdoor dan indoor yang dilengkapi alat permainan edukatif dan aman.', image: '/foto-sarana-prasarana/taman-bermain.jpg' },
+  { id: 3, title: 'Ruang Kelas & Sentra', desc: 'Kelas dengan perlengkapan multimedia dan alat peraga edukatif lengkap.', image: '/foto-sarana-prasarana/ruang-kelas-sentra.jpg' },
+];
+
+// --- DATA DUMMY BERITA & ACARA ---
+const BERITA = [
+  {
+    id: 1, // ID baru untuk ditaruh di paling atas
+    kategori: 'Acara',
+    tanggal: '4 Mei 2026',
+    judul: 'Keseruan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng',
+    snippet: 'Anak-anak belajar kemandirian dan kerja sama melalui berbagai wahana outbound yang sangat menyenangkan...',
+    fullText: 'Alhamdulillah, kegiatan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng telah berjalan dengan lancar dan penuh kegembiraan. Dalam kegiatan ini, anak-anak diajak untuk berinteraksi langsung dengan alam dan melatih kemandirian serta keberanian mereka.\n\nBerbagai wahana seru dan menantang diikuti oleh para siswa dengan antusias, mulai dari meniti jembatan jaring di atas persawahan, bekerja sama memindahkan air dengan pipa, hingga menyusuri danau menggunakan rakit bambu. Kegiatan outbound ini sangat bermanfaat untuk melatih motorik kasar, kekompakan tim, dan rasa percaya diri anak-anak. Terima kasih kepada para guru dan orang tua murid yang telah mendukung suksesnya acara ini!',
+    thumbnail: '/foto-berita-pengumuman-acara/field trip-1.jpg',
+    gallery: [
+      '/foto-berita-pengumuman-acara/field trip-4.jpg',
+      '/foto-berita-pengumuman-acara/field-trip-3.jpg',
+      '/foto-berita-pengumuman-acara/field-trip-2.jpg'
+    ]
+  },
+  {
+    id: 2,
+    kategori: 'Acara',
+    tanggal: '17 Agustus 2025',
+    judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
+    snippet: 'TK Islam Al-Huda mengadakan berbagai lomba seru untuk memeriahkan HUT RI...',
+    fullText: 'Alhamdulillah, acara peringatan Hari Kemerdekaan Republik Indonesia di TK Islam Al-Huda berjalan dengan sangat meriah. Anak-anak sangat antusias mengikuti berbagai lomba seperti lomba mewarnai, lomba membawa kelereng, dan lomba menyanyi lagu nasional. Acara ini bertujuan untuk menanamkan rasa cinta tanah air sejak dini kepada anak-anak kita.',
+    thumbnail: '/foto-berita-pengumuman-acara/hut-ri-1.jpg',
+    gallery: [
+      '/foto-berita-pengumuman-acara/hut-ri-2.jpg',
+      '/foto-berita-pengumuman-acara/hut-ri-3.jpg'
+    ]
+  },
+  {
+    id: 3,
+    kategori: 'Pengumuman',
+    tanggal: '01 September 2026',
+    judul: 'Pembagian Raport Bayangan Semester Ganjil',
+    snippet: 'Diberitahukan kepada seluruh wali murid bahwa pembagian raport bayangan akan dilaksanakan pada...',
+    fullText: 'Assalamu\'alaikum Wr. Wb. Diberitahukan kepada seluruh wali murid TK dan TPQ Al-Huda, bahwa evaluasi tengah semester telah selesai. Pembagian raport bayangan akan dilaksanakan pada hari Sabtu, 12 September 2026 pukul 08.00 WIB s/d selesai. Kehadiran wali murid sangat kami harapkan untuk berkonsultasi langsung dengan wali kelas mengenai perkembangan ananda. Terima kasih.',
+    thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
+    gallery: []
+  },
+  {
+    id: 4,
+    kategori: 'Acara',
+    tanggal: '20 Oktober 2026',
+    judul: 'Haflah Akhirussanah dan Wisuda Tahfizh',
+    snippet: 'Momen mengharukan saat para santri TPQ Al-Huda melaksanakan ujian publik dan wisuda...',
+    fullText: 'Masya Allah Tabarakallah. Ratusan pasang mata wali murid berkaca-kaca saat melihat putra-putrinya melantunkan ayat suci Al-Qur\'an dengan fasih di atas panggung. Acara Khotmil Qur\'an dan Imtihan angkatan ke-12 ini merupakan bukti komitmen TPQ Al-Huda dalam memberantas buta huruf Al-Qur\'an. Selamat kepada para santri yang telah lulus!',
+    thumbnail: '/foto-berita-pengumuman-acara/wisuda-tpq.jpg',
+    gallery: [
+      '/foto-berita-pengumuman-acara/wisuda-tpq.jpg'
+    ]
+  }
+];
+
+export default function Informasi() {
+  const [selectedArticle, setSelectedArticle] = useState(null);
+
+  // Kunci scroll body saat popup terbuka
+  if (selectedArticle) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+
+  return (
+    <div className="pt-32 pb-20 bg-gray-50 min-h-screen animate-[fadeIn_0.5s_ease-out]">
+      
+      {/* HEADER PAGE */}
+      <div className="text-center mb-16 px-6 max-w-7xl mx-auto">
+        <h2 className="text-5xl font-extrabold text-huda-dark mb-6">Informasi & Fasilitas</h2>
+        <div className="w-32 h-2 bg-huda-yellow mx-auto rounded-full"></div>
+        <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
+          Temukan berita terbaru, pengumuman sekolah, serta intip sarana prasarana yang ada di TK-TPQ Al-Huda.
+        </p>
+      </div>
+
+      {/* SECTION 1: SARANA PRASARANA */}
+      <div className="max-w-7xl mx-auto px-6 mb-24">
+        <div className="flex items-center gap-3 mb-8">
+          <Building className="w-8 h-8 text-huda-green" />
+          <h3 className="text-3xl font-extrabold text-gray-800">Sarana & Prasarana</h3>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {FASILITAS.map((fas) => (
+            <div key={fas.id} className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+              <div className="h-56 overflow-hidden">
+                <img src={fas.image} alt={fas.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-bold text-gray-800 mb-2">{fas.title}</h4>
+                <p className="text-gray-600 leading-relaxed">{fas.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* SECTION 2: BERITA, ACARA & PENGUMUMAN */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center gap-3 mb-8">
+          <Megaphone className="w-8 h-8 text-huda-yellow" />
+          <h3 className="text-3xl font-extrabold text-gray-800">Berita & Pengumuman Terbaru</h3>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {BERITA.map((item) => (
+            <div 
+              key={item.id} 
+              onClick={() => setSelectedArticle(item)}
+              className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 cursor-pointer group hover:-translate-y-2 transition-all duration-300 flex flex-col"
+            >
+              <div className="h-48 overflow-hidden relative">
+                <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-huda-dark flex items-center gap-1 shadow-sm">
+                  {item.kategori === 'Berita' ? <Megaphone size={12}/> : item.kategori === 'Acara' ? <Calendar size={12}/> : <Clock size={12}/>}
+                  {item.kategori}
+                </div>
+                <img src={item.thumbnail} alt={item.judul} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              
+              <div className="p-6 flex flex-col flex-grow">
+                <p className="text-sm text-gray-400 font-semibold mb-2">{item.tanggal}</p>
+                <h4 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-huda-green transition-colors">{item.judul}</h4>
+                <p className="text-gray-600 leading-relaxed mb-6 line-clamp-2 flex-grow">{item.snippet}</p>
+                
+                <div className="flex items-center gap-2 text-huda-green font-bold text-sm mt-auto">
+                  Baca Selengkapnya <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* MODAL / POP-UP ARTIKEL */}
+      {selectedArticle && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          {/* Background Overlay Gelap */}
+          <div 
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
+            onClick={() => setSelectedArticle(null)}
+          ></div>
+          
+          {/* Konten Pop-up */}
+          <div className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2rem] shadow-2xl relative z-10 flex flex-col animate-[bounceIn_0.4s_ease-out] overflow-hidden">
+            
+            {/* Tombol Tutup */}
+            <button 
+              onClick={() => setSelectedArticle(null)}
+              className="absolute top-4 right-4 z-20 bg-white/50 hover:bg-white text-gray-800 p-2 rounded-full backdrop-blur transition-colors shadow-sm"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Area Konten Scrollable */}
+            <div className="overflow-y-auto w-full h-full pb-8 custom-scrollbar">
+              {/* Cover Image */}
+              <div className="h-64 sm:h-80 w-full relative">
+                <img src={selectedArticle.thumbnail} alt={selectedArticle.judul} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6 sm:p-8">
+                  <span className="bg-huda-yellow text-huda-dark text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">
+                    {selectedArticle.kategori}
+                  </span>
+                  <h2 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">{selectedArticle.judul}</h2>
+                  <p className="text-gray-300 mt-2 flex items-center gap-2 text-sm sm:text-base">
+                    <Calendar size={16} /> {selectedArticle.tanggal}
+                  </p>
+                </div>
+              </div>
+
+              {/* Isi Teks */}
+              <div className="p-6 sm:p-8">
+                <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line mb-8">
+                  {selectedArticle.fullText}
+                </p>
+
+                {/* Galeri Foto (Muncul jika ada foto tambahan) */}
+                {selectedArticle.gallery && selectedArticle.gallery.length > 0 && (
+                  <div className="border-t border-gray-100 pt-8 mt-4">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                      <ImageIcon size={20} className="text-huda-green" /> Dokumentasi Kegiatan
+                    </h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                      {selectedArticle.gallery.map((img, idx) => (
+                        <div key={idx} className="rounded-xl overflow-hidden h-32 sm:h-40 shadow-sm border border-gray-100">
+                          <img src={img} alt={`Galeri ${idx}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      )}
+
+    </div>
   );
 }
 </file>
@@ -1839,7 +1839,7 @@ export default function TPQProfil() {
             </div>
 
             <p className="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
-              Taman Pendidikan Al-Qur'an (TPQ) adalah sebuah tempat yang indah dan nyaman. Oleh karena itu proses belajar dan mengajar TPQ harus mampu mencerminkan, menciptakan suasana yang indah, nyaman dan menyenangkan. TPQ Al Huda adalah <strong p>Lembaga Pendidikan dan Pengajaran Iqro sampai dengan Al Quran untuk anak usia 3 s/d 17 tahun.”</strong>.
+              Taman Pendidikan Al-Qur'an (TPQ) adalah sebuah tempat yang indah dan nyaman. Oleh karena itu proses belajar dan mengajar TPQ harus mampu mencerminkan, menciptakan suasana yang indah, nyaman dan menyenangkan. TPQ Al Huda adalah <strong>Lembaga Pendidikan dan Pengajaran Iqro sampai dengan Al Quran untuk anak usia 3 s/d 17 tahun.”</strong>.
             </p>
             
             <p className="text-gray-600 mb-8 text-lg leading-relaxed text-justify">
@@ -1944,42 +1944,58 @@ export default function TPQProfil() {
             <div className="pt-12 border-t border-gray-600/50 flex flex-col items-center">
               <p className="text-xl font-bold text-huda-green mb-8">Informasi Kontak & Lokasi Resmi TPQ</p>
               
-              <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
-                {/* Kiri: Alamat Lengkap */}
-                <div className="bg-white/10 p-6 rounded-3xl flex items-start gap-4 hover:bg-white/20 transition-colors">
-                  <MapPin className="w-8 h-8 text-huda-green flex-shrink-0 mt-1" />
+              <div className="flex flex-col gap-5 max-w-4xl w-full text-left mx-auto">
+                
+                {/* Alamat Lengkap */}
+                <div className="bg-white/10 p-6 rounded-3xl flex items-center gap-5 hover:bg-white/20 transition-colors shadow-sm backdrop-blur-sm">
+                  <MapPin className="w-8 h-8 text-huda-green flex-shrink-0" />
                   <div>
-                    <p className="font-bold text-white mb-2 text-lg">Alamat Lengkap</p>
-                    <p className="text-gray-300 leading-relaxed">Jl. Bambu Apus Raya No. 85, Pondok Bambu, Kec. Duren Sawit, Jakarta Timur</p>
+                    <p className="font-extrabold text-white mb-1 text-lg">Alamat Lengkap</p>
+                    <p className="text-gray-300 font-semibold leading-relaxed">Jl. Bambu Apus Raya No. 85, Pondok Bambu, Kec. Duren Sawit, Jakarta Timur</p>
                   </div>
                 </div>
                 
-                {/* Kanan: Telepon, Email, Sosmed */}
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <a href="https://wa.me/6287869974676" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
-                    <Phone className="w-6 h-6 text-huda-green" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Telepon</p>
-                      <p className="text-gray-300 font-semibold">0878 69974676</p>
+                {/* --- GRID 2 KOLOM ABSOLUT (Ukuran Kotak Pasti Sama) --- */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                  
+                  {/* Kotak 1: Link WhatsApp */}
+                  <a href="https://wa.me/6287869974676" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden backdrop-blur-sm">
+                    <MessageCircle className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-white text-sm mb-1 truncate">WhatsApp Admin</p>
+                      <p className="text-gray-300 font-bold truncate">0878 69974676</p>
+                    </div>
+                  </a>
+
+                  {/* Kotak 2: Telepon Sekolah */}
+                  <a href="tel:0218616313" className="bg-white/10 hover:bg-white/20 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden backdrop-blur-sm">
+                    <Phone className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-white text-sm mb-1 truncate">Telepon Sekolah</p>
+                      <p className="text-gray-300 font-bold truncate">021 8616313</p>
+                    </div>
+                  </a>
+
+                  {/* Kotak 3: Link Email */}
+                  <a href="mailto:tpqalhuda.pondokbambu@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden backdrop-blur-sm">
+                    <Mail className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-white text-sm mb-1 truncate">Email Resmi</p>
+                      <p className="text-gray-300 font-bold truncate">tpqalhuda.pondokbambu@gmail.com</p>
                     </div>
                   </a>
                   
-                  <a href="mailto:tpqalhuda.pondokbambu@gmail.com" className="bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex flex-col gap-3">
-                    <Mail className="w-6 h-6 text-huda-green" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Email Resmi</p>
-                      <p className="text-gray-300 text-sm break-all font-semibold">tpqalhuda.pondokbambu<br/>@gmail.com</p>
+                  {/* Kotak 4: Link Instagram */}
+                  <a href="https://instagram.com/tpqalhuda.pondokbambu" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden backdrop-blur-sm">
+                    <InstagramIcon className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-white text-sm mb-1 truncate">Instagram</p>
+                      <p className="text-gray-300 font-bold truncate">@tpqalhuda.pondokbambu</p>
                     </div>
                   </a>
                   
-                  <a href="https://instagram.com/tpqalhuda.pondokbambu" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white/10 hover:bg-white/20 transition-colors p-5 rounded-3xl flex items-center gap-4">
-                    <InstagramIcon className="w-7 h-7 text-huda-green" />
-                    <div>
-                      <p className="font-bold text-white text-sm mb-1">Instagram</p>
-                      <p className="text-gray-300 font-semibold">@tpqalhuda.pondokbambu</p>
-                    </div>
-                  </a>
                 </div>
+                {/* --- AKHIR GRID --- */}
               </div>
             </div>
           </div>
@@ -2051,7 +2067,7 @@ const DATA_KEGIATAN_TK = [
     // TAMBAHAN: subItems untuk menampilkan macam-macam kegiatan secara detail
     subItems: [
       { name: 'Berenang', desc: 'Melatih motorik kasar, keberanian, dan kemandirian anak di dalam air dengan pengawasan penuh dari guru.', img: '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg' },
-      { name: 'Baca Tulis Qur\'an (BTQ)', desc: 'Pendalaman pengenalan huruf hijaiyah dan dasar-dasar membaca Al-Qur\'an sejak dini.', img: '/foto-profil-kegiatan-tk/btq4.jpeg' },
+      { name: 'Baca Tulis Qur\'an (BTQ)', desc: 'Pendalaman pengenalan huruf Hijaiyah, dasar-dasar membaca Al-Qur\'an dan Bahasa Arab dasar sejak dini.', img: '/foto-profil-kegiatan-tk/btq4.jpeg' },
       { name: 'Seni Mewarnai / Menggambar', desc: 'Eksplorasi warna dan bentuk untuk mengasah jiwa seni dan fokus anak.', img: '/foto-profil-kegiatan-tk/btq5.jpeg' },
     ],
     gallery: [
@@ -2217,7 +2233,7 @@ import {
   MessageCircle, MapPin, Phone, Hash, Award, Clock, Quote, Mail, Star
 } from 'lucide-react';
 
-// SVG Icon Instagram Manual untuk mengatasi error lucide-react
+// SVG Icon Instagram Manual
 const InstagramIcon = ({ size = 24, className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -2229,12 +2245,10 @@ const InstagramIcon = ({ size = 24, className = "" }) => (
 export default function TKProfil() {
   const navigate = useNavigate();
 
-  // Fungsi untuk membuka WhatsApp khusus Admin TK
   const handleWhatsApp = () => {
     window.open('https://wa.me/6282125640715?text=Assalamu%27alaikum%20Admin%20TK%20Islam%20Al-Huda,%20saya%20ingin%20bertanya%20seputar%20pendaftaran%20dan%20program%20TK.', '_blank');
   };
 
-  // Komponen Helper untuk Kotak Info Profil
   const InfoCard = ({ icon, label, value, className = "" }) => (
     <div className={`flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${className}`}>
       <div className="bg-green-100 p-3 rounded-xl text-huda-green flex-shrink-0">
@@ -2288,14 +2302,12 @@ export default function TKProfil() {
               </p>
             </div>
 
-            {/* Kolom Info Identitas */}
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
               <InfoCard icon={<Hash size={24} />} label="No. NPSN" value="20111944" />
               <InfoCard icon={<Award size={24} />} label="Status Akreditasi" value="Terakreditasi – B" />
               <InfoCard icon={<Clock size={24} />} label="Hari & Jam Belajar" value="Senin s/d Jum'at (08.00 - 11.00 WIB)" className="sm:col-span-2" />
             </div>
 
-            {/* Misi TK */}
             <h3 className="text-3xl font-extrabold text-huda-green mb-6">Misi Kami</h3>
             <ul className="space-y-4 text-gray-700 text-lg font-medium">
               <li className="flex items-start gap-4">
@@ -2389,41 +2401,60 @@ export default function TKProfil() {
             <div className="pt-12 border-t border-gray-300 flex flex-col items-center">
               <p className="text-xl font-extrabold text-gray-900 mb-8">Informasi Kontak & Lokasi Resmi TK</p>
               
-              <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
-                <div className="bg-white border border-gray-200 p-6 rounded-3xl flex items-start gap-4 hover:bg-gray-50 transition-colors shadow-sm">
-                  <MapPin className="w-8 h-8 text-huda-yellow flex-shrink-0 mt-1" />
+              <div className="flex flex-col gap-5 max-w-4xl w-full text-left mx-auto">
+                
+                {/* Alamat Lengkap */}
+                <div className="bg-white border border-gray-200 p-6 rounded-3xl flex items-center gap-5 shadow-sm">
+                  <MapPin className="w-8 h-8 text-huda-yellow flex-shrink-0" />
                   <div>
-                    <p className="font-extrabold text-gray-800 mb-2 text-lg">Alamat Lengkap</p>
+                    <p className="font-extrabold text-gray-800 mb-1 text-lg">Alamat Lengkap</p>
                     <p className="text-gray-600 font-semibold leading-relaxed">Jl. Bambu Apus Raya No.85, Kel. Pondok Bambu, Kec. Duren Sawit, Jakarta Timur. 13430</p>
                   </div>
                 </div>
                 
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <a href="tel:0218616313" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex flex-col gap-3">
-                    <Phone className="w-6 h-6 text-huda-yellow" />
-                    <div>
-                      <p className="font-extrabold text-gray-900 text-sm mb-1">Telepon</p>
-                      <p className="text-gray-600 font-bold">0821 25640715</p>
+                {/* --- GRID 2 KOLOM ABSOLUT (Ukuran Kotak Pasti Sama) --- */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                  
+                  {/* Kotak 1: Link WhatsApp */}
+                  <a href="https://wa.me/6282125640715" target="_blank" rel="noreferrer" className="bg-white border border-gray-200 hover:bg-green-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden">
+                    <MessageCircle className="w-8 h-8 text-huda-green group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-gray-900 text-sm mb-1 truncate">WhatsApp Admin</p>
+                      <p className="text-gray-600 font-bold truncate">0821 25640715</p>
+                    </div>
+                  </a>
+
+                  {/* Kotak 2: Telepon Sekolah */}
+                  <a href="tel:0218616313" className="bg-white border border-gray-200 hover:bg-yellow-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden">
+                    <Phone className="w-8 h-8 text-huda-yellow group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-gray-900 text-sm mb-1 truncate">Telepon Sekolah</p>
+                      <p className="text-gray-600 font-bold truncate">021 8616313</p>
+                    </div>
+                  </a>
+
+                  {/* Kotak 3: Link Email */}
+                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden">
+                    <Mail className="w-8 h-8 text-huda-yellow group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-gray-900 text-sm mb-1 truncate">Email Resmi</p>
+                      <p className="text-gray-600 font-bold truncate">tkislamalhuda313@gmail.com</p>
                     </div>
                   </a>
                   
-                  <a href="mailto:tkislamalhuda313@gmail.com" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex flex-col gap-3">
-                    <Mail className="w-6 h-6 text-huda-yellow" />
-                    <div>
-                      <p className="font-extrabold text-gray-900 text-sm mb-1">Email Resmi</p>
-                      <p className="text-gray-600 text-sm break-all font-bold">tkislamalhuda313<br/>@gmail.com</p>
+                  {/* Kotak 4: Link Instagram */}
+                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4 group overflow-hidden">
+                    <InstagramIcon className="w-8 h-8 text-huda-yellow group-hover:scale-110 transition-transform flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-extrabold text-gray-900 text-sm mb-1 truncate">Instagram</p>
+                      <p className="text-gray-600 font-bold truncate">@tkialhuda.pondokbambu</p>
                     </div>
                   </a>
                   
-                  <a href="https://www.instagram.com/tkialhuda.pondokbambu/" target="_blank" rel="noreferrer" className="sm:col-span-2 bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm p-5 rounded-3xl flex items-center gap-4">
-                    <InstagramIcon className="w-7 h-7 text-huda-yellow" />
-                    <div>
-                      <p className="font-extrabold text-gray-900 text-sm mb-1">Instagram</p>
-                      <p className="text-gray-600 font-bold">@tkialhuda.pondokbambu</p>
-                    </div>
-                  </a>
                 </div>
+                {/* --- AKHIR GRID --- */}
               </div>
+              
             </div>
           </div>
         </div>
