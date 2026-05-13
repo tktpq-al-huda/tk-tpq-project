@@ -19,7 +19,7 @@ const BERITA = [
     fullText: 'Alhamdulillah, kegiatan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng telah berjalan dengan lancar dan penuh kegembiraan. Dalam kegiatan ini, anak-anak diajak untuk berinteraksi langsung dengan alam dan melatih kemandirian serta keberanian mereka.\n\nBerbagai wahana seru dan menantang diikuti oleh para siswa dengan antusias, mulai dari meniti jembatan jaring di atas persawahan, bekerja sama memindahkan air dengan pipa, hingga menyusuri danau menggunakan rakit bambu. Kegiatan outbound ini sangat bermanfaat untuk melatih motorik kasar, kekompakan tim, dan rasa percaya diri anak-anak. Terima kasih kepada para guru dan orang tua murid yang telah mendukung suksesnya acara ini!',
     thumbnail: '/foto-berita-pengumuman-acara/field trip-1.png',
     gallery: [
-      '/foto-berita-pengumuman-acara/field trip-4.png',
+      '/foto-berita-pengumuman-acara/field-trip-4.png',
       '/foto-berita-pengumuman-acara/field-trip-3.png',
       '/foto-berita-pengumuman-acara/field-trip-2.png'
     ]
