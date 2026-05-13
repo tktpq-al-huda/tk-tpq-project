@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.tktpq-alhuda.sch.id/sitemap.xml
+```
