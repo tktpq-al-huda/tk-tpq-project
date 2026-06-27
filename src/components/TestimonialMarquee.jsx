@@ -66,14 +66,13 @@ export const TestimonialMarquee = () => {
           ref={trackRef}
           className="marquee-track"
           style={{
-            display: 'flex',
-            width: 'max-content',
-            gap: '1.5rem',
-            padding: '0 1rem',
-            willChange: 'transform',
-            transform: 'translateZ(0)',
-            animation: 'marqueeScroll 40s linear infinite',
-          }}
+                      display: 'flex',
+                      width: 'max-content',
+                      gap: '1.5rem',
+                      padding: '0 1rem',
+                      willChange: 'transform',
+                      transform: 'translateZ(0)',
+                    }}
         >
           {duplicatedTestimonials.map((testimoni, idx) => (
             <div

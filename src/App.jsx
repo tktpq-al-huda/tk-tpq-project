@@ -108,7 +108,7 @@ export default function App() {
             0% { transform: translateX(0) translateZ(0); }
             100% { transform: translateX(-50%) translateZ(0); }
           }
-          .marquee-track { animation: marqueeScroll 40s linear infinite; }
+          .marquee-track { animation: marqueeScroll 60s linear infinite; }
           .marquee-viewport:hover .marquee-track { animation-play-state: paused; }
           @media (hover: none) and (pointer: coarse) {
             .marquee-viewport:hover .marquee-track { animation-play-state: running; }
