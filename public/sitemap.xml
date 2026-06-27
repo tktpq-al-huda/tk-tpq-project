@@ -1,28 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
   <url>
     <loc>https://www.tktpq-alhuda.sch.id/</loc>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/logo/tk-islam-al-huda.webp</image:loc>
+      <image:title>Logo TK Islam Al-Huda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/logo/tpq-al-huda.webp</image:loc>
+      <image:title>Logo TPQ Al-Huda</image:title>
+    </image:image>
   </url>
+
+  <!-- TK Profil -->
   <url>
     <loc>https://www.tktpq-alhuda.sch.id/tk</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/logo/tk-islam-al-huda.webp</image:loc>
+      <image:title>TK Islam Al-Huda - Profil Sekolah</image:title>
+      <image:caption>TK Islam Al-Huda Pondok Bambu Jakarta Timur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- TK Kegiatan -->
+  <url>
+    <loc>https://www.tktpq-alhuda.sch.id/kegiatan-tk</loc>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-profil-kegiatan-tk/seni-kreativitas.webp</image:loc>
+      <image:title>Kegiatan Seni dan Kreativitas TK Islam Al-Huda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-profil-kegiatan-tk/praktik-ibadah.webp</image:loc>
+      <image:title>Praktik Ibadah TK Islam Al-Huda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-profil-kegiatan-tk/foto-olahraga-gembira.webp</image:loc>
+      <image:title>Olahraga Gembira TK Islam Al-Huda</image:title>
+    </image:image>
   </url>
+
+  <!-- Pendaftaran TK -->
   <url>
-    <loc>https://www.tktpq-alhuda.sch.id/tpq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.tktpq-alhuda.sch.id/informasi</loc>
+    <loc>https://www.tktpq-alhuda.sch.id/daftar-tk</loc>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- TPQ Profil -->
+  <url>
+    <loc>https://www.tktpq-alhuda.sch.id/tpq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/logo/tpq-al-huda.webp</image:loc>
+      <image:title>TPQ Al-Huda - Profil Lembaga</image:title>
+      <image:caption>TPQ Al-Huda Pondok Bambu Jakarta Timur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- TPQ Kegiatan -->
+  <url>
+    <loc>https://www.tktpq-alhuda.sch.id/kegiatan-tpq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-profil-kegiatan-tpq/klasikal-privat.webp</image:loc>
+      <image:title>Belajar Iqro dan Al-Qur'an di TPQ Al-Huda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-profil-kegiatan-tpq/eksul-rebana.webp</image:loc>
+      <image:title>Ekstrakurikuler Rebana TPQ Al-Huda</image:title>
+    </image:image>
+  </url>
+
+  <!-- Pendaftaran TPQ -->
+  <url>
+    <loc>https://www.tktpq-alhuda.sch.id/daftar-tpq</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Informasi -->
+  <url>
+    <loc>https://www.tktpq-alhuda.sch.id/informasi</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-sarana-prasarana/gedung-sekolah-nyaman.webp</image:loc>
+      <image:title>Gedung Sekolah TK-TPQ Al-Huda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-sarana-prasarana/taman-bermain.webp</image:loc>
+      <image:title>Taman Bermain TK Islam Al-Huda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-sarana-prasarana/ruang-kelas-sentra.webp</image:loc>
+      <image:title>Ruang Kelas Sentra TK Islam Al-Huda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-berita-pengumuman-acara/field-trip-1.webp</image:loc>
+      <image:title>Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tktpq-alhuda.sch.id/foto-berita-pengumuman-acara/wisuda-tpq.webp</image:loc>
+      <image:title>Wisuda Tahfizh TPQ Al-Huda</image:title>
+    </image:image>
+  </url>
+
+  <!-- Kontak -->
   <url>
     <loc>https://www.tktpq-alhuda.sch.id/kontak</loc>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
 </urlset>

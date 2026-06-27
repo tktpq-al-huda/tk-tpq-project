@@ -8,9 +8,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Melatih motorik halus dan imajinasi anak melalui kegiatan mewarnai, melukis, membuat prakarya, dan eksperimen.', 
     icon: 'palette',
     gallery: [
-      '/foto-profil-kegiatan-tk/seni-kreativitas.jpg',
-      '/foto-profil-kegiatan-tk/seni-kreativitas-1.jpg',
-      '/foto-profil-kegiatan-tk/seni-kreativitas-2.jpg'
+      '/foto-profil-kegiatan-tk/seni-kreativitas.webp',
+      '/foto-profil-kegiatan-tk/seni-kreativitas-1.webp',
+      '/foto-profil-kegiatan-tk/seni-kreativitas-2.webp'
     ]
   },
   { 
@@ -19,9 +19,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, serta hafalan hadits dan doa harian.', 
     icon: 'heart',
     gallery: [
-      '/foto-profil-kegiatan-tk/praktik-ibadah.jpg', 
-      '/foto-profil-kegiatan-tk/praktik-ibadah-1.jpg',
-      '/foto-profil-kegiatan-tk/praktik-ibadah-2.jpg'
+      '/foto-profil-kegiatan-tk/praktik-ibadah.webp', 
+      '/foto-profil-kegiatan-tk/praktik-ibadah-1.webp',
+      '/foto-profil-kegiatan-tk/praktik-ibadah-2.webp'
     ]
   },
   { 
@@ -30,9 +30,9 @@ const DATA_KEGIATAN_TK = [
     desc: 'Senam ceria, permainan ketangkasan untuk melatih keseimbangan dan kesehatan fisik.', 
     icon: 'activity',
     gallery: [
-      '/foto-profil-kegiatan-tk/foto-olahraga-gembira.jpg',
-      '/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.jpg',
-      '/foto-profil-kegiatan-tk/foto-olahraga-gembira-2.jpg',
+      '/foto-profil-kegiatan-tk/foto-olahraga-gembira.webp',
+      '/foto-profil-kegiatan-tk/foto-olahraga-gembira-1.webp',
+      '/foto-profil-kegiatan-tk/foto-olahraga-gembira-2.webp',
     ]
   },
   { 
@@ -42,14 +42,14 @@ const DATA_KEGIATAN_TK = [
     icon: 'extracurricular-activities',
     // TAMBAHAN: subItems untuk menampilkan macam-macam kegiatan secara detail
     subItems: [
-      { name: 'Berenang', desc: 'Melatih motorik kasar, keberanian, dan kemandirian anak di dalam air dengan pengawasan penuh dari guru.', img: '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg' },
-      { name: 'Baca Tulis Qur\'an (BTQ)', desc: 'Pendalaman pengenalan huruf Hijaiyah, dasar-dasar membaca Al-Qur\'an dan Bahasa Arab dasar sejak dini.', img: '/foto-profil-kegiatan-tk/btq4.jpeg' },
-      { name: 'Seni Mewarnai / Menggambar', desc: 'Eksplorasi warna dan bentuk untuk mengasah jiwa seni dan fokus anak.', img: '/foto-profil-kegiatan-tk/btq5.jpeg' },
+      { name: 'Berenang', desc: 'Melatih motorik kasar, keberanian, dan kemandirian anak di dalam air dengan pengawasan penuh dari guru.', img: '/foto-profil-kegiatan-tk/kegiatan-berenang.webp' },
+      { name: 'Baca Tulis Qur\'an (BTQ)', desc: 'Pendalaman pengenalan huruf Hijaiyah, dasar-dasar membaca Al-Qur\'an dan Bahasa Arab dasar sejak dini.', img: '/foto-profil-kegiatan-tk/btq4.webp' },
+      { name: 'Seni Mewarnai / Menggambar', desc: 'Eksplorasi warna dan bentuk untuk mengasah jiwa seni dan fokus anak.', img: '/foto-profil-kegiatan-tk/btq5.webp' },
     ],
     gallery: [
-      '/foto-profil-kegiatan-tk/kegiatan-berenang.jpg',
-      '/foto-profil-kegiatan-tk/btq4.jpeg',
-      '/foto-profil-kegiatan-tk/btq5.jpeg',
+      '/foto-profil-kegiatan-tk/kegiatan-berenang.webp',
+      '/foto-profil-kegiatan-tk/btq4.webp',
+      '/foto-profil-kegiatan-tk/btq5.webp',
     ]
   },
 ];

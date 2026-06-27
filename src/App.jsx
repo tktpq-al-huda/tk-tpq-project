@@ -104,8 +104,15 @@ export default function App() {
 
         {/* Style Global untuk Animasi */}
         <style dangerouslySetInnerHTML={{__html: `
-          @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-          .animate-scroll { display: flex; width: max-content; animation: scroll 35s linear infinite; }
+          @keyframes marqueeScroll {
+            0% { transform: translateX(0) translateZ(0); }
+            100% { transform: translateX(-50%) translateZ(0); }
+          }
+          .marquee-track { animation: marqueeScroll 40s linear infinite; }
+          .marquee-viewport:hover .marquee-track { animation-play-state: paused; }
+          @media (hover: none) and (pointer: coarse) {
+            .marquee-viewport:hover .marquee-track { animation-play-state: running; }
+          }
           @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
           @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
           @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
@@ -114,6 +121,9 @@ export default function App() {
           .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
           .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
           .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+          /* Fix line-clamp utility */
+          .line-clamp-4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+          .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         `}} />
       </div>
     </BrowserRouter>

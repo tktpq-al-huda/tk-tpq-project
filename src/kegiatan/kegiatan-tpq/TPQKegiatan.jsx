@@ -8,8 +8,8 @@ const DATA_KEGIATAN_TPQ = [
     desc: 'Belajar membaca iqro dan Al Quran secara tartil dgn bimbingan langsung (privat) oleh Asatidz serta Kegiatan Murajaah Bersama mengulang hafalan surat pendek (Juz 30).', 
     icon: 'book',
     gallery: [
-      '/foto-profil-kegiatan-tpq/klasikal-privat.jpg',
-      '/foto-profil-kegiatan-tpq/muroja-ah-bersama.jpg',
+      '/foto-profil-kegiatan-tpq/klasikal-privat.webp',
+      '/foto-profil-kegiatan-tpq/muroja-ah-bersama.webp',
     ]
   },
   { 
@@ -18,7 +18,7 @@ const DATA_KEGIATAN_TPQ = [
     desc: 'Fondasi utama pendidikan Islam yang berfokus pada pengetahuan akidah (tauhid) dan tata cara ibadah (fiqih).', 
     icon: 'users',
     gallery: [
-      '/foto-profil-kegiatan-tpq/kisah-islami-akhlak.jpg',
+      '/foto-profil-kegiatan-tpq/kisah-islami-akhlak.webp',
     ]
   },
   { 
@@ -27,7 +27,7 @@ const DATA_KEGIATAN_TPQ = [
     desc: 'Pengenalan rukun Islam sejak dini, praktik wudhu, gerakan sholat, serta hafalan hadits dan doa harian.', 
     icon: 'half-moon',
     gallery: [
-      '/foto-profil-kegiatan-tpq/praktik-ibadah-tpq.jpg',
+      '/foto-profil-kegiatan-tpq/praktik-ibadah-tpq.webp',
     ]
   },
   { 
@@ -37,12 +37,12 @@ const DATA_KEGIATAN_TPQ = [
     icon: 'mic',
     // TAMBAHAN: subItems untuk TPQ
     subItems: [
-      { name: 'Seni Rebana / Hadroh', desc: 'Melatih kekompakan, rasa percaya diri, dan kecintaan pada kesenian Islam melalui lantunan shalawat.', img: '/foto-profil-kegiatan-tpq/eksul-rebana.jpeg' },
-      { name: 'Seni Islami Lainnya', desc: 'Pengembangan bakat seni santri untuk persiapan lomba maupun pementasan akhir tahun.', img: '/foto-profil-kegiatan-tpq/eskul-rebana-2.jpg' }
+      { name: 'Seni Rebana / Hadroh', desc: 'Melatih kekompakan, rasa percaya diri, dan kecintaan pada kesenian Islam melalui lantunan shalawat.', img: '/foto-profil-kegiatan-tpq/eksul-rebana.webp' },
+      { name: 'Seni Islami Lainnya', desc: 'Pengembangan bakat seni santri untuk persiapan lomba maupun pementasan akhir tahun.', img: '/foto-profil-kegiatan-tpq/eskul-rebana-2.webp' }
     ],
     gallery: [
-      '/foto-profil-kegiatan-tpq/eksul-rebana.jpeg',
-      '/foto-profil-kegiatan-tpq/eskul-rebana-2.jpg'
+      '/foto-profil-kegiatan-tpq/eksul-rebana.webp',
+      '/foto-profil-kegiatan-tpq/eskul-rebana-2.webp'
     ]
   },
 ];

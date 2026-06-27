@@ -3,9 +3,9 @@ import { Calendar, Megaphone, Building, X, ArrowRight, Clock, MapPin, Image as I
 
 // --- DATA DUMMY FASILITAS ---
 const FASILITAS = [
-  { id: 1, title: 'Gedung Sekolah Nyaman', desc: 'Bangunan permanen, sirkulasi udara baik, dan lingkungan yang aman untuk anak-anak.', image: '/foto-sarana-prasarana/gedung-sekolah-nyaman.jpg' },
-  { id: 2, title: 'Taman Bermain (Playground)', desc: 'Area bermain outdoor dan indoor yang dilengkapi alat permainan edukatif dan aman.', image: '/foto-sarana-prasarana/taman-bermain.jpg' },
-  { id: 3, title: 'Ruang Kelas & Sentra', desc: 'Kelas dengan perlengkapan multimedia dan alat peraga edukatif lengkap.', image: '/foto-sarana-prasarana/ruang-kelas-sentra.jpg' },
+  { id: 1, title: 'Gedung Sekolah Nyaman', desc: 'Bangunan permanen, sirkulasi udara baik, dan lingkungan yang aman untuk anak-anak.', image: '/foto-sarana-prasarana/gedung-sekolah-nyaman.webp' },
+  { id: 2, title: 'Taman Bermain (Playground)', desc: 'Area bermain outdoor dan indoor yang dilengkapi alat permainan edukatif dan aman.', image: '/foto-sarana-prasarana/taman-bermain.webp' },
+  { id: 3, title: 'Ruang Kelas & Sentra', desc: 'Kelas dengan perlengkapan multimedia dan alat peraga edukatif lengkap.', image: '/foto-sarana-prasarana/ruang-kelas-sentra.webp' },
 ];
 
 // --- DATA DUMMY BERITA & ACARA ---
@@ -17,11 +17,11 @@ const BERITA = [
     judul: 'Keseruan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng',
     snippet: 'Anak-anak belajar kemandirian dan kerja sama melalui berbagai wahana outbound yang sangat menyenangkan...',
     fullText: 'Alhamdulillah, kegiatan Field Trip TK Islam Al-Huda ke Pelita Desa Ciseeng telah berjalan dengan lancar dan penuh kegembiraan. Dalam kegiatan ini, anak-anak diajak untuk berinteraksi langsung dengan alam dan melatih kemandirian serta keberanian mereka.\n\nBerbagai wahana seru dan menantang diikuti oleh para siswa dengan antusias, mulai dari meniti jembatan jaring di atas persawahan, bekerja sama memindahkan air dengan pipa, hingga menyusuri danau menggunakan rakit bambu. Kegiatan outbound ini sangat bermanfaat untuk melatih motorik kasar, kekompakan tim, dan rasa percaya diri anak-anak. Terima kasih kepada para guru dan orang tua murid yang telah mendukung suksesnya acara ini!',
-    thumbnail: '/foto-berita-pengumuman-acara/field-trip-1.png',
+    thumbnail: '/foto-berita-pengumuman-acara/field-trip-1.webp',
     gallery: [
-      '/foto-berita-pengumuman-acara/field-trip-4.png',
-      '/foto-berita-pengumuman-acara/field-trip-3.png',
-      '/foto-berita-pengumuman-acara/field-trip-2.png'
+      '/foto-berita-pengumuman-acara/field-trip-4.webp',
+      '/foto-berita-pengumuman-acara/field-trip-3.webp',
+      '/foto-berita-pengumuman-acara/field-trip-2.webp'
     ]
   },
   {
@@ -31,10 +31,10 @@ const BERITA = [
     judul: 'Peringatan Hari Kemerdekaan & Lomba Mewarnai',
     snippet: 'TK Islam Al-Huda mengadakan berbagai lomba seru untuk memeriahkan HUT RI...',
     fullText: 'Alhamdulillah, acara peringatan Hari Kemerdekaan Republik Indonesia di TK Islam Al-Huda berjalan dengan sangat meriah. Anak-anak sangat antusias mengikuti berbagai lomba seperti lomba mewarnai, lomba membawa kelereng, dan lomba menyanyi lagu nasional. Acara ini bertujuan untuk menanamkan rasa cinta tanah air sejak dini kepada anak-anak kita.',
-    thumbnail: '/foto-berita-pengumuman-acara/hut-ri-1.jpg',
+    thumbnail: '/foto-berita-pengumuman-acara/hut-ri-1.webp',
     gallery: [
-      '/foto-berita-pengumuman-acara/hut-ri-2.jpg',
-      '/foto-berita-pengumuman-acara/hut-ri-3.jpg'
+      '/foto-berita-pengumuman-acara/hut-ri-2.webp',
+      '/foto-berita-pengumuman-acara/hut-ri-3.webp'
     ]
   },
   {
@@ -54,9 +54,9 @@ const BERITA = [
     judul: 'Haflah Akhirussanah dan Wisuda Tahfizh',
     snippet: 'Momen mengharukan saat para santri TPQ Al-Huda melaksanakan ujian publik dan wisuda...',
     fullText: 'Masya Allah Tabarakallah. Ratusan pasang mata wali murid berkaca-kaca saat melihat putra-putrinya melantunkan ayat suci Al-Qur\'an dengan fasih di atas panggung. Acara Khotmil Qur\'an dan Imtihan angkatan ke-12 ini merupakan bukti komitmen TPQ Al-Huda dalam memberantas buta huruf Al-Qur\'an. Selamat kepada para santri yang telah lulus!',
-    thumbnail: '/foto-berita-pengumuman-acara/wisuda-tpq.jpg',
+    thumbnail: '/foto-berita-pengumuman-acara/wisuda-tpq.webp',
     gallery: [
-      '/foto-berita-pengumuman-acara/wisuda-tpq.jpg'
+      '/foto-berita-pengumuman-acara/wisuda-tpq.webp'
     ]
   }
 ];

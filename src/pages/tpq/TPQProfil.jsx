@@ -54,7 +54,7 @@ export default function TPQProfil() {
             
             {/* Foto Ilustrasi Belajar Mengaji / Logo TPQ */}
             <img 
-              src="/logo/tpq-al-huda.jpeg" 
+              src="/logo/tpq-al-huda.webp" 
               alt="Logo TPQ Al-Huda" 
               onError={(e) => {
                 e.target.onerror = null; 
