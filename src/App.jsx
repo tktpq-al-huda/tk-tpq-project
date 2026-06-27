@@ -112,14 +112,7 @@ export default function App() {
             animation: marqueeScroll 60s linear infinite;
             backface-visibility: hidden;
           }
-          .marquee-viewport:hover .marquee-track {
-            animation-play-state: paused;
-          }
-          @media (hover: none) and (pointer: coarse) {
-            .marquee-viewport:hover .marquee-track {
-              animation-play-state: running;
-            }
-          }
+          /* Marquee selalu berjalan forever - no pause on hover */}
           @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
           @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
           @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 70% { transform: scale(0.9); } 100% { transform: scale(1); } }
