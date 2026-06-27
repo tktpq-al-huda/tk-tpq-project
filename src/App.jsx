@@ -105,13 +105,20 @@ export default function App() {
         {/* Style Global untuk Animasi */}
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes marqueeScroll {
-            0% { transform: translateX(0) translateZ(0); }
-            100% { transform: translateX(-50%) translateZ(0); }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
           }
-          .marquee-track { animation: marqueeScroll 60s linear infinite; }
-          .marquee-viewport:hover .marquee-track { animation-play-state: paused; }
+          .marquee-track {
+            animation: marqueeScroll 60s linear infinite;
+            backface-visibility: hidden;
+          }
+          .marquee-viewport:hover .marquee-track {
+            animation-play-state: paused;
+          }
           @media (hover: none) and (pointer: coarse) {
-            .marquee-viewport:hover .marquee-track { animation-play-state: running; }
+            .marquee-viewport:hover .marquee-track {
+              animation-play-state: running;
+            }
           }
           @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
           @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }

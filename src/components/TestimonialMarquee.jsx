@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star, CheckCircle } from 'lucide-react';
 import { DATA_TESTIMONI } from '../data/index.js';
 
 export const TestimonialMarquee = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const trackRef = useRef(null);
 
   const SCRIPT_URL_ULASAN = 'https://script.google.com/macros/s/AKfycbwpkb5U9UgP1ei9x8wqfXB3hBnmaDVuzQ4BY2sfUNXSPEickC5YtjAJhjp_UPx5VI5guQ/exec';
 
@@ -44,41 +43,21 @@ export const TestimonialMarquee = () => {
   const duplicatedTestimonials = [...displayData, ...displayData];
 
   return (
-    <section
-      className="w-full bg-huda-dark py-8 sm:py-12 overflow-hidden relative border-t-4 border-huda-yellow"
-      style={{ contain: 'layout style' }}
-    >
+    <section className="w-full bg-huda-dark py-8 sm:py-12 border-t-4 border-huda-yellow">
       <div className="text-center mb-6 sm:mb-8 px-4">
         <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Apa Kata Orang Tua Murid?</h3>
         <div className="w-16 h-1 bg-huda-yellow mx-auto rounded-full mb-4"></div>
         {isLoading && <p className="text-gray-400 text-sm animate-pulse">Menarik ulasan terbaru...</p>}
       </div>
 
-      <div
-        className="marquee-viewport overflow-hidden"
-        style={{
-          width: '100%',
-          touchAction: 'pan-y',
-          WebkitOverflowScrolling: 'auto',
-        }}
-      >
-        <div
-          ref={trackRef}
-          className="marquee-track"
-          style={{
-                      display: 'flex',
-                      width: 'max-content',
-                      gap: '1.5rem',
-                      padding: '0 1rem',
-                      willChange: 'transform',
-                      transform: 'translateZ(0)',
-                    }}
-        >
+      {/* Viewport: overflow hidden untuk clip kartu yang keluar */}
+      <div className="marquee-viewport overflow-hidden w-full">
+        {/* Track: flex row, animasi jalan dari kanan ke kiri */}
+        <div className="marquee-track flex w-max gap-6 px-4">
           {duplicatedTestimonials.map((testimoni, idx) => (
             <div
               key={idx}
               className="bg-white rounded-2xl p-5 sm:p-6 shadow-xl w-72 sm:w-80 flex-shrink-0 flex flex-col justify-between"
-              style={{ pointerEvents: 'auto' }}
             >
               <div>
                 <div className="flex text-huda-yellow mb-3">
